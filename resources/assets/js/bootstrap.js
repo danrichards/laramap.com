@@ -1,4 +1,6 @@
 
+require('./tabler');
+
 window._ = require('lodash');
 window.Popper = require('popper.js').default;
 
@@ -24,6 +26,24 @@ window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
+window.axios.interceptors.request.use(function (config) {
+    window.app.isLoading = true;
+    return config;
+}, function (error) {
+    window.app.isLoading = false;
+    toastr.error(error.message);
+    return Promise.reject(error);
+});
+
+window.axios.interceptors.response.use(function (response) {
+    window.app.isLoading = false;
+    return response;
+}, function (error) {
+    window.app.isLoading = false;
+    toastr.error(error.message);
+    return Promise.reject(error);
+});
+
 /**
  * Next we will register the CSRF Token as a common header with Axios so that
  * all outgoing HTTP requests automatically have it attached. This is just
@@ -44,9 +64,9 @@ if (token) {
  * allows your team to easily build robust real-time web applications.
  */
 
-// import Echo from 'laravel-echo'
+import Echo from 'laravel-echo';
 
-// window.Pusher = require('pusher-js');
+window.Pusher = require('pusher-js');
 
 // window.Echo = new Echo({
 //     broadcaster: 'pusher',
@@ -54,3 +74,21 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+import Mapbox from 'mapbox-gl-vue';
+Vue.component('mapbox', Mapbox);
+
+/**
+ * Require third party libraries
+ */
+window.d3 = require('d3');
+window.moment = require('moment');
+window.fullcalendar = require('fullcalendar');
+window.mapboxgl = require('mapbox-gl');
+window.toastr = require('toastr');
+window.toastr.options = {
+    "positionClass": "toast-bottom-right",
+};
+window.collect = require('collect.js');
+
+var stream = require('getstream');
