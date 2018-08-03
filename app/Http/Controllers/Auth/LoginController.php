@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Models\User;
 use Exception;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\Models\User;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
@@ -73,7 +73,7 @@ class LoginController extends Controller
     }
 
     /**
-     * Return user if exists; create and return if doesn't
+     * Return user if exists; create and return if doesn't.
      *
      * @param $githubUser
      * @return User
@@ -89,7 +89,7 @@ class LoginController extends Controller
             'username' => $authUser->getNickname,
             'name' => $authUser->getName,
             'email' => $authUser->getEmail,
-            'avatar_path' => $authUser->getAvatar
+            'avatar_path' => $authUser->getAvatar,
         ]);
 
         return $user;

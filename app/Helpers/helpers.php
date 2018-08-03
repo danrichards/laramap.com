@@ -68,7 +68,6 @@ function schema(): Schema
     return new Schema();
 }
 
-
 /**
  * Shortens a string in a pretty way. It will clean it by trimming
  * it, remove all double spaces and html. If the string is then still

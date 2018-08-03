@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * App\Models\UserGroup
+ * App\Models\UserGroup.
  *
  * @property int $id
  * @property \Carbon\Carbon|null $created_at
