@@ -75,6 +75,9 @@ window.Pusher = require('pusher-js');
 //     encrypted: true
 // });
 
+window.mapboxgl = require('mapbox-gl');
+window.mapboxgl.accessToken = 'pk.eyJ1IjoiZndhcnRuZXIiLCJhIjoiY2lyYWxwaDlmMDA0YWk5bWd2cjd1cHk1OCJ9.kzizG2lpFQU3tsuhfZBrGQ';
+
 import Mapbox from 'mapbox-gl-vue';
 Vue.component('mapbox', Mapbox);
 

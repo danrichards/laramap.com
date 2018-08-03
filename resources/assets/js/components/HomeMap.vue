@@ -1,25 +1,6 @@
 <template>
     <div>
-        <mapbox
-            access-token="pk.eyJ1IjoiZndhcnRuZXIiLCJhIjoiY2lyYWxwaDlmMDA0YWk5bWd2cjd1cHk1OCJ9.kzizG2lpFQU3tsuhfZBrGQ"
-            :map-options="{
-              style: 'mapbox://styles/fwartner/cjgrusaz600122sp5wqz54wb4',
-              center: [-0, 0],
-              zoom: 1
-            }"
-            :geolocate-control="{
-              show: false,
-              position: 'top-left'
-            }"
-            :scale-control="{
-              show: false,
-              position: 'top-left'
-            }"
-            :fullscreen-control="{
-              show: true,
-              position: 'top-left'
-            }">
-        </mapbox>
+        <div id="map"></div>
     </div>
 </template>
 
@@ -41,11 +22,27 @@
         },
 
         methods: {
+            createMap() {
+                var map = new window.mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/fwartner/cjgrusaz600122sp5wqz54wb4',
+                    center: [0, 0],
+                    zoom: 1,
+                });
+
+                for (user in this.users) {
+                    var marker = new mapboxgl.Marker()
+                        .setLngLat([user.latitude, user.longitude])
+                        .addTo(map);
+                }
+            },
+
             async getUsers() {
                 let self = this;
-                await axios.get('/api/public/users')
+                await axios.get('/api/users')
                     .then(function (response) {
                         self.users = response.data.data;
+                        self.createMap();
                     })
                     .catch(function (error) {
                         console.log(error);
