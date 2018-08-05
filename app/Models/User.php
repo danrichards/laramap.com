@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
+use Laravel\Scout\Searchable;
 
 /**
  * App\Models\User
@@ -50,7 +51,7 @@ use Laravel\Passport\HasApiTokens;
  */
 class User extends Authenticatable
 {
-    use HasApiTokens, Notifiable;
+    use HasApiTokens, Notifiable, Searchable;
 
     /**
      * @var array
@@ -63,7 +64,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token'
     ];
 
     /**
@@ -73,4 +74,36 @@ class User extends Authenticatable
         'is_admin' => 'boolean',
         'is_active' => 'boolean'
     ];
+
+    /***
+     * @var array
+     */
+    protected $appends = [
+        'gravatar'
+    ];
+
+    /**
+     * @return string
+     */
+    public function getGravatarAttribute()
+    {
+        $s = 80;
+        $d = 'mp';
+        $r = 'g';
+        $img = false;
+        $atts = array();
+
+        $url = 'https://www.gravatar.com/avatar/';
+        $url .= md5( strtolower( trim( $this->email ) ) );
+        $url .= "?s=$s&d=$d&r=$r";
+
+        if ( $img ) {
+            $url = '<img src="' . $url . '"';
+            foreach ( $atts as $key => $val )
+                $url .= ' ' . $key . '="' . $val . '"';
+            $url .= ' />';
+        }
+
+        return $url;
+    }
 }

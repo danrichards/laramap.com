@@ -22,36 +22,52 @@
         },
 
         methods: {
-            createMap() {
-                var map = new window.mapboxgl.Map({
+            async getUsers() {
+                let map = new window.mapboxgl.Map({
                     container: 'map',
-                    style: 'mapbox://styles/fwartner/cjgrusaz600122sp5wqz54wb4',
+                    style: 'mapbox://styles/fwartner/ciralq1a4001bh1kp5yio8k2y',
                     center: [0, 0],
-                    zoom: 1,
+                    zoom: 2
                 });
 
-                for (user in this.users) {
-                    var marker = new mapboxgl.Marker()
-                        .setLngLat([user.latitude, user.longitude])
-                        .addTo(map);
-                }
-            },
-
-            async getUsers() {
                 let self = this;
                 await axios.get('/api/users')
                     .then(function (response) {
                         self.users = response.data.data;
-                        self.createMap();
+                        for (let item in response.data.data) {
+                            let el = document.createElement('div');
+                            el.className = 'marker';
+
+                            self.placerMarkers(el, item);
+                        }
                     })
                     .catch(function (error) {
                         console.log(error);
                     });
+            },
+
+            placerMarkers(el, item) {
+                new window.mapboxgl.Marker(el)
+                    .setLngLat([item.latitude, item.longitude])
+                    .setPopup(new window.mapboxgl.Popup({ offset: 25 })
+                        .setHTML('<h3>' + user.name + '</h3><p>' + user.username + '</p>'))
+                    .addTo(map);
+            },
+
+            mapLoaded(map) {
+
             }
         }
     }
 </script>
 
 <style scoped>
+    .mapboxgl-popup {
+        max-width: 200px;
+    }
 
+    .mapboxgl-popup-content {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+    }
 </style>

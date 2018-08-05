@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 /**
  * App\Models\UserGroup
@@ -17,5 +18,5 @@ use Illuminate\Database\Eloquent\Model;
  */
 class UserGroup extends Model
 {
-    //
+    use Searchable;
 }

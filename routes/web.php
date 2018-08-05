@@ -16,10 +16,17 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::get('/oauth/github', 'Auth\LoginController@redirectToProvider');
-Route::get('/oauth/github/callback', 'Auth\LoginController@handleProviderCallback');
+
+Route::get('auth/social', 'Auth\SocialAuthController@show')->name('social.login');
+Route::get('oauth/{driver}', 'Auth\SocialAuthController@redirectToProvider')->name('social.oauth');
+Route::get('oauth/{driver}/callback', 'Auth\SocialAuthController@handleProviderCallback')->name('social.callback');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('@{username}', 'Users\UserController@show');
+
+Route::post('search', 'Search\SearchController@getResults');
 
 //Route::get('/test', function () {
 //    return url('/oauth/github/callback');
