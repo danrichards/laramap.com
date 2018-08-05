@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.29 on 2018-08-03 09:26:38.
+ * Generated for Laravel 5.6.29 on 2018-08-05 07:59:14.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -13265,6 +13265,61 @@ namespace Laravel\Socialite\Facades {
 
 }
 
+namespace Spatie\Geocoder\Facades {
+
+    class Geocoder
+    {
+        /**
+         * @static
+         */
+        public static function setApiKey($apiKey)
+        {
+            return \Spatie\Geocoder\Geocoder::setApiKey($apiKey);
+        }
+
+        /**
+         * @static
+         */
+        public static function setLanguage($language)
+        {
+            return \Spatie\Geocoder\Geocoder::setLanguage($language);
+        }
+
+        /**
+         * @static
+         */
+        public static function setRegion($region)
+        {
+            return \Spatie\Geocoder\Geocoder::setRegion($region);
+        }
+
+        /**
+         * @static
+         */
+        public static function setBounds($bounds)
+        {
+            return \Spatie\Geocoder\Geocoder::setBounds($bounds);
+        }
+
+        /**
+         * @static
+         */
+        public static function getCoordinatesForAddress($address)
+        {
+            return \Spatie\Geocoder\Geocoder::getCoordinatesForAddress($address);
+        }
+
+        /**
+         * @static
+         */
+        public static function getAddressForCoordinates($lat, $lng)
+        {
+            return \Spatie\Geocoder\Geocoder::getAddressForCoordinates($lat, $lng);
+        }
+    }
+
+}
+
 namespace Vinkla\Hashids\Facades {
 
     class Hashids
@@ -15822,6 +15877,10 @@ namespace  {
     }
 
     class Socialite extends \Laravel\Socialite\Facades\Socialite
+    {
+    }
+
+    class Geocoder extends \Spatie\Geocoder\Facades\Geocoder
     {
     }
 

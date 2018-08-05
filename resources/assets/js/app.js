@@ -31,7 +31,43 @@ Vue.component(
 
 
 Vue.component('home-map', require('./components/HomeMap.vue'));
+Vue.component('user-list', require('./components/UserList.vue'));
+Vue.component('user-profile', require('./components/UserProfile.vue'));
+
+if (window.Notification) {
+    console.log('Notifications are supported!');
+} else {
+    alert('Notifications aren\'t supported on your browser! :(');
+}
+
+import InstantSearch from 'vue-instantsearch';
+Vue.use(InstantSearch);
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    mounted() {
+        this.listenForChanges();
+    },
+    methods: {
+        listenForChanges() {
+            Echo.channel('posts')
+                .listen('PostPublished', post => {
+                    if (! ('Notification' in window)) {
+                        console.log('Web Notifications are not supported on your browser');
+                        return;
+                    }
+
+                    Notification.requestPermission( permission => {
+                        let notification = new Notification('New post published', {
+                            body: post.title,
+                            icon: "https://laramap.com/images/logo_500x500.png"
+                        });
+
+                        notification.onclick = () => {
+                            window.open(window.location.href);
+                        };
+                    });
+                })
+        }
+    }
 });

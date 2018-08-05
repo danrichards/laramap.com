@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Laravel\Scout\Searchable;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -47,10 +48,29 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUsername($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereZip($value)
  * @mixin \Eloquent
+ * @property string|null $provider
+ * @property string|null $provider_id
+ * @property string|null $access_token
+ * @property string|null $address
+ * @property string|null $twitter_link
+ * @property string|null $linkedin_link
+ * @property string|null $github_link
+ * @property string|null $facebook_link
+ * @property string|null $web_link
+ * @property-read string $gravatar
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereAccessToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereAddress($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereFacebookLink($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereGithubLink($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereLinkedinLink($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereProvider($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereProviderId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereTwitterLink($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereWebLink($value)
  */
 class User extends Authenticatable
 {
-    use HasApiTokens, Notifiable;
+    use HasApiTokens, Notifiable, Searchable;
 
     /**
      * @var array
@@ -73,4 +93,37 @@ class User extends Authenticatable
         'is_admin' => 'boolean',
         'is_active' => 'boolean',
     ];
+
+    /***
+     * @var array
+     */
+    protected $appends = [
+        'gravatar',
+    ];
+
+    /**
+     * @return string
+     */
+    public function getGravatarAttribute()
+    {
+        $s = 80;
+        $d = 'mp';
+        $r = 'g';
+        $img = false;
+        $atts = [];
+
+        $url = 'https://www.gravatar.com/avatar/';
+        $url .= md5(strtolower(trim($this->email)));
+        $url .= "?s=$s&d=$d&r=$r";
+
+        if ($img) {
+            $url = '<img src="'.$url.'"';
+            foreach ($atts as $key => $val) {
+                $url .= ' '.$key.'="'.$val.'"';
+            }
+            $url .= ' />';
+        }
+
+        return $url;
+    }
 }
