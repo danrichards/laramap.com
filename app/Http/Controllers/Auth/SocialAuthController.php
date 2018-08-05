@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Http\Controllers\Controller;
 use App\Models\User;
 use Exception;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Laravel\Socialite\Facades\Socialite;
-use App\Http\Controllers\Controller;
 
 class SocialAuthController extends Controller
 {
@@ -41,7 +40,7 @@ class SocialAuthController extends Controller
      */
     public function redirectToProvider($driver)
     {
-        if( ! $this->isProviderAllowed($driver) ) {
+        if (! $this->isProviderAllowed($driver)) {
             return $this->sendFailedResponse("{$driver} is not currently supported");
         }
 
@@ -56,7 +55,7 @@ class SocialAuthController extends Controller
      * @param $driver
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function handleProviderCallback($driver )
+    public function handleProviderCallback($driver)
     {
         try {
             $user = Socialite::driver($driver)->user();
@@ -64,7 +63,7 @@ class SocialAuthController extends Controller
             return $this->sendFailedResponse($e->getMessage());
         }
 
-        return empty( $user->email )
+        return empty($user->email)
             ? $this->sendFailedResponse("No email id returned from {$driver} provider.")
             : $this->loginOrCreateAccount($user, $driver);
     }
@@ -96,7 +95,7 @@ class SocialAuthController extends Controller
     {
         $user = (new \App\Models\User)->where('email', $providerUser->getEmail())->first();
 
-        if( $user ) {
+        if ($user) {
             $user->update([
                 'avatar_path' => $providerUser->avatar,
                 'provider' => $driver,

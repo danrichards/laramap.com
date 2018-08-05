@@ -8,7 +8,7 @@ use Laravel\Passport\HasApiTokens;
 use Laravel\Scout\Searchable;
 
 /**
- * App\Models\User
+ * App\Models\User.
  *
  * @property int $id
  * @property string $name
@@ -48,6 +48,25 @@ use Laravel\Scout\Searchable;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUsername($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereZip($value)
  * @mixin \Eloquent
+ * @property string|null $provider
+ * @property string|null $provider_id
+ * @property string|null $access_token
+ * @property string|null $address
+ * @property string|null $twitter_link
+ * @property string|null $linkedin_link
+ * @property string|null $github_link
+ * @property string|null $facebook_link
+ * @property string|null $web_link
+ * @property-read string $gravatar
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereAccessToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereAddress($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereFacebookLink($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereGithubLink($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereLinkedinLink($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereProvider($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereProviderId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereTwitterLink($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereWebLink($value)
  */
 class User extends Authenticatable
 {
@@ -72,7 +91,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'is_admin' => 'boolean',
-        'is_active' => 'boolean'
+        'is_active' => 'boolean',
     ];
 
     /***
@@ -91,16 +110,17 @@ class User extends Authenticatable
         $d = 'mp';
         $r = 'g';
         $img = false;
-        $atts = array();
+        $atts = [];
 
         $url = 'https://www.gravatar.com/avatar/';
-        $url .= md5( strtolower( trim( $this->email ) ) );
+        $url .= md5(strtolower(trim($this->email)));
         $url .= "?s=$s&d=$d&r=$r";
 
-        if ( $img ) {
+        if ($img) {
             $url = '<img src="' . $url . '"';
-            foreach ( $atts as $key => $val )
+            foreach ($atts as $key => $val) {
                 $url .= ' ' . $key . '="' . $val . '"';
+            }
             $url .= ' />';
         }
 

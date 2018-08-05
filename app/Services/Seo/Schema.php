@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Services\Seo;
 
 use Spatie\SchemaOrg\Schema as Builder;

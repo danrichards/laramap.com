@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
+
 use Illuminate\Support\Facades\Validator;
+
 use Spatie\Geocoder\Facades\Geocoder;
 
 class RegisterController extends Controller
@@ -70,7 +72,6 @@ class RegisterController extends Controller
 
         return User::create([
             'name' => $data['name'],
-//            'address' => $address['formatted_address'],
             'latitude' => $address['lat'],
             'longitude' => $address['lng'],
             'username' => str_slug($data['username'], '_'),

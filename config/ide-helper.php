@@ -66,9 +66,8 @@ return [
 
     'model_locations' => [
         'app/',
-        'app/Models'
+        'app/Models',
     ],
-
 
     /*
     |--------------------------------------------------------------------------
@@ -94,7 +93,7 @@ return [
             'critical'  => 'Monolog\Logger::addCritical',
             'alert'     => 'Monolog\Logger::addAlert',
             'emergency' => 'Monolog\Logger::addEmergency',
-        ]
+        ],
     ],
 
     /*
