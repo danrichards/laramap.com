@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Passport\HasApiTokens;
 use Laravel\Scout\Searchable;
+use Laravel\Passport\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * App\Models\User.
@@ -83,7 +83,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token'
+        'password', 'remember_token',
     ];
 
     /**
@@ -98,7 +98,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $appends = [
-        'gravatar'
+        'gravatar',
     ];
 
     /**
@@ -117,9 +117,9 @@ class User extends Authenticatable
         $url .= "?s=$s&d=$d&r=$r";
 
         if ($img) {
-            $url = '<img src="' . $url . '"';
+            $url = '<img src="'.$url.'"';
             foreach ($atts as $key => $val) {
-                $url .= ' ' . $key . '="' . $val . '"';
+                $url .= ' '.$key.'="'.$val.'"';
             }
             $url .= ' />';
         }

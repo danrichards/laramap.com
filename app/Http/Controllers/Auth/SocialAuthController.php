@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Models\User;
 use Exception;
+use App\Models\User;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Laravel\Socialite\Facades\Socialite;
@@ -100,7 +100,7 @@ class SocialAuthController extends Controller
                 'avatar_path' => $providerUser->avatar,
                 'provider' => $driver,
                 'provider_id' => $providerUser->id,
-                'access_token' => $providerUser->token
+                'access_token' => $providerUser->token,
             ]);
         } else {
             $user = User::create([
@@ -111,7 +111,7 @@ class SocialAuthController extends Controller
                 'provider' => $driver,
                 'provider_id' => $providerUser->getId(),
                 'access_token' => $providerUser->token,
-                'password' => bcrypt(str_random(16))
+                'password' => bcrypt(str_random(16)),
             ]);
         }
 
