@@ -33,6 +33,7 @@ Vue.component(
 Vue.component('home-map', require('./components/HomeMap.vue'));
 Vue.component('user-list', require('./components/UserList.vue'));
 Vue.component('user-profile', require('./components/UserProfile.vue'));
+Vue.component('user-edit', require('./components/EditProfile.vue'));
 Vue.component('user-notifications-bar', require('./components/NotificationsBar.vue'));
 
 if (window.Notification) {

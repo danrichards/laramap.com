@@ -24,12 +24,17 @@ Route::get('oauth/{driver}/callback', 'Auth\SocialAuthController@handleProviderC
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('@{username}', 'Users\UserController@show');
+Route::get('users', 'Users\UserController@index');
+Route::get('account', 'Users\AccountController@getAccount');
 
 Route::post('search', 'Search\SearchController@getResults');
 
-Route::get('/test', function () {
-    $user = \App\Models\User::find(4);
-    $user->notify(new \App\Notifications\Users\TestNotification($user));
+Route::view('sponsors', 'static.sponsors');
+Route::view('about', 'static.about');
+Route::view('terms', 'static.terms');
+Route::view('privacy', 'static.privacy');
+Route::view('imprint', 'static.imprint');
 
-    return back();
+Route::get('/test', function () {
+     return response()->json(\PragmaRX\Countries\Package\Countries::all()->pluck('name'));
 });

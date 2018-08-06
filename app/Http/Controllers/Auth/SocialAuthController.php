@@ -100,7 +100,7 @@ class SocialAuthController extends Controller
 
         if ($user) {
             $user->update([
-                'avatar_path' => $providerUser->avatar,
+                'avatar_path' => $providerUser->getAvatar(),
                 'provider' => $driver,
                 'provider_id' => $providerUser->id,
                 'access_token' => $providerUser->token,
