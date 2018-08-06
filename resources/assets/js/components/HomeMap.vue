@@ -5,12 +5,7 @@
 </template>
 
 <script>
-    import Mapbox from 'mapbox-gl-vue';
     export default {
-        components: {
-            Mapbox
-        },
-
         data() {
             return {
                 users: []
@@ -34,29 +29,19 @@
                 await axios.get('/api/users')
                     .then(function (response) {
                         self.users = response.data.data;
-                        for (let item in response.data.data) {
-                            let el = document.createElement('div');
-                            el.className = 'marker';
 
-                            self.placerMarkers(el, item);
-                        }
+                        self.users.forEach(function(user) {
+                            let marker = new window.mapboxgl.Marker()
+                                .setLngLat({lng: user.longitude, lat: user.latitude})
+                                .setPopup(new mapboxgl.Popup({ offset: 25 })
+                                    .setHTML('<h3>' + user.username + '</h3><p>' + user.name + '</p>'))
+                                .addTo(map);
+                        });
                     })
                     .catch(function (error) {
                         console.log(error);
                     });
             },
-
-            placerMarkers(el, item) {
-                new window.mapboxgl.Marker(el)
-                    .setLngLat([item.latitude, item.longitude])
-                    .setPopup(new window.mapboxgl.Popup({ offset: 25 })
-                        .setHTML('<h3>' + user.name + '</h3><p>' + user.username + '</p>'))
-                    .addTo(map);
-            },
-
-            mapLoaded(map) {
-
-            }
         }
     }
 </script>
@@ -69,5 +54,14 @@
     .mapboxgl-popup-content {
         text-align: center;
         font-family: 'Open Sans', sans-serif;
+    }
+
+    .marker {
+        background-image: url('https://www.latlong.net/logo.png');
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
     }
 </style>

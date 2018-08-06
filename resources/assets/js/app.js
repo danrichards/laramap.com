@@ -36,6 +36,8 @@ Vue.component('user-profile', require('./components/UserProfile.vue'));
 Vue.component('user-edit', require('./components/EditProfile.vue'));
 Vue.component('user-notifications-bar', require('./components/NotificationsBar.vue'));
 
+Vue.component('sponsor-list', require('./components/SponsorList.vue'));
+
 if (window.Notification) {
     console.log('Notifications are supported!');
 } else {

@@ -16,7 +16,7 @@
     <div class="page">
         <div class="page-single">
             <div class="container">
-
+                <sponsor-list></sponsor-list>
             </div>
         </div>
     </div>
