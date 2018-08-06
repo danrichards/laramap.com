@@ -4,11 +4,11 @@ namespace App\Notifications\Users;
 
 use App\Models\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Channels\BroadcastChannel;
-use Illuminate\Notifications\Messages\BroadcastMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Channels\BroadcastChannel;
+use Illuminate\Notifications\Messages\BroadcastMessage;
 
 class NewLikeNotification extends Notification implements ShouldQueue
 {
@@ -50,9 +50,9 @@ class NewLikeNotification extends Notification implements ShouldQueue
     {
         return (new MailMessage)
                     ->subject('New Like!')
-                    ->greeting('Hey, ' . $notifiable->name)
-                    ->line($this->user->username . ' liked your action')
-                    ->line('Thank you for using ' . env('APP_NAME') . '!');
+                    ->greeting('Hey, '.$notifiable->name)
+                    ->line($this->user->username.' liked your action')
+                    ->line('Thank you for using '.env('APP_NAME').'!');
     }
 
     /**
@@ -64,8 +64,8 @@ class NewLikeNotification extends Notification implements ShouldQueue
     public function toArray($notifiable)
     {
         return [
-            'title' => $this->user->username . ' liked your action',
-            'from_user' => $this->user
+            'title' => $this->user->username.' liked your action',
+            'from_user' => $this->user,
         ];
     }
 
@@ -79,7 +79,7 @@ class NewLikeNotification extends Notification implements ShouldQueue
     {
         return new BroadcastMessage([
             'title' => 'liked your action',
-            'from_user' => $this->user
+            'from_user' => $this->user,
         ]);
     }
 }

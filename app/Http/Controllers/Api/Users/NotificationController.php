@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Api\Users;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class NotificationController extends Controller
 {
@@ -19,8 +19,8 @@ class NotificationController extends Controller
         return response()->json([
             'data' => [
                 'unread_notifications' => $user->unreadNotifications,
-                'unread_notifications_count' => count($user->unreadNotifications)
-            ]
+                'unread_notifications_count' => count($user->unreadNotifications),
+            ],
         ], 200);
     }
 

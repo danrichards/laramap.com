@@ -44,7 +44,7 @@ return [
     'twitter' => [
         'client_id'     => env('TWITTER_ID'),
         'client_secret' => env('TWITTER_SECRET'),
-        'redirect'      => env('APP_URL') . '/oauth/twitter/callback',
+        'redirect'      => env('APP_URL').'/oauth/twitter/callback',
     ],
 
 ];

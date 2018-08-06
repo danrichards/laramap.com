@@ -4,11 +4,11 @@ namespace App\Notifications\Users;
 
 use App\Models\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Notifications\Messages\BroadcastMessage;
-use Illuminate\Notifications\Channels\BroadcastChannel;
-use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Channels\BroadcastChannel;
+use Illuminate\Notifications\Messages\BroadcastMessage;
 
 class TestNotification extends Notification implements ShouldQueue
 {
@@ -64,7 +64,7 @@ class TestNotification extends Notification implements ShouldQueue
     {
         return [
             'title' => 'Lorem ipsum',
-            'from_user' => $this->user
+            'from_user' => $this->user,
         ];
     }
 
@@ -78,7 +78,7 @@ class TestNotification extends Notification implements ShouldQueue
     {
         return new BroadcastMessage([
             'title' => 'commented on your action',
-            'from_user' => $this->user
+            'from_user' => $this->user,
         ]);
     }
 }

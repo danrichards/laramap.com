@@ -4,11 +4,11 @@ namespace App\Notifications\Users;
 
 use App\Models\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Channels\BroadcastChannel;
-use Illuminate\Notifications\Messages\BroadcastMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Channels\BroadcastChannel;
+use Illuminate\Notifications\Messages\BroadcastMessage;
 
 class NewFollowerNotification extends Notification implements ShouldQueue
 {
@@ -50,10 +50,10 @@ class NewFollowerNotification extends Notification implements ShouldQueue
     {
         return (new MailMessage)
                     ->subject('New follower!')
-                    ->greeting('Hey, ' . $notifiable->name)
-                    ->line($this->user->username . ' started following you!')
+                    ->greeting('Hey, '.$notifiable->name)
+                    ->line($this->user->username.' started following you!')
                     ->action('Notification Action', url('/'))
-                    ->line('Thank you for using ' . env('APP_NAME') . '!');
+                    ->line('Thank you for using '.env('APP_NAME').'!');
     }
 
     /**
@@ -65,8 +65,8 @@ class NewFollowerNotification extends Notification implements ShouldQueue
     public function toArray($notifiable)
     {
         return [
-            'title' => $this->user->username . 'started following you',
-            'from_user' => $this->user
+            'title' => $this->user->username.'started following you',
+            'from_user' => $this->user,
         ];
     }
 
@@ -80,7 +80,7 @@ class NewFollowerNotification extends Notification implements ShouldQueue
     {
         return new BroadcastMessage([
             'title' => 'started following you',
-            'from_user' => $this->user
+            'from_user' => $this->user,
         ]);
     }
 }
