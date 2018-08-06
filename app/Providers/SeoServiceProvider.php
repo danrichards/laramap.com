@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use App\Services\Seo\Meta as MetaService;
+use Illuminate\Support\ServiceProvider;
 
 class SeoServiceProvider extends ServiceProvider
 {
