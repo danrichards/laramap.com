@@ -13,7 +13,7 @@
                     <div class="col-6 col-md-3">
                         <ul class="list-unstyled mb-0">
                             <li><a href="https://laravel-news.com">Laravel News</a></li>
-                            <li><a href="https://madewithlaravel.com">made with Laravel</a></li>
+                            <li><a href="https://larajobs.com">LaraJobs</a></li>
                         </ul>
                     </div>
 

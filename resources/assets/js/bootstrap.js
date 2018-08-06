@@ -24,6 +24,11 @@ try {
 
 window.axios = require('axios');
 
+window.toastr = require('toastr');
+window.toastr.options = {
+    "positionClass": "toast-bottom-right",
+};
+
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 window.axios.interceptors.request.use(function (config) {
@@ -88,10 +93,5 @@ window.d3 = require('d3');
 window.moment = require('moment');
 window.fullcalendar = require('fullcalendar');
 window.mapboxgl = require('mapbox-gl');
-window.toastr = require('toastr');
-window.toastr.options = {
-    "positionClass": "toast-bottom-right",
-};
 window.collect = require('collect.js');
-
-var stream = require('getstream');
+window.getstream = require('getstream');

@@ -67,6 +67,13 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereProviderId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereTwitterLink($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereWebLink($value)
+ * @property string|null $company
+ * @property bool $is_admin
+ * @property bool $is_hireable
+ * @property-read null|string $avatar
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereCompany($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereIsAdmin($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereIsHireable($value)
  */
 class User extends Authenticatable
 {
@@ -92,14 +99,35 @@ class User extends Authenticatable
     protected $casts = [
         'is_admin' => 'boolean',
         'is_active' => 'boolean',
+        'is_hireable' => 'boolean',
     ];
 
     /***
      * @var array
      */
     protected $appends = [
-        'gravatar',
+        'gravatar', 'avatar',
     ];
+
+    /**
+     * @return string
+     */
+    public function receivesBroadcastNotificationsOn()
+    {
+        return 'private-App.Models.User.'.$this->id;
+    }
+
+    /**
+     * @return null|string
+     */
+    public function getAvatarAttribute()
+    {
+        if ($this->avatar_path) {
+            return $this->avatar_path;
+        } else {
+            return $this->getGravatarAttribute();
+        }
+    }
 
     /**
      * @return string

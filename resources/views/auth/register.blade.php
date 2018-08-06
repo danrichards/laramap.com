@@ -78,6 +78,16 @@
                                     <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm password">
                                 </div>
 
+                                <div class="form-group">
+                                    <label class="form-label">Terms of Service</label>
+                                    <input type="checkbox" name="terms" class="form-control{{ $errors->has('terms') ? ' is-invalid' : '' }}" value="{{ old('terms') }}"> I agree to the <a href="{{ url('/terms') }}">Terms of Service</a>
+                                    @if ($errors->has('terms'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('terms') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+
                                 <div class="form-footer">
                                     <button type="submit" class="btn btn-primary btn-block">Create new account</button>
 

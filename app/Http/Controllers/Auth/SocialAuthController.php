@@ -6,7 +6,6 @@ use Exception;
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Redirect;
 use Laravel\Socialite\Facades\Socialite;
 
 class SocialAuthController extends Controller
@@ -24,6 +23,7 @@ class SocialAuthController extends Controller
      */
     protected $providers = [
         'github',
+        'twitter',
     ];
 
     /**
@@ -73,7 +73,7 @@ class SocialAuthController extends Controller
      */
     protected function sendSuccessResponse()
     {
-        return redirect()->intended('home');
+        return redirect()->intended('/');
     }
 
     /**
@@ -93,11 +93,14 @@ class SocialAuthController extends Controller
      */
     protected function loginOrCreateAccount($providerUser, $driver)
     {
-        $user = (new \App\Models\User)->where('email', $providerUser->getEmail())->first();
+        $user = (new \App\Models\User)
+            ->where('email', $providerUser->getEmail())
+            ->orWhere('username', $providerUser->getNickname())
+            ->first();
 
         if ($user) {
             $user->update([
-                'avatar_path' => $providerUser->avatar,
+                'avatar_path' => $providerUser->getAvatar(),
                 'provider' => $driver,
                 'provider_id' => $providerUser->id,
                 'access_token' => $providerUser->token,

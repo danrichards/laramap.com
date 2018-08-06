@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return view('users.list');
     }
 
     /**
@@ -25,7 +25,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return back();
     }
 
     /**
@@ -36,7 +36,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return back();
     }
 
     /**
@@ -60,7 +60,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        return back();
     }
 
     /**
@@ -72,7 +72,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return back();
     }
 
     /**
@@ -83,6 +83,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return back();
     }
 }

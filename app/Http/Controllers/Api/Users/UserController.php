@@ -2,10 +2,19 @@
 
 namespace App\Http\Controllers\Api\Users;
 
+<<<<<<< HEAD
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Users\UpdateRequest;
+use App\Http\Resources\UserResource;
+use App\Models\User;
+use Illuminate\Http\Request;
+=======
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
+use App\Http\Requests\Users\UpdateRequest;
+>>>>>>> cd289478dd5c3c96b2832e257cff9945ba6d1cb4
 
 class UserController extends Controller
 {
@@ -45,16 +54,19 @@ class UserController extends Controller
         return UserResource::make($user);
     }
 
-    /**
+    /**4
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param UpdateRequest $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRequest $request, $id)
     {
-        //
+        $user = (new \App\Models\User)->find($id);
+        $user->update($request->validated());
+
+        return UserResource::make($user);
     }
 
     /**

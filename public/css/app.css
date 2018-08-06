@@ -1,5 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+.red {
+  color: #e3342f;
+}
+
+.brown {
+  color: brown;
+}
+
 /**
 Dashboard UI
  */
