@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-body d-flex flex-column">
                     <div class="d-flex align-items-center">
-                        <img class="avatar avatar-md mr-3" v-bind:src="user.gravatar">
+                        <img class="avatar avatar-md mr-3" v-bind:src="user.avatar">
                         <div>
                             <a v-bind:href="'@' + user.username" class="text-default">{{ user.name }}</a>
                             <small class="d-block text-muted">{{ user.username }}</small>
@@ -20,7 +20,7 @@
     export default {
         data() {
             return {
-                users: []
+                users: [],
             }
         },
 
@@ -39,7 +39,6 @@
                         console.log(error);
                     });
             },
-
         }
     }
 </script>

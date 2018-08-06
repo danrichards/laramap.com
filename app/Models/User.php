@@ -92,13 +92,14 @@ class User extends Authenticatable
     protected $casts = [
         'is_admin' => 'boolean',
         'is_active' => 'boolean',
+        'is_hireable' => 'boolean'
     ];
 
     /***
      * @var array
      */
     protected $appends = [
-        'gravatar',
+        'gravatar', 'avatar'
     ];
 
     /**
@@ -107,6 +108,18 @@ class User extends Authenticatable
     public function receivesBroadcastNotificationsOn()
     {
         return 'private-App.Models.User.'.$this->id;
+    }
+
+    /**
+     * @return null|string
+     */
+    public function getAvatarAttribute()
+    {
+        if ($this->avatar_path) {
+            return $this->avatar_path;
+        } else {
+            return $this->getGravatarAttribute();
+        }
     }
 
     /**

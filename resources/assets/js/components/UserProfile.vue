@@ -6,7 +6,7 @@
                     <div class="card card-profile">
                         <div class="card-header" v-bind:style="'background-image: url('+ mapLink + ');'"></div>
                         <div class="card-body text-center">
-                            <img class="card-profile-img" v-bind:src="avatar">
+                            <img class="card-profile-img" v-bind:src="user.avatar">
                             <h3 class="mb-3">{{ user.name }}</h3>
 
                             <p class="mb-4">
@@ -33,15 +33,19 @@
                                 <i class="fab fa-facebook"></i>
                             </button>
 
-                            <div v-if="user.is_sponsor || user.is_admin">
+                            <div v-if="user.is_sponsor || user.is_admin || user.is_hireable">
                                 <br>
 
                                 <small v-if="user.is_admin">
-                                    <i class="fas fa-user-shield"></i> Administrator
+                                    <i class="fas fa-user-shield"></i> Administrator &nbsp;
                                 </small>
 
                                 <small v-if="user.is_sponsor">
-                                    <i class="fas fa-star sponsor"></i> Sponsor
+                                    <i class="fas fa-star sponsor"></i> Sponsor &nbsp;
+                                </small>
+
+                                <small v-if="user.is_hireable">
+                                    <i class="fas fa-briefcase"></i> Available for hire &nbsp;
                                 </small>
                             </div>
                         </div>
@@ -50,7 +54,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="media">
-                                <img class="avatar avatar-xxl mr-5" v-bind:src="avatar" v-bind:alt="user.username">
+                                <img class="avatar avatar-xxl mr-5" v-bind:src="user.avatar" v-bind:alt="user.username">
                                 <div class="media-body">
                                     <h4 class="m-0">Juan Hernandez</h4>
                                     <p class="text-muted mb-0">Webdeveloper</p>
@@ -179,7 +183,6 @@
             return {
                 user: {},
                 mapLink: null,
-                avatar: null
             }
         },
 
@@ -193,21 +196,12 @@
                 axios.get('/api/users/' + this.userid)
                     .then(function (response) {
                         self.user = response.data.data;
-                        self.getAvatar();
                         self.mapLink = 'https://maps.googleapis.com/maps/api/staticmap?center=' + response.data.data.latitude + ',' + response.data.data.longitude + '&zoom=13&scale=false&size=600x300&maptype=roadmap&key=' + window.Laramap.gmaps_key + '&format=png&visual_refresh=true';
                     })
                     .catch(function (error) {
                         console.log(error);
                     });
             },
-
-            getAvatar() {
-                if (this.user.avatar_path) {
-                    this.avatar = this.user.avatar_path
-                } else {
-                    this.avatar = this.user.gravatar
-                }
-            }
         }
     }
 </script>

@@ -37,14 +37,16 @@ class CreateUsersTable extends Migration
             $table->string('linkedin_link')->nullable();
             $table->string('github_link')->nullable();
             $table->string('facebook_link')->nullable();
-
             $table->string('web_link')->nullable();
+
+            $table->string('company')->nullable();
 
             $table->longText('biography')->nullable();
 
             $table->boolean('is_active')->default(false);
             $table->boolean('is_sponsor')->default(false);
             $table->boolean('is_admin')->default(false);
+            $table->boolean('is_hireable')->default(false);
 
             $table->rememberToken();
             $table->timestamps();
