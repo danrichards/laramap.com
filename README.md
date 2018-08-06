@@ -1,4 +1,4 @@
 # laramap.com
 <p align="center">
-<img src="https://raw.githubusercontent.com/laramap/laramap.com/master/public/static/laramap_logo.svg">
+<img src="https://raw.githubusercontent.com/laramap/art/master/Laramap_Logo.png">
 </p>
