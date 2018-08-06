@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
-use Laravel\Scout\Searchable;
-use Laravel\Passport\HasApiTokens;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Passport\HasApiTokens;
+use Laravel\Scout\Searchable;
 
 /**
  * App\Models\User.
@@ -67,6 +67,13 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereProviderId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereTwitterLink($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereWebLink($value)
+ * @property string|null $company
+ * @property bool $is_admin
+ * @property bool $is_hireable
+ * @property-read null|string $avatar
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereCompany($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereIsAdmin($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereIsHireable($value)
  */
 class User extends Authenticatable
 {

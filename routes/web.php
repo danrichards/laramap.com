@@ -36,5 +36,5 @@ Route::view('privacy', 'static.privacy');
 Route::view('imprint', 'static.imprint');
 
 Route::get('/test', function () {
-     return response()->json(\PragmaRX\Countries\Package\Countries::all()->pluck('name'));
+    return response()->json(\PragmaRX\Countries\Package\Countries::all()->pluck('name'));
 });
