@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0ca063c72eec1eb26f75c07fdb3b0110",
+    "content-hash": "1b7a01cf8eb23821114c5b38a906435d",
     "packages": [
         {
             "name": "abraham/twitteroauth",
