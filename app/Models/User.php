@@ -99,14 +99,14 @@ class User extends Authenticatable
     protected $casts = [
         'is_admin' => 'boolean',
         'is_active' => 'boolean',
-        'is_hireable' => 'boolean'
+        'is_hireable' => 'boolean',
     ];
 
     /***
      * @var array
      */
     protected $appends = [
-        'gravatar', 'avatar'
+        'gravatar', 'avatar',
     ];
 
     /**
