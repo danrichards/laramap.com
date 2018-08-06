@@ -41,4 +41,10 @@ return [
         'redirect' => env('APP_URL').'/oauth/github/callback',
     ],
 
+    'twitter' => [
+        'client_id'     => env('TWITTER_ID'),
+        'client_secret' => env('TWITTER_SECRET'),
+        'redirect'      => env('APP_URL') . '/oauth/twitter/callback',
+    ],
+
 ];

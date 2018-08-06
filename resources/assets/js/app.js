@@ -33,6 +33,7 @@ Vue.component(
 Vue.component('home-map', require('./components/HomeMap.vue'));
 Vue.component('user-list', require('./components/UserList.vue'));
 Vue.component('user-profile', require('./components/UserProfile.vue'));
+Vue.component('user-notifications-bar', require('./components/NotificationsBar.vue'));
 
 if (window.Notification) {
     console.log('Notifications are supported!');
@@ -48,8 +49,21 @@ const app = new Vue({
     mounted() {
         this.listenForChanges();
     },
+    data() {
+        return {
+            isLoading: false,
+            userId: window.Laramap.currentUser.id
+        }
+    },
     methods: {
         listenForChanges() {
+            let self = this;
+            console.log('Current User ID:' + this.userId);
+            Echo.channel('private-App.Models.User.' + this.userId)
+                .notification((notification) => {
+                    console.log('hghjhfhf');
+                });
+
             Echo.channel('posts')
                 .listen('PostPublished', post => {
                     if (! ('Notification' in window)) {

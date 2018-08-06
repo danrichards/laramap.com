@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
-use Laravel\Scout\Searchable;
-use Laravel\Passport\HasApiTokens;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Passport\HasApiTokens;
+use Laravel\Scout\Searchable;
 
 /**
  * App\Models\User.
@@ -100,6 +100,14 @@ class User extends Authenticatable
     protected $appends = [
         'gravatar',
     ];
+
+    /**
+     * @return string
+     */
+    public function receivesBroadcastNotificationsOn()
+    {
+        return 'private-App.Models.User.'.$this->id;
+    }
 
     /**
      * @return string

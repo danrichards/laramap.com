@@ -27,6 +27,9 @@ Route::get('@{username}', 'Users\UserController@show');
 
 Route::post('search', 'Search\SearchController@getResults');
 
-//Route::get('/test', function () {
-//    return url('/oauth/github/callback');
-//});
+Route::get('/test', function () {
+    $user = \App\Models\User::find(4);
+    $user->notify(new \App\Notifications\Users\TestNotification($user));
+
+    return back();
+});
