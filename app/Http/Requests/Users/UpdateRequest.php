@@ -35,7 +35,7 @@ class UpdateRequest extends FormRequest
             'twitter_link' => 'nullable|url',
             'facebook_link' => 'nullable|url',
             'web_link' => 'nullable|url',
-            'is_hireable' => 'nullable|boolean'
+            'is_hireable' => 'nullable|boolean',
         ];
     }
 }
