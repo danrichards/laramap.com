@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Api\Sponsors;
 
-use App\Http\Resources\SponsorResource;
 use App\Models\Sponsor;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\SponsorResource;
 
 class CompanySponsorController extends Controller
 {
