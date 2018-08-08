@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('page_title')
-    Privacy
+    Privacy Policy
 @endsection
 
 @push('styles')
