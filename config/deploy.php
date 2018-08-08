@@ -48,13 +48,13 @@ return [
         'start' => [
             //
         ],
-        
+
         // Code and composer vendors are ready but nothing is built.
         'build' => [
             'npm:install',
             'npm:production',
         ],
-        
+
         // Deployment is done but not live yet (before symlink)
         'ready' => [
             'artisan:storage:link',
@@ -65,17 +65,17 @@ return [
             'artisan:migrate',
             'artisan:horizon:terminate',
         ],
-        
+
         // Deployment is done and live
         'done' => [
             'fpm:reload',
         ],
-        
+
         // Deployment succeeded.
         'success' => [
             //
         ],
-        
+
         // Deployment failed.
         'fail' => [
             //
