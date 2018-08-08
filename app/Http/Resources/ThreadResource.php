@@ -26,7 +26,7 @@ class ThreadResource extends JsonResource
             'likers' => UserResource::collection($this->collectLikers()),
             'like_count' => $this->likesCount,
             'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at
+            'updated_at' => $this->updated_at,
         ];
     }
 }

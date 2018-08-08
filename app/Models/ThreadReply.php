@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * App\Models\ThreadReply
+ * App\Models\ThreadReply.
  *
  * @mixin \Eloquent
  * @property-read \App\Models\User $user

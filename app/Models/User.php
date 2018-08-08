@@ -2,12 +2,12 @@
 
 namespace App\Models;
 
-use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
+use Laravel\Scout\Searchable;
+use Laravel\Passport\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
 use Cog\Laravel\Love\Liker\Models\Traits\Liker;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Passport\HasApiTokens;
-use Laravel\Scout\Searchable;
+use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
 
 /**
  * App\Models\User.

@@ -27,7 +27,7 @@ class ThreadCreateRequest extends FormRequest
             'category_id' => 'required|numeric',
             'user_id' => 'required|numeric',
             'title' => 'required|string:min:5|unique:threads',
-            'body' => 'require|string|min:20'
+            'body' => 'require|string|min:20',
         ];
     }
 }
