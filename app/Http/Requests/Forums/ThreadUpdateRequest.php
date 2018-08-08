@@ -24,7 +24,7 @@ class ThreadUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'body' => 'require|string|min:20'
+            'body' => 'require|string|min:20',
         ];
     }
 }

@@ -19,7 +19,7 @@ class ThreadCategoryResource extends JsonResource
             'title' => $this->title,
             'slug' => $this->slug,
             'description' => $this->description,
-            'thread_count' => count($this->threads)
+            'thread_count' => count($this->threads),
         ];
     }
 }

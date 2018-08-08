@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Forums;
 
-use App\Models\ThreadCategory;
 use Illuminate\Http\Request;
+use App\Models\ThreadCategory;
 use App\Http\Controllers\Controller;
 
 class ThreadCategoryController extends Controller
