@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Forums;
 
 use App\Http\Controllers\Controller;
+use App\Models\Thread;
 use App\Models\ThreadCategory;
 use Illuminate\Http\Request;
 
@@ -18,7 +19,7 @@ class ThreadController extends Controller
     {
         $category = ThreadCategory::whereSlug($categorySlug)->first();
 
-        return view('forums.threads', compact('category'));
+        return view('forums.threads.list', compact('category'));
     }
 
     /**
@@ -45,12 +46,14 @@ class ThreadController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param $slug
+     * @return void
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $thread = Thread::whereSlug($slug)->first();
+
+        return view('forums.threads.show', compact('thread'));
     }
 
     /**

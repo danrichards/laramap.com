@@ -23,6 +23,8 @@ Route::get('oauth/{driver}/callback', 'Auth\SocialAuthController@handleProviderC
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/likes', 'Api\Social\LikeController@getLikesForCurrentUser');
+
 Route::get('@{username}', 'Users\UserController@show');
 Route::get('users', 'Users\UserController@index');
 Route::get('account', 'Users\AccountController@getAccount');
@@ -41,6 +43,7 @@ Route::get('/test', function () {
 
 Route::group(['prefix' => 'forums'], function () {
     Route::view('/', 'forums.list');
+    Route::resource('categories', 'Forums\ThreadCategoryController');
     Route::resource('threads', 'Forums\ThreadController');
     Route::resource('threads.replies', 'Forums\ThreadReplyController');
 });

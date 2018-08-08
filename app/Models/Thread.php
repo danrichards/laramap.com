@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Cog\Contracts\Love\Likeable\Models\Likeable as LikeableContract;
+use Cog\Laravel\Love\Likeable\Models\Traits\Likeable;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
@@ -10,15 +12,47 @@ use Spatie\Sluggable\SlugOptions;
  * App\Models\Thread
  *
  * @mixin \Eloquent
+ * @property-read \App\Models\ThreadCategory $category
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\ThreadReply[] $replies
+ * @property-read \App\Models\User $user
+ * @property string $body
+ * @property int $category_id
+ * @property \Carbon\Carbon|null $created_at
+ * @property int $id
+ * @property bool $is_closed
+ * @property bool $is_pinned
+ * @property string $slug
+ * @property string $title
+ * @property \Carbon\Carbon|null $updated_at
+ * @property int $user_id
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Thread whereBody($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Thread whereCategoryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Thread whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Thread whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Thread whereIsClosed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Thread whereIsPinned($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Thread whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Thread whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Thread whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Thread whereUserId($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Thread[] $likers
  */
-class Thread extends Model
+class Thread extends Model implements LikeableContract
 {
-    use HasSlug;
+    use HasSlug, Likeable;
 
     /**
      * @var array
      */
     protected $guarded = [];
+
+    /**
+     * @var array
+     */
+    protected $casts = [
+        'is_closed' => 'boolean',
+        'is_pinned' => 'boolean',
+    ];
 
     /**
      * @return SlugOptions
@@ -27,6 +61,31 @@ class Thread extends Model
     {
         return SlugOptions::create()
             ->generateSlugsFrom('title')
-            ->saveSlugsTo('slug');
+            ->saveSlugsTo('slug')
+            ->usingSeparator('-');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function category()
+    {
+        return $this->belongsTo(ThreadCategory::class, 'category_id', 'id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function replies()
+    {
+        return $this->hasMany(ThreadReply::class, 'thread_id', 'id');
     }
 }

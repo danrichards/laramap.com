@@ -19,6 +19,16 @@
                     </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                            @if(auth()->user()->is_admin)
+                                <a class="dropdown-item" href="{{ url('/admin') }}">
+                                    <i class="fal fa-toolbox"></i> Admin
+                                </a>
+
+                                <a class="dropdown-item" href="{{ url('/horizon') }}">
+                                    <i class="fal fa-server"></i> Horizon
+                                </a>
+                                <div class="dropdown-divider"></div>
+                            @endif
                             <a class="dropdown-item" href="{{ url('@' . auth()->user()->username) }}">
                                 <i class="dropdown-icon fe fe-user"></i> Profile
                             </a>
@@ -28,7 +38,7 @@
                             </a>
 
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="https://laramapcom.nolt.io">
                                 <i class="dropdown-icon fe fe-help-circle"></i> Feedback
                             </a>
 
@@ -36,7 +46,8 @@
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                 <i class="dropdown-icon fe fe-log-out"></i> Sign out
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                      style="display: none;">
                                     @csrf
                                 </form>
                             </a>
@@ -44,10 +55,11 @@
                     </div>
                 </div>
 
-                <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
+                <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse"
+                   data-target="#headerMenuCollapse">
                     <span class="header-toggler-icon"></span>
                 </a>
-                @else
+            @else
                 <div class="d-flex order-lg-2 ml-auto">
                     <div class="nav-item d-none d-md-flex">
                         <a href="{{ route('login') }}" class="btn btn-sm btn-outline-primary">Login</a>
@@ -68,7 +80,8 @@
             <div class="col-lg-3 ml-auto">
                 <form class="input-icon my-3 my-lg-0" method="post" action="{{ url('/search') }}">
                     @csrf
-                    <input type="search" class="form-control header-search" name="query" placeholder="Search&hellip;" tabindex="1">
+                    <input type="search" class="form-control header-search" name="query" placeholder="Search&hellip;"
+                           tabindex="1">
                     <div class="input-icon-addon">
                         <i class="fal fa-search"></i>
                     </div>

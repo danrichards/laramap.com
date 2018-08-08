@@ -41,6 +41,7 @@
     @else
         @include('_includes.navigation')
         @yield('content')
+        <div v-show="is_loading" class="loader"></div>
         @include('_includes.footer')
     @endif
 </div>

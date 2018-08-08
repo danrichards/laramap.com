@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
+use Cog\Laravel\Love\Liker\Models\Traits\Liker;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
@@ -74,10 +76,15 @@ use Laravel\Scout\Searchable;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereCompany($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereIsAdmin($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereIsHireable($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User[] $blockers
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User[] $blocking
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User[] $followers
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User[] $following
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User[] $liking
  */
-class User extends Authenticatable
+class User extends Authenticatable implements LikerContract
 {
-    use HasApiTokens, Notifiable, Searchable;
+    use HasApiTokens, Notifiable, Searchable, Liker;
 
     /**
      * @var array

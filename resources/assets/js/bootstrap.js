@@ -97,3 +97,4 @@ window.collect = require('collect.js');
 window.getstream = require('getstream');
 
 window.places = require('places.js');
+window.moment = require('moment');

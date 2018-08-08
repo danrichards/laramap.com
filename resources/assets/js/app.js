@@ -36,6 +36,10 @@ Vue.component('user-profile', require('./components/UserProfile.vue'));
 Vue.component('user-edit', require('./components/EditProfile.vue'));
 Vue.component('user-notifications-bar', require('./components/NotificationsBar.vue'));
 
+Vue.component('thread-list', require('./components/ThreadList.vue'));
+Vue.component('thread-category-list', require('./components/ThreadCategoryList.vue'));
+Vue.component('single-thread', require('./components/SingleThread.vue'));
+
 if (window.Notification) {
     console.log('Notifications are supported!');
 } else {

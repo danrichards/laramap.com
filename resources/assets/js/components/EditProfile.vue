@@ -68,7 +68,7 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-6 col-md-3">
+                    <div class="col-md-3">
                         <div class="form-group">
                             <label class="form-label">Available for hire</label>
                             <input type="checkbox" class="form-control" name="is_hireable" v-model="user.is_hireable">
@@ -76,9 +76,37 @@
                     </div>
 
                     <div class="col-md-12">
-                        <div class="form-group mb-0">
+                        <div class="form-group">
                             <label class="form-label">About Me</label>
                             <textarea rows="5" class="form-control" placeholder="Here can be your biography" v-html="user.biography" v-model="user.biography"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="form-label">Website</label>
+                            <input type="text" class="form-control" placeholder="https://example.com" name="web_link" v-model="user.web_link">
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="form-label">GitHub-Profile</label>
+                            <input type="text" class="form-control" placeholder="https://github.com/fwartner" name="github_link" v-model="user.github_link">
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="form-label">Twitter-Profile</label>
+                            <input type="text" class="form-control" placeholder="https://twitter.com/fwartner" name="twitter_link" v-model="user.twitter_link">
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="form-label">LinkedIn-Profile</label>
+                            <input type="text" class="form-control" placeholder="https://linkedin.com/fwartner" name="linkedin_link" v-model="user.linkedin_link">
                         </div>
                     </div>
                 </div>

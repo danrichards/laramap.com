@@ -26,7 +26,7 @@
                 let map = new window.mapboxgl.Map({
                     container: 'map',
                     style: 'mapbox://styles/fwartner/ciralq1a4001bh1kp5yio8k2y',
-                    center: [0, 0],
+                    center: [12.567380, 41.871940],
                     zoom: 2
                 });
 
