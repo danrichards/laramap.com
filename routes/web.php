@@ -42,7 +42,7 @@ Route::get('/test', function () {
 });
 
 Route::group(['prefix' => 'forums'], function () {
-    Route::view('/', 'forums.list');
+    Route::view('/', 'forums.threads.list');
     Route::resource('categories', 'Forums\ThreadCategoryController');
     Route::resource('threads', 'Forums\ThreadController');
     Route::resource('threads.replies', 'Forums\ThreadReplyController');
