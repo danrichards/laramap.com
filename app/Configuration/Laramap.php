@@ -13,6 +13,7 @@ class Laramap
             'csrfToken' => csrf_token(),
             'env' => config('app.env'),
             'gmaps_key' => env('GMAPS_KEY'),
+            'mapbox_key' => env('MAPBOX_KEY'),
             'currentUser' => auth()->user(),
         ];
     }

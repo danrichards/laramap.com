@@ -16,9 +16,9 @@ return [
             /*
              * The feed will be available on this url.
              */
-            'url' => '',
+            'url' => '/feed',
 
-            'title' => 'My feed',
+            'title' => 'Laramap.com',
 
             /*
              * The view that will render the feed.

@@ -34,29 +34,18 @@
                 await axios.get('/api/users')
                     .then(function (response) {
                         self.users = response.data.data;
-                        for (let item in response.data.data) {
-                            let el = document.createElement('div');
-                            el.className = 'marker';
-
-                            self.placerMarkers(el, item);
-                        }
+                        self.users.forEach(function(user) {
+                            new window.mapboxgl.Marker()
+                                .setLngLat([user.longitude, user.latitude])
+                                .setPopup(new window.mapboxgl.Popup({ offset: 25 })
+                                    .setHTML('<img class="avatar" src="' + user.avatar + '">' + '<h3>' + user.name + '</h3><p>' + user.username + '</p>'))
+                                .addTo(map);
+                        });
                     })
                     .catch(function (error) {
                         console.log(error);
                     });
             },
-
-            placerMarkers(el, item) {
-                new window.mapboxgl.Marker(el)
-                    .setLngLat([item.latitude, item.longitude])
-                    .setPopup(new window.mapboxgl.Popup({ offset: 25 })
-                        .setHTML('<h3>' + user.name + '</h3><p>' + user.username + '</p>'))
-                    .addTo(map);
-            },
-
-            mapLoaded(map) {
-
-            }
         }
     }
 </script>

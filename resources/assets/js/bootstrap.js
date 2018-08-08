@@ -95,3 +95,5 @@ window.fullcalendar = require('fullcalendar');
 window.mapboxgl = require('mapbox-gl');
 window.collect = require('collect.js');
 window.getstream = require('getstream');
+
+window.places = require('places.js');

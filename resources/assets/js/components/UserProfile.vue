@@ -13,25 +13,25 @@
                                 {{ user.biography }}
                             </p>
 
-                            <button class="btn btn-outline-primary btn-sm" v-if="user.web_link">
+                            <a class="btn btn-outline-primary btn-sm" v-if="user.web_link" v-bind:href="user.web_link">
                                 <i class="fas fa-globe"></i>
-                            </button>
+                            </a>
 
-                            <button class="btn btn-outline-primary btn-sm" v-if="user.twitter_link">
+                            <a class="btn btn-outline-primary btn-sm" v-if="user.twitter_link" v-bind:href="user.twitter_link">
                                 <i class="fab fa-twitter"></i>
-                            </button>
+                            </a>
 
-                            <button class="btn btn-outline-primary btn-sm" v-if="user.github_link">
+                            <a class="btn btn-outline-primary btn-sm" v-if="user.github_link" v-bind:href="user.github_link">
                                 <i class="fab fa-github"></i>
-                            </button>
+                            </a>
 
-                            <button class="btn btn-outline-primary btn-sm" v-if="user.linkedin_link">
+                            <a class="btn btn-outline-primary btn-sm" v-if="user.linkedin_link" v-bind:href="user.linkedin_link">
                                 <i class="fab fa-linkedin"></i>
-                            </button>
+                            </a>
 
-                            <button class="btn btn-outline-primary btn-sm" v-if="user.facebook_link">
+                            <a class="btn btn-outline-primary btn-sm" v-if="user.facebook_link" v-bind:href="user.facebook_link">
                                 <i class="fab fa-facebook"></i>
-                            </button>
+                            </a>
 
                             <div v-if="user.is_sponsor || user.is_admin || user.is_hireable">
                                 <br>
@@ -48,6 +48,12 @@
                                     <i class="fas fa-briefcase"></i> Available for hire &nbsp;
                                 </small>
                             </div>
+
+                            <p class="text-muted" v-if="user.company">
+                                <small>
+                                    <i class="fas fa-briefcase"></i> {{ user.company }}
+                                </small>
+                            </p>
                         </div>
                     </div>
 

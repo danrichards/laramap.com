@@ -18,10 +18,15 @@
                         </div>
                     </div>
 
-                    <div class="col-md-5">
+                    <div class="col-md-12">
                         <div class="form-group">
-                            <label class="form-label">Company</label>
-                            <input type="text" class="form-control" placeholder="Company" name="company" v-model="user.company">
+                            <label class="form-label">Address</label>
+                            <places
+                                v-model="user.address"
+                                placeholder="Where are we going ?"
+                                :language="en"
+                                @change="updateAddress">
+                            </places>
                         </div>
                     </div>
 
@@ -29,6 +34,7 @@
                         <div class="form-group">
                             <label class="form-label">Email address</label>
                             <input type="email" class="form-control" placeholder="Email" name="email" v-model="user.email">
+                            <small class="text-muted">This is also for Gravatar.com</small>
                         </div>
                     </div>
 
@@ -42,7 +48,7 @@
                     <div class="col-sm-6 col-md-3">
                         <div class="form-group">
                             <label class="form-label">Postal Code</label>
-                            <input type="number" class="form-control" placeholder="ZIP Code" name="zip" v-model="user.zip">
+                            <input type="text" class="form-control" placeholder="ZIP Code" name="zip" v-model="user.zip">
                         </div>
                     </div>
 
@@ -52,6 +58,13 @@
                             <select class="form-control custom-select" v-model="user.country">
                                 <option v-for="country in countries"  name="country" v-bind:value="country.name">{{ country.name }}</option>
                             </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="form-label">Company</label>
+                            <input type="text" class="form-control" placeholder="Company" name="company" v-model="user.company">
                         </div>
                     </div>
 
@@ -78,7 +91,12 @@
 </template>
 
 <script>
+    import Places from 'vue-places';
     export default {
+        components: {
+            Places
+        },
+
         data() {
             return {
                 countries: [],
@@ -123,6 +141,15 @@
                     .catch(function (error) {
                         console.log(error);
                     });
+            },
+
+            updateAddress(val) {
+                console.log(val);
+                this.user.latitude = val.latlng.lat;
+                this.user.longitude = val.latlng.lng;
+                this.user.country = val.country;
+                this.user.city = val.name;
+                this.user.zip = val.postcode;
             }
         }
     }
