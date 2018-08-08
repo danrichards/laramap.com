@@ -30,6 +30,8 @@
                     zoom: 2
                 });
 
+                map.scrollZoom.disable();
+
                 let self = this;
                 await axios.get('/api/users')
                     .then(function (response) {

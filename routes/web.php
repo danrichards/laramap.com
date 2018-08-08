@@ -38,3 +38,9 @@ Route::view('imprint', 'static.imprint');
 Route::get('/test', function () {
     return response()->json(\PragmaRX\Countries\Package\Countries::all()->pluck('name'));
 });
+
+Route::group(['prefix' => 'forums'], function () {
+    Route::view('/', 'forums.list');
+    Route::resource('threads', 'Forums\ThreadController');
+    Route::resource('threads.replies', 'Forums\ThreadReplyController');
+});
