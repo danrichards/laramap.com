@@ -111,8 +111,20 @@
                     </div>
                 </div>
             </div>
-            <div class="card-footer text-right">
-                <button type="submit" class="btn btn-primary" v-on:click="updateAccount">Update Profile</button>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col">
+                        <div class="text-left">
+                            <button type="submit" class="btn btn-danger" v-on:click="deleteAccountPrompt">Delete Account</button>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-primary" v-on:click="updateAccount">Update Profile</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </form>
     </div>
@@ -178,6 +190,10 @@
                 this.user.country = val.country;
                 this.user.city = val.name;
                 this.user.zip = val.postcode;
+            },
+
+            deleteAccountPrompt() {
+                alert('HA! NEVER! 🖕')
             }
         }
     }

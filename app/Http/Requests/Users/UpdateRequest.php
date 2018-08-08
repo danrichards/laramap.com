@@ -29,6 +29,7 @@ class UpdateRequest extends FormRequest
             'city' => 'nullable|string',
             'zip' => 'nullable|string',
             'country' => 'nullable|string',
+            'company' => 'nullable|string',
             'address' => 'nullable|string',
             'latitude' => 'nullable',
             'longitude' => 'nullable',

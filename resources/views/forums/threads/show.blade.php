@@ -30,6 +30,12 @@
     <div class="page">
         <div class="page-single">
             <div class="container">
+                <div class="page-header">
+                    <h1 class="page-title">
+                        {{ $thread->title }}
+                    </h1>
+                </div>
+
                 <single-thread :threadid="{{ $thread->id }}"></single-thread>
             </div>
         </div>
