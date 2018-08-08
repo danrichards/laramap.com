@@ -22,7 +22,7 @@
                         <div class="card-status bg-blue"></div>
                         <div class="card-body d-flex flex-column">
                             <h4><a v-bind:href="'/forums/threads/' + thread.slug">{{ thread.title }}</a></h4>
-                            <div class="text-muted">{{ thread.body }}</div>
+                            <div class="text-muted">{{ thread.body | excerpt  }}</div>
                             <div class="d-flex align-items-center pt-5 mt-auto">
                                 <img class="avatar avatar-md mr-3" v-bind:src="thread.user.avatar">
                                 <div>
@@ -120,6 +120,10 @@
             momentTime(myDate) {
                 return moment(myDate).format('HH:mm');
             },
+
+            excerpt(myText) {
+                return myText.substring(0,400) + ' ...'
+            }
         },
 
         methods: {

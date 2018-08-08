@@ -25,7 +25,7 @@
                     {{ thread.title }}
                 </h4>
 
-                <article>{{ thread.body }}</article>
+                <article v-html="thread.body"></article>
                     <div class="ml-auto text-muted">
                         <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>
                     </div>

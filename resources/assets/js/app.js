@@ -9,6 +9,18 @@
 window.Vue = require('vue');
 require('./bootstrap');
 
+import VuePrism from 'vue-prism';
+Vue.use(VuePrism);
+import 'prismjs/themes/prism.css';
+
+import Turbolinks from 'turbolinks';
+Turbolinks.start();
+
+import Highlight from './extra/Highlight';
+document.addEventListener('turbolinks:load', () => {
+    Highlight.start();
+});
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

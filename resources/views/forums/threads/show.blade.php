@@ -4,6 +4,20 @@
     {{ $thread->title }}
 @endsection
 
+@section('meta')
+    <meta property="og:url" content="{{ url('/forums/threads/' . $thread->slug) }}"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="{{ $thread->title }}"/>
+    <meta property="og:description" content="{{ strip_tags($thread->body) }}"/>
+    <meta property="og:image" content="{{ asset('static/laramap_logo.svg') }}"/>
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@laramapcom" />
+    <meta name="twitter:title" content="{{ $thread->title }}" />
+    <meta name="twitter:description" content="{{ strip_tags($thread->body) }}" />
+    <meta name="twitter:image" content="{{ asset('static/laramap_logo.svg') }}" />
+@endsection
+
 @push('header_styles')
 
 @endpush
