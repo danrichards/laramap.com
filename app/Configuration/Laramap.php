@@ -2,6 +2,7 @@
 
 namespace App\Configuration;
 
+
 class Laramap
 {
     /**
@@ -15,6 +16,7 @@ class Laramap
             'gmaps_key' => env('GMAPS_KEY'),
             'mapbox_key' => env('MAPBOX_KEY'),
             'currentUser' => auth()->user(),
+            'authCheck' => auth()->check(),
         ];
     }
 }

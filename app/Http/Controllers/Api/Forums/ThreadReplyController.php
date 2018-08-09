@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api\Forums;
 
+use App\Http\Resources\ThreadReplyResource;
+use App\Models\Thread;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -20,12 +22,20 @@ class ThreadReplyController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
+     * @param $id
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+        $thread = Thread::find($id);
+        $reply = $thread->replies()->create([
+            'thread_id' => $thread->id,
+            'user_id' => auth()->guard('api')->user()->id,
+            'body' => $request->get('body')
+        ]);
+
+        return ThreadReplyResource::make($reply);
     }
 
     /**

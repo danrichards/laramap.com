@@ -40,7 +40,9 @@ class ThreadCategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        $category = ThreadCategory::find($id);
+
+        return ThreadCategoryResource::make($category);
     }
 
     /**

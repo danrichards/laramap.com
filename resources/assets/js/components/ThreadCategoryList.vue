@@ -89,16 +89,16 @@
 
 <script>
     export default {
+        props: ['categoryid'],
+
         data() {
             return {
                 threads: [],
-                categories: []
             }
         },
 
         mounted() {
             this.getThreads();
-            this.getThreadCategories();
         },
 
         filters: {
@@ -122,20 +122,13 @@
 
             async getThreads() {
                 let self = this;
-                await axios.get('/api/forums/threads')
+                await axios.get('/api/forums/threads', {
+                    params: {
+                        category_id: self.categoryid
+                    }
+                })
                     .then(function (response) {
                         self.threads = response.data.data;
-                    })
-                    .catch(function (error) {
-                        console.log(error);
-                    });
-            },
-
-            async getThreadCategories() {
-                let self = this;
-                await axios.get('/api/forums/categories')
-                    .then(function (response) {
-                        self.categories = response.data.data;
                     })
                     .catch(function (error) {
                         console.log(error);

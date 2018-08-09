@@ -16,7 +16,7 @@
     <div class="page">
         <div class="page-single">
             <div class="container">
-                <thread-category-list></thread-category-list>
+                <thread-category-list :categoryid="{{ $category->id }}"></thread-category-list>
             </div>
         </div>
     </div>

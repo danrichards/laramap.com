@@ -17,7 +17,11 @@ class ThreadController extends Controller
      */
     public function index()
     {
-        $threads = Thread::all();
+        if (request()->query->has('category_id')) {
+            $threads = Thread::whereCategoryId(request()->query('category_id'))->get();
+        } else {
+            $threads = Thread::all();
+        }
 
         return ThreadResource::collection($threads);
     }

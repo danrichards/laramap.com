@@ -69,7 +69,8 @@ const app = new Vue({
     data() {
         return {
             isLoading: false,
-            userId: window.Laramap.currentUser.id
+            userId: window.Laramap.currentUser.id,
+            isLoggedIn: window.Laramap.authCheck
         }
     },
     methods: {

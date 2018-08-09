@@ -136,6 +136,8 @@
                 await axios.get('/api/forums/threads')
                     .then(function (response) {
                         self.threads = response.data.data;
+                        self.links = response.data.links;
+                        self.meta = response.data.meta;
                     })
                     .catch(function (error) {
                         console.log(error);

@@ -14,6 +14,14 @@ class ThreadReplyResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'thread_id' => $this->thread_id,
+            'user_id' => $this->user_id,
+            'user' => UserResource::make($this->user),
+            'body' => $this->body,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
+        ];
     }
 }
