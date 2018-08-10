@@ -126,7 +126,7 @@
         </section>
 
         <hr width="50%">
-        
+
         <br>
     </div>
 @endsection
