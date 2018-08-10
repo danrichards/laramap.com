@@ -30,6 +30,8 @@
                                     Our lovely sponsors
                                 </h3>
 
+                                <p class="text-center">Laramap could not be without our sponsors! That´s why we want to say thank you to all of our sponsors!</p>
+
                                 <br>
 
                                 <div class="row">
@@ -65,9 +67,7 @@
                                 </div>
 
                                 <div class="col-md-2 mr-md-auto">
-                                    <a href="https://www.patreon.com/fwartner" class="btn btn-orange" target="_blank">
-                                        <i class="fab fa-patreon"></i> Become a Patreon
-                                    </a>
+                                    <a href="https://www.patreon.com/bePatron?u=3200756" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
                                 </div>
                             </div>
 
