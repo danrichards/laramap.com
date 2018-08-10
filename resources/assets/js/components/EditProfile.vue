@@ -1,5 +1,15 @@
 <template>
     <div>
+        <div v-show="!user.longitude" class="alert alert-avatar alert-primary alert-dismissible">
+            <img class="avatar" src="/static/florian.jpg" alt="Florian Wartner">
+            In order to place yourself on the map, please make sure that you have filled out your address-field on this page.
+        </div>
+
+        <!--<span class="tag tag-white">-->
+                    <!--<span class="text-gray-dark">fwartner</span>-->
+                    <!--<span class="tag-addon tag-red"><i class="fab fa-laravel"></i> &nbsp; Laramap</span>-->
+                <!--</span>-->
+
         <form class="card">
             <div class="card-body">
                 <h3 class="card-title">Edit Profile</h3>
@@ -24,7 +34,7 @@
                             <places
                                 v-model="user.address"
                                 placeholder="Where are we going ?"
-                                :language="en"
+                                language="en"
                                 @change="updateAddress">
                             </places>
                         </div>
@@ -139,8 +149,9 @@
 
         data() {
             return {
+                isLoading: false,
                 countries: [],
-                user: null
+                user: {}
             }
         },
 

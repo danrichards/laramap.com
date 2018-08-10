@@ -7,7 +7,7 @@
 
             @auth
                 <div class="d-flex order-lg-2 ml-auto">
-                    <user-notifications-bar></user-notifications-bar>
+                    {{--<user-notifications-bar></user-notifications-bar>--}}
 
                     <div class="dropdown">
                         <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
@@ -98,21 +98,21 @@
                         <a href="{{ url('/users') }}" class="nav-link">Users</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="{{ url('/articles') }}" class="nav-link">Articles</a>
-                    </li>
+                    {{--<li class="nav-item">--}}
+                        {{--<a href="{{ url('/articles') }}" class="nav-link">Articles</a>--}}
+                    {{--</li>--}}
 
                     <li class="nav-item">
                         <a href="{{ url('/forums') }}" class="nav-link">Forums</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="{{ url('/events') }}" class="nav-link">Events</a>
-                    </li>
+                    {{--<li class="nav-item">--}}
+                        {{--<a href="{{ url('/events') }}" class="nav-link">Events</a>--}}
+                    {{--</li>--}}
 
-                    <li class="nav-item">
-                        <a href="{{ url('/usergroups') }}" class="nav-link">Usergroups</a>
-                    </li>
+                    {{--<li class="nav-item">--}}
+                        {{--<a href="{{ url('/usergroups') }}" class="nav-link">Usergroups</a>--}}
+                    {{--</li>--}}
 
                     <li class="nav-item">
                         <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown">About</a>

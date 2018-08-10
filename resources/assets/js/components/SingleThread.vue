@@ -28,7 +28,7 @@
                 <article v-html="singleThread.body"></article>
                 <div class="ml-auto text-muted">
                     <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3">
-                        <i class="fe fe-heart mr-1"></i>
+                        <!--<i class="fe fe-heart mr-1"></i>-->
                     </a>
                 </div>
             </div>
@@ -69,7 +69,7 @@
             <div class="card-body">
                 <article v-html="reply.body"></article>
                 <div class="text-right text-muted">
-                    <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>
+                    <!--<a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>-->
                 </div>
             </div>
         </div>
@@ -78,7 +78,6 @@
             <div class="card-body">
                 <form>
                     <div class="form-group">
-                        <label class="form-label">Textarea <span class="form-label-small">56/100</span></label>
                         <textarea class="form-control" name="reply" rows="6" placeholder="Your reply.." v-model="reply.body"></textarea>
                     </div>
 
@@ -120,6 +119,7 @@
                 currentUser: this.$parent.currentUser,
                 singleThread: {},
                 reply: {
+                    user_id: this.$parent.currentUser.id,
                     body: null,
                 }
             }
@@ -146,7 +146,7 @@
         methods: {
             async getThread() {
                 let self = this;
-                await axios.get('/api/forums/threads/' + this.threadid)
+                await axios.get('/public-api/forums/threads/' + this.threadid)
                     .then(function (response) {
                         self.singleThread = response.data.data;
                     })
@@ -162,7 +162,7 @@
                     .then(function (response) {
                         self.singleThread.replies.push(response.data.data);
                         toastr.success('Your profile has been updated', '✅');
-                        self.reply = {};
+                        this.reply.body = '';
                     })
                     .catch(function (error) {
                         console.log(error);
@@ -171,7 +171,7 @@
 
             cancelReply(e) {
                 e.preventDefault();
-                this.reply = {};
+                this.reply.body = '';
             }
         }
     }

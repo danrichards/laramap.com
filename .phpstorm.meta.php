@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2018-08-09 13:54:55.
+    * Generated on 2018-08-10 08:27:24.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -68,6 +68,9 @@ namespace PHPSTORM_META {
         'pragmarx.countries' => \PragmaRX\Countries\Package\Countries::class,
         'countries.update.command' => \PragmaRX\CountriesLaravel\Package\Console\Commands\Update::class,
         'geocoder' => \Spatie\Geocoder\Geocoder::class,
+        'command.activitylog:clean' => \Spatie\Activitylog\CleanActivitylogCommand::class,
+        'Spatie\Activitylog\ActivityLogger' => \Spatie\Activitylog\ActivityLogger::class,
+        'Spatie\Activitylog\ActivityLogStatus' => \Spatie\Activitylog\ActivityLogStatus::class,
         'Spatie\Referer\Referer' => \Spatie\Referer\Referer::class,
         'hashids.factory' => \Vinkla\Hashids\HashidsFactory::class,
         'hashids' => \Vinkla\Hashids\HashidsManager::class,
@@ -243,6 +246,9 @@ namespace PHPSTORM_META {
         'pragmarx.countries' => \PragmaRX\Countries\Package\Countries::class,
         'countries.update.command' => \PragmaRX\CountriesLaravel\Package\Console\Commands\Update::class,
         'geocoder' => \Spatie\Geocoder\Geocoder::class,
+        'command.activitylog:clean' => \Spatie\Activitylog\CleanActivitylogCommand::class,
+        'Spatie\Activitylog\ActivityLogger' => \Spatie\Activitylog\ActivityLogger::class,
+        'Spatie\Activitylog\ActivityLogStatus' => \Spatie\Activitylog\ActivityLogStatus::class,
         'Spatie\Referer\Referer' => \Spatie\Referer\Referer::class,
         'hashids.factory' => \Vinkla\Hashids\HashidsFactory::class,
         'hashids' => \Vinkla\Hashids\HashidsManager::class,
@@ -418,6 +424,9 @@ namespace PHPSTORM_META {
         'pragmarx.countries' => \PragmaRX\Countries\Package\Countries::class,
         'countries.update.command' => \PragmaRX\CountriesLaravel\Package\Console\Commands\Update::class,
         'geocoder' => \Spatie\Geocoder\Geocoder::class,
+        'command.activitylog:clean' => \Spatie\Activitylog\CleanActivitylogCommand::class,
+        'Spatie\Activitylog\ActivityLogger' => \Spatie\Activitylog\ActivityLogger::class,
+        'Spatie\Activitylog\ActivityLogStatus' => \Spatie\Activitylog\ActivityLogStatus::class,
         'Spatie\Referer\Referer' => \Spatie\Referer\Referer::class,
         'hashids.factory' => \Vinkla\Hashids\HashidsFactory::class,
         'hashids' => \Vinkla\Hashids\HashidsManager::class,
@@ -593,6 +602,9 @@ namespace PHPSTORM_META {
         'pragmarx.countries' => \PragmaRX\Countries\Package\Countries::class,
         'countries.update.command' => \PragmaRX\CountriesLaravel\Package\Console\Commands\Update::class,
         'geocoder' => \Spatie\Geocoder\Geocoder::class,
+        'command.activitylog:clean' => \Spatie\Activitylog\CleanActivitylogCommand::class,
+        'Spatie\Activitylog\ActivityLogger' => \Spatie\Activitylog\ActivityLogger::class,
+        'Spatie\Activitylog\ActivityLogStatus' => \Spatie\Activitylog\ActivityLogStatus::class,
         'Spatie\Referer\Referer' => \Spatie\Referer\Referer::class,
         'hashids.factory' => \Vinkla\Hashids\HashidsFactory::class,
         'hashids' => \Vinkla\Hashids\HashidsManager::class,
@@ -768,6 +780,9 @@ namespace PHPSTORM_META {
         'pragmarx.countries' => \PragmaRX\Countries\Package\Countries::class,
         'countries.update.command' => \PragmaRX\CountriesLaravel\Package\Console\Commands\Update::class,
         'geocoder' => \Spatie\Geocoder\Geocoder::class,
+        'command.activitylog:clean' => \Spatie\Activitylog\CleanActivitylogCommand::class,
+        'Spatie\Activitylog\ActivityLogger' => \Spatie\Activitylog\ActivityLogger::class,
+        'Spatie\Activitylog\ActivityLogStatus' => \Spatie\Activitylog\ActivityLogStatus::class,
         'Spatie\Referer\Referer' => \Spatie\Referer\Referer::class,
         'hashids.factory' => \Vinkla\Hashids\HashidsFactory::class,
         'hashids' => \Vinkla\Hashids\HashidsManager::class,
@@ -943,6 +958,9 @@ namespace PHPSTORM_META {
         'pragmarx.countries' => \PragmaRX\Countries\Package\Countries::class,
         'countries.update.command' => \PragmaRX\CountriesLaravel\Package\Console\Commands\Update::class,
         'geocoder' => \Spatie\Geocoder\Geocoder::class,
+        'command.activitylog:clean' => \Spatie\Activitylog\CleanActivitylogCommand::class,
+        'Spatie\Activitylog\ActivityLogger' => \Spatie\Activitylog\ActivityLogger::class,
+        'Spatie\Activitylog\ActivityLogStatus' => \Spatie\Activitylog\ActivityLogStatus::class,
         'Spatie\Referer\Referer' => \Spatie\Referer\Referer::class,
         'hashids.factory' => \Vinkla\Hashids\HashidsFactory::class,
         'hashids' => \Vinkla\Hashids\HashidsManager::class,
@@ -1118,6 +1136,9 @@ namespace PHPSTORM_META {
         'pragmarx.countries' => \PragmaRX\Countries\Package\Countries::class,
         'countries.update.command' => \PragmaRX\CountriesLaravel\Package\Console\Commands\Update::class,
         'geocoder' => \Spatie\Geocoder\Geocoder::class,
+        'command.activitylog:clean' => \Spatie\Activitylog\CleanActivitylogCommand::class,
+        'Spatie\Activitylog\ActivityLogger' => \Spatie\Activitylog\ActivityLogger::class,
+        'Spatie\Activitylog\ActivityLogStatus' => \Spatie\Activitylog\ActivityLogStatus::class,
         'Spatie\Referer\Referer' => \Spatie\Referer\Referer::class,
         'hashids.factory' => \Vinkla\Hashids\HashidsFactory::class,
         'hashids' => \Vinkla\Hashids\HashidsManager::class,

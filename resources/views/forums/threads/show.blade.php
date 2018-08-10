@@ -31,9 +31,13 @@
         <div class="page-single">
             <div class="container">
                 <div class="page-header">
-                    <h1 class="page-title">
-                        {{ $thread->title }}
-                    </h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/forums">Forums</a></li>
+                            <li class="breadcrumb-item"><a href="/forums/categories/{{ $thread->category->slug }}">{{ $thread->category->title }}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ $thread->title }}</li>
+                        </ol>
+                    </nav>
                 </div>
 
                 <single-thread :threadid="{{ $thread->id }}"></single-thread>

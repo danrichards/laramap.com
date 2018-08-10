@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\Forums;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ThreadReplyResource;
 use App\Models\Thread;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ThreadReplyController extends Controller
@@ -31,9 +32,17 @@ class ThreadReplyController extends Controller
         $thread = Thread::find($id);
         $reply = $thread->replies()->create([
             'thread_id' => $thread->id,
-            'user_id' => auth()->guard('api')->user()->id,
+            'user_id' => $request->get('user_id'),
             'body' => $request->get('body')
         ]);
+
+        $user = User::find($request->get('user_id'));
+
+        activity()
+            ->causedBy($user)
+            ->performedOn($thread)
+            ->withProperties(['title' => $thread->title])
+            ->log('replied to ":properties.title".');
 
         return ThreadReplyResource::make($reply);
     }

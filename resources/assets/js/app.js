@@ -13,9 +13,6 @@ import VuePrism from 'vue-prism';
 Vue.use(VuePrism);
 import 'prismjs/themes/prism.css';
 
-import Turbolinks from 'turbolinks';
-Turbolinks.start();
-
 import Highlight from './extra/Highlight';
 document.addEventListener('turbolinks:load', () => {
     Highlight.start();
@@ -63,6 +60,8 @@ if (window.Notification) {
 
 import InstantSearch from 'vue-instantsearch';
 Vue.use(InstantSearch);
+
+Vue.config.productionTip = false;
 
 const app = new Vue({
     el: '#app',

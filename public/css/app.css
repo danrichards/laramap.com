@@ -43448,3 +43448,7 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-right {
   height: 700px;
 }
 
+#wrapper {
+  min-height: 80vh;
+}
+

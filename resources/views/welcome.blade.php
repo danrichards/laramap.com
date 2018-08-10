@@ -27,7 +27,9 @@
 
             <div class="card">
                 <div class="card-body">
-                    <p class="text-center">Laramap is a platform for laravel-developers around the world. On Laramap you can connect to other laravel developers in your area, create local user-groups and write articles. But you can also follow up whats going on in the community.</p>
+                    <p class="text-center">
+                        Laramap is a platform for laravel-developers around the world. On Laramap you can connect to other laravel developers in your area, create local user-groups and write articles. But you can also follow up whats going on in the community.
+                    </p>
                 </div>
             </div>
 
@@ -42,7 +44,7 @@
 
             <br>
 
-            <div class="row row-cards">
+            <div class="row row-cards justify-content-center">
                 <div class="col-6 col-sm-4 col-lg-2">
                     <div class="card">
                         <div class="card-body p-3 text-center">
@@ -52,14 +54,14 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-sm-4 col-lg-2">
-                    <div class="card">
-                        <div class="card-body p-3 text-center">
-                            <div class="h1 m-0">{{ \App\Models\UserGroup::all()->count() }}</div>
-                            <div class="text-muted mb-4">Laravel usergroups</div>
-                        </div>
-                    </div>
-                </div>
+                {{--<div class="col-6 col-sm-4 col-lg-2">--}}
+                    {{--<div class="card">--}}
+                        {{--<div class="card-body p-3 text-center">--}}
+                            {{--<div class="h1 m-0">{{ \App\Models\UserGroup::all()->count() }}</div>--}}
+                            {{--<div class="text-muted mb-4">Laravel usergroups</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
 
                 <div class="col-6 col-sm-4 col-lg-2">
                     <div class="card">
@@ -70,14 +72,14 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-sm-4 col-lg-2">
-                    <div class="card">
-                        <div class="card-body p-3 text-center">
-                            <div class="h1 m-0">{{ \App\Models\Article::all()->count() }}</div>
-                            <div class="text-muted mb-4">User written articles</div>
-                        </div>
-                    </div>
-                </div>
+                {{--<div class="col-6 col-sm-4 col-lg-2">--}}
+                    {{--<div class="card">--}}
+                        {{--<div class="card-body p-3 text-center">--}}
+                            {{--<div class="h1 m-0">{{ \App\Models\Article::all()->count() }}</div>--}}
+                            {{--<div class="text-muted mb-4">User written articles</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
 
                 <div class="col-6 col-sm-4 col-lg-2">
                     <div class="card">
@@ -88,14 +90,14 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-sm-4 col-lg-2">
-                    <div class="card">
-                        <div class="card-body p-3 text-center">
-                            <div class="h1 m-0">{{ \App\Models\ArticleReply::all()->count() }}</div>
-                            <div class="text-muted mb-4">Comments on articles</div>
-                        </div>
-                    </div>
-                </div>
+                {{--<div class="col-6 col-sm-4 col-lg-2">--}}
+                    {{--<div class="card">--}}
+                        {{--<div class="card-body p-3 text-center">--}}
+                            {{--<div class="h1 m-0">{{ \App\Models\ArticleReply::all()->count() }}</div>--}}
+                            {{--<div class="text-muted mb-4">Comments on articles</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             </div>
         </section>
 

@@ -40,7 +40,7 @@
                                     </small>
                                 </div>
                                 <div class="ml-auto text-muted">
-                                    <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>
+                                    <!--<a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>-->
                                 </div>
                             </div>
                         </div>
@@ -130,7 +130,7 @@
 
             async getThreads() {
                 let self = this;
-                await axios.get('/api/forums/threads')
+                await axios.get('/public-api/forums/threads')
                     .then(function (response) {
                         self.threads = response.data.data;
                         self.links = response.data.links;
@@ -143,7 +143,7 @@
 
             async getThreadCategories() {
                 let self = this;
-                await axios.get('/api/forums/categories')
+                await axios.get('/public-api/forums/categories')
                     .then(function (response) {
                         self.categories = response.data.data;
                     })

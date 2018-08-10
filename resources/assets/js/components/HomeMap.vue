@@ -33,7 +33,7 @@
                 map.scrollZoom.disable();
 
                 let self = this;
-                await axios.get('/api/users')
+                await axios.get('/public-api/users')
                     .then(function (response) {
                         self.users = response.data.data;
                         self.users.forEach(function(user) {

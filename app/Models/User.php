@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
 use Laravel\Scout\Searchable;
+use Spatie\Activitylog\Models\Activity;
 
 /**
  * App\Models\User.
@@ -81,6 +82,7 @@ use Laravel\Scout\Searchable;
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User[] $followers
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User[] $following
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User[] $liking
+ * @property-read \Illuminate\Support\Collection $activities
  */
 class User extends Authenticatable implements LikerContract
 {
@@ -113,7 +115,7 @@ class User extends Authenticatable implements LikerContract
      * @var array
      */
     protected $appends = [
-        'gravatar', 'avatar',
+        'gravatar', 'avatar', 'activities'
     ];
 
     /**
@@ -152,5 +154,13 @@ class User extends Authenticatable implements LikerContract
         }
 
         return $url;
+    }
+
+    /**
+     * @return \Illuminate\Support\Collection
+     */
+    public function getActivitiesAttribute()
+    {
+        return Activity::where('causer_id', $this->id)->get();
     }
 }

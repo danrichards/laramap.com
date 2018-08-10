@@ -7,6 +7,7 @@ use App\Http\Requests\Forums\ThreadCreateRequest;
 use App\Http\Requests\Forums\ThreadUpdateRequest;
 use App\Http\Resources\ThreadResource;
 use App\Models\Thread;
+use App\Models\User;
 
 class ThreadController extends Controller
 {
@@ -35,6 +36,15 @@ class ThreadController extends Controller
     public function store(ThreadCreateRequest $request)
     {
         $thread = Thread::create($request->validated());
+
+        $user = User::find($request->get('user_id'));
+
+        activity()
+            ->causedBy($user)
+            ->performedOn($thread)
+            ->withProperties(['title' => $thread->title])
+            ->log('created a new thread ":properties.title".');
+
 
         return ThreadResource::make($thread);
     }

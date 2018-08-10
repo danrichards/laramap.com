@@ -10,12 +10,12 @@
                     </div>
                 </div>
 
-                <div class="col-md-12">
+                <div class="col-md-4">
                     <div class="card" v-for="thread in threads">
                         <div class="card-status bg-blue"></div>
                         <div class="card-body d-flex flex-column">
                             <h4><a v-bind:href="'/forums/threads/' + thread.slug">{{ thread.title }}</a></h4>
-                            <div class="text-muted">{{ thread.body }}</div>
+                            <div class="text-muted">{{ thread.body | excerpt }}</div>
                             <div class="d-flex align-items-center pt-5 mt-auto">
                                 <img class="avatar avatar-md mr-3" v-bind:src="thread.user.avatar">
                                 <div>
@@ -33,7 +33,7 @@
                                     </small>
                                 </div>
                                 <div class="ml-auto text-muted">
-                                    <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>
+                                    <!--<a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>-->
                                 </div>
                             </div>
                         </div>
@@ -113,6 +113,10 @@
             momentTime(myDate) {
                 return moment(myDate).format('HH:mm');
             },
+
+            excerpt(myText) {
+                return myText.substring(0,400) + ' ...'
+            }
         },
 
         methods: {
@@ -122,7 +126,7 @@
 
             async getThreads() {
                 let self = this;
-                await axios.get('/api/forums/threads', {
+                await axios.get('/public-api/forums/threads', {
                     params: {
                         category_id: self.categoryid
                     }
