@@ -55,7 +55,7 @@ Laramap could not be without our sponsors! That´s why we want to say thank you 
 Becoming a sponsor for laramap means that you truly support the community and it´s open source projects.
 
 <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" >
-<a href="https://www.patreon.com/bePatron?u=3200756" data-patreon-widget-type="become-patron-button">
+<a href="https://www.patreon.com/bePatron?u=3200756">
     <img height="37px;" src="https://raw.githubusercontent.com/laramap/laramap.com/master/public/static/become_a_patron_button3x.png">
 </a>
 
