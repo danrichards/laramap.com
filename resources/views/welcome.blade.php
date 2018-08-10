@@ -125,17 +125,6 @@
             </div>
         </section>
 
-        <hr width="50%">
-
-        <section id="sponsors">
-            <h3 class="text-center">
-                Our latest users
-            </h3>
-            <br>
-
-            <user-latest></user-latest>
-        </section>
-
         <br>
     </div>
 @endsection

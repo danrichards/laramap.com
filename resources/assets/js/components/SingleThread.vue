@@ -119,13 +119,14 @@
                 currentUser: this.$parent.currentUser,
                 singleThread: {},
                 reply: {
-                    user_id: this.$parent.currentUser.id,
+                    user_id: null,
                     body: null,
                 }
             }
         },
 
         mounted() {
+            this.checkForAuth();
             this.getThread();
         },
 
@@ -144,6 +145,12 @@
         },
 
         methods: {
+            checkForAuth() {
+                if (window.Laramap.currentUser) {
+                    this.reply.user_id = window.Laramap.currentUser.id;
+                }
+            },
+
             async getThread() {
                 let self = this;
                 await axios.get('/public-api/forums/threads/' + this.threadid)

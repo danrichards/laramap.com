@@ -88,19 +88,19 @@
     export default {
         data() {
             return {
-                currentUser: window.Laramap.currentUser,
                 threads: [],
                 categories: [],
                 newThread: {
                     title: null,
                     category_id: null,
                     body: null,
-                    user_id: window.Laramap.currentUser.id
+                    user_id: null
                 }
             }
         },
 
         mounted() {
+            this.checkForAuth();
             this.getThreads();
             this.getThreadCategories();
         },
@@ -124,6 +124,12 @@
         },
 
         methods: {
+            checkForAuth() {
+                if (window.Laramap.currentUser) {
+                    this.newThread.user_id = window.Laramap.currentUser.id;
+                }
+            },
+
             moment() {
                 return window.moment;
             },
