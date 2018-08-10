@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Notifications\Admin\NotifyAboutNewUserNotification;
+use App\Notifications\Users\WelcomeNotification;
 use Laravel\Scout\Searchable;
 use Laravel\Passport\HasApiTokens;
 use Spatie\Activitylog\Models\Activity;
@@ -117,6 +119,26 @@ class User extends Authenticatable implements LikerContract
     protected $appends = [
         'gravatar', 'avatar', 'activities',
     ];
+
+    /**
+     * Boot method of the model
+     */
+    public static function boot()
+    {
+        parent::boot();
+        self::created(function ($model) {
+            $admins = User::all();
+            foreach ($admins as $admin) {
+                if (env('APP_ENV') === 'production') {
+                    if ($admin->is_admin) {
+                        $admin->notify(new NotifyAboutNewUserNotification($model));
+                    }
+                }
+            }
+
+            self::notify(new WelcomeNotification($model));
+        });
+    }
 
     /**
      * @return null|string
