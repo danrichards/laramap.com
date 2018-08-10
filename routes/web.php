@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -36,10 +25,6 @@ Route::view('about', 'static.about');
 Route::view('terms', 'static.terms');
 Route::view('privacy', 'static.privacy');
 Route::view('imprint', 'static.imprint');
-
-Route::get('/test', function () {
-    return response()->json(\PragmaRX\Countries\Package\Countries::all()->pluck('name'));
-});
 
 Route::group(['prefix' => 'forums'], function () {
     Route::view('/', 'forums.threads.list');

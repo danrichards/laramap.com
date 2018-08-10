@@ -2,13 +2,13 @@
 
 namespace App\Models;
 
-use Laravel\Scout\Searchable;
-use Laravel\Passport\HasApiTokens;
-use Spatie\Activitylog\Models\Activity;
-use Illuminate\Notifications\Notifiable;
+use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
 use Cog\Laravel\Love\Liker\Models\Traits\Liker;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Passport\HasApiTokens;
+use Laravel\Scout\Searchable;
+use Spatie\Activitylog\Models\Activity;
 
 /**
  * App\Models\User.

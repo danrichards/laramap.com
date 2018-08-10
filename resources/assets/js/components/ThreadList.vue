@@ -88,6 +88,7 @@
     export default {
         data() {
             return {
+                currentUser: this.$parent.currentUser,
                 threads: [],
                 categories: [],
                 newThread: {
