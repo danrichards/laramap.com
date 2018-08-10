@@ -49,8 +49,8 @@ class NotifyAboutNewUserNotification extends Notification implements ShouldQueue
         return (new MailMessage)
                     ->subject('New user on Laramap!')
                     ->greeting('Hello there')
-                    ->line($this->user->username . ' just signed up.')
-                    ->action('Show ' . $this->user->username . '´s profile', url('/@' . $this->user->username))
+                    ->line($this->user->username.' just signed up.')
+                    ->action('Show '.$this->user->username.'´s profile', url('/@'.$this->user->username))
                     ->line('Thank you for using Laramap!');
     }
 

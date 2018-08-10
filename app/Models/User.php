@@ -2,14 +2,14 @@
 
 namespace App\Models;
 
-use App\Notifications\Admin\NotifyAboutNewUserNotification;
-use App\Notifications\Users\WelcomeNotification;
 use Laravel\Scout\Searchable;
 use Laravel\Passport\HasApiTokens;
 use Spatie\Activitylog\Models\Activity;
 use Illuminate\Notifications\Notifiable;
 use Cog\Laravel\Love\Liker\Models\Traits\Liker;
+use App\Notifications\Users\WelcomeNotification;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Notifications\Admin\NotifyAboutNewUserNotification;
 use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
 
 /**
@@ -121,7 +121,7 @@ class User extends Authenticatable implements LikerContract
     ];
 
     /**
-     * Boot method of the model
+     * Boot method of the model.
      */
     public static function boot()
     {
