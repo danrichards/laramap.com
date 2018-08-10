@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Content-Language" content="en" />
-    <meta name="msapplication-TileColor" content="#2d89ef">
-    <meta name="theme-color" content="#4188c9">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
     @yield('meta')
 
-    <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
     <link rel="canonical" href="@yield('canonical', request()->url())" />
     <title>@yield('page_title') - {{ env('APP_NAME') }}</title>
 
@@ -43,11 +45,11 @@
     @else
         @include('_includes.navigation')
         @yield('content')
-        <div v-show="is_loading" class="loader"></div>
         @include('_includes.footer')
     @endif
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 <script src="{{ mix('js/app.js') }}"></script>
 <script type="text/javascript">
     var _paq = _paq || [];

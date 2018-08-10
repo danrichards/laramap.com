@@ -59,11 +59,6 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="form-label">Address</label>
-                                    <input type="text" class="form-control" name="address" placeholder="Eg. Infinite Loop 1, Cupertino">
-                                </div>
-
-                                <div class="form-group">
                                     <label class="form-label">Password</label>
                                     <input type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Password">
                                     @if ($errors->has('password'))

@@ -20,6 +20,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
+        "c3": "^0.6.7",
         "collect.js": "^4.0.16",
         "d3": "^5.4.0",
         "fullcalendar": "^3.9.0",
@@ -40,6 +41,7 @@
         "require": "^2.4.20",
         "selectize": "^0.12.6",
         "supercluster": "^4.1.1",
+        "sweetalert2": "^7.26.11",
         "tablesorter": "^2.30.7",
         "toastr": "^2.1.4",
         "turbolinks": "^5.1.1",

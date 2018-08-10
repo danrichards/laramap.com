@@ -117,7 +117,7 @@
 
         data() {
             return {
-                currentUser: window.Laramap.currentUser,
+                currentUser: this.$parent.currentUser,
                 singleThread: {},
                 reply: {
                     body: null,

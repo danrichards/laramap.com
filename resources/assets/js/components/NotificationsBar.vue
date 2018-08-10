@@ -1,5 +1,5 @@
 <template>
-    <div v-if="notifications.unread_notifications.length" class="dropdown d-none d-md-flex">
+    <div v-if="notifications.length" class="dropdown d-none d-md-flex">
         <a class="nav-link icon" data-toggle="dropdown">
             <i class="fe fe-bell"></i>
             <span class="nav-unread"></span>
@@ -35,7 +35,7 @@
                 let self = this;
                 await axios.get('/api/notifications')
                     .then(function (response) {
-                        self.notifications = response.data.data;
+                        self.notifications = response.data.data.unread_notifications;
                     })
                     .catch(function (error) {
                         console.log(error);

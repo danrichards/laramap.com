@@ -117,14 +117,6 @@ class User extends Authenticatable implements LikerContract
     ];
 
     /**
-     * @return string
-     */
-    public function receivesBroadcastNotificationsOn()
-    {
-        return 'private-App.Models.User.'.$this->id;
-    }
-
-    /**
      * @return null|string
      */
     public function getAvatarAttribute()

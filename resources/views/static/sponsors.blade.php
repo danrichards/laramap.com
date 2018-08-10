@@ -60,14 +60,14 @@
                             <div class="row justify-content-center">
                                 <div class="col-md-2 ml-md-auto">
                                     <a href="https://www.buymeacoffee.com/fwartner" target="_blank">
-                                        <a href="https://www.buymeacoffee.com/fwartner" target="_blank">
-                                            <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" >
-                                        </a>
+                                        <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" >
                                     </a>
                                 </div>
 
                                 <div class="col-md-2 mr-md-auto">
-                                    <a href="https://www.patreon.com/fwartner" class="btn btn-orange"><i class="fab fa-patreon"></i> Become a Patreon</a>
+                                    <a href="https://www.patreon.com/fwartner" class="btn btn-orange" target="_blank">
+                                        <i class="fab fa-patreon"></i> Become a Patreon
+                                    </a>
                                 </div>
                             </div>
 

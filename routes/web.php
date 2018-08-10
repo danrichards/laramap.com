@@ -47,3 +47,7 @@ Route::group(['prefix' => 'forums'], function () {
     Route::resource('threads', 'Forums\ThreadController');
     Route::resource('threads.replies', 'Forums\ThreadReplyController');
 });
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::view('/', 'admin.index');
+});

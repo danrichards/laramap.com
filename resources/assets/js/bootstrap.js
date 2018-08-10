@@ -98,3 +98,5 @@ window.getstream = require('getstream');
 
 window.places = require('places.js');
 window.moment = require('moment');
+window.swal = require('sweetalert2');
+window.c3 = require('c3');

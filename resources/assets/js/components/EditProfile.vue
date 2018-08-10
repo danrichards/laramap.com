@@ -14,7 +14,7 @@
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">
                             <label class="form-label">Username</label>
-                            <input type="text" class="form-control" placeholder="Username" name="username" v-model="user.username">
+                            <input type="text" class="form-control" placeholder="Username" name="username" readonly v-model="user.username">
                         </div>
                     </div>
 

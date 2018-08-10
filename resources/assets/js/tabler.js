@@ -14,7 +14,6 @@ require.config({
         'selectize': require('selectize'),
         'tablesorter': require('tablesorter'),
         'vector-map': require('jvectormap'),
-        'circle-progress': require('jquery-circle-progress'),
     }
 });
 window.tabler = {
