@@ -48,7 +48,7 @@ class WelcomeNotification extends Notification implements ShouldQueue
     {
         return (new MailMessage)
             ->subject('Welcome to Laramap 🔥')
-            ->greeting('Dear ' . $this->user->username)
+            ->greeting('Dear '.$this->user->username)
             ->line('The first step is already done..')
             ->line('Now let´s hit your profile.')
             ->line('In order to place yourself on the map, please make sure that you filled out your address in the settings.')
