@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Api\Forums;
 
+use App\Models\User;
+use App\Models\Thread;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\ThreadResource;
 use App\Http\Requests\Forums\ThreadCreateRequest;
 use App\Http\Requests\Forums\ThreadUpdateRequest;
-use App\Http\Resources\ThreadResource;
-use App\Models\Thread;
-use App\Models\User;
 
 class ThreadController extends Controller
 {
