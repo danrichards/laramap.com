@@ -9,13 +9,13 @@
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="{{ $thread->title }}"/>
     <meta property="og:description" content="{{ strip_tags($thread->body) }}"/>
-    <meta property="og:image" content="{{ asset('static/laramap_logo.svg') }}"/>
+    <meta name="og:image" content="https://laramap.com/static/og_logo.png">
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@laramapcom" />
     <meta name="twitter:title" content="{{ $thread->title }}" />
     <meta name="twitter:description" content="{{ strip_tags($thread->body) }}" />
-    <meta name="twitter:image" content="{{ asset('static/laramap_logo.svg') }}" />
+    <meta name="twitter:image:src" content="https://laramap.com/static/og_logo_twitter.png">
 @endsection
 
 @push('header_styles')
