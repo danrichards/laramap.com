@@ -2,14 +2,14 @@
 
 namespace App\Models;
 
-use Cog\Contracts\Love\Likeable\Models\Likeable as LikeableContract;
-use Cog\Laravel\Love\Likeable\Models\Traits\Likeable;
-use Illuminate\Database\Eloquent\Model;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
+use Illuminate\Database\Eloquent\Model;
+use Cog\Laravel\Love\Likeable\Models\Traits\Likeable;
+use Cog\Contracts\Love\Likeable\Models\Likeable as LikeableContract;
 
 /**
- * App\Models\Article
+ * App\Models\Article.
  *
  * @property int $id
  * @property int $user_id
@@ -61,7 +61,7 @@ class Article extends Model implements LikeableContract
      */
     protected $casts = [
         'is_marked' => 'boolean',
-        'is_published' => 'boolean'
+        'is_published' => 'boolean',
     ];
 
     /**

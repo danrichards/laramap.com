@@ -30,7 +30,7 @@ class CategorySeeder extends Seeder
     {
         $category = \App\Models\ThreadCategory::create([
             'title' => 'Off Topic',
-            'description' => 'Discussions besides development'
+            'description' => 'Discussions besides development',
         ]);
     }
 
@@ -38,7 +38,7 @@ class CategorySeeder extends Seeder
     {
         $category = \App\Models\ThreadCategory::create([
             'title' => 'Laravel',
-            'description' => 'Laravel related discussions'
+            'description' => 'Laravel related discussions',
         ]);
     }
 
@@ -46,7 +46,7 @@ class CategorySeeder extends Seeder
     {
         $category = \App\Models\ThreadCategory::create([
             'title' => 'Lumen',
-            'description' => 'Lumen related discussions'
+            'description' => 'Lumen related discussions',
         ]);
     }
 
@@ -54,7 +54,7 @@ class CategorySeeder extends Seeder
     {
         $category = \App\Models\ThreadCategory::create([
             'title' => 'Mix',
-            'description' => 'Mix related discussions'
+            'description' => 'Mix related discussions',
         ]);
     }
 
@@ -62,7 +62,7 @@ class CategorySeeder extends Seeder
     {
         $category = \App\Models\ThreadCategory::create([
             'title' => 'Testing',
-            'description' => 'Testing related discussions'
+            'description' => 'Testing related discussions',
         ]);
     }
 
@@ -70,7 +70,7 @@ class CategorySeeder extends Seeder
     {
         $category = \App\Models\ThreadCategory::create([
             'title' => 'Forge',
-            'description' => 'Forge related discussions'
+            'description' => 'Forge related discussions',
         ]);
     }
 
@@ -78,7 +78,7 @@ class CategorySeeder extends Seeder
     {
         $category = \App\Models\ThreadCategory::create([
             'title' => 'General',
-            'description' => 'General related discussions'
+            'description' => 'General related discussions',
         ]);
     }
 
@@ -86,7 +86,7 @@ class CategorySeeder extends Seeder
     {
         $category = \App\Models\ThreadCategory::create([
             'title' => 'Envoyer',
-            'description' => 'Envoyer related discussions'
+            'description' => 'Envoyer related discussions',
         ]);
     }
 
@@ -94,7 +94,7 @@ class CategorySeeder extends Seeder
     {
         $category = \App\Models\ThreadCategory::create([
             'title' => 'Spark',
-            'description' => 'Spark related discussions'
+            'description' => 'Spark related discussions',
         ]);
     }
 
@@ -102,7 +102,7 @@ class CategorySeeder extends Seeder
     {
         $category = \App\Models\ThreadCategory::create([
             'title' => 'Nova',
-            'description' => 'Nova related discussions'
+            'description' => 'Nova related discussions',
         ]);
     }
 
@@ -110,7 +110,7 @@ class CategorySeeder extends Seeder
     {
         $category = \App\Models\ThreadCategory::create([
             'title' => 'Tips',
-            'description' => 'Tip related discussions'
+            'description' => 'Tip related discussions',
         ]);
     }
 
@@ -118,7 +118,7 @@ class CategorySeeder extends Seeder
     {
         $category = \App\Models\ThreadCategory::create([
             'title' => 'Eloquent',
-            'description' => 'Eloquent related discussions'
+            'description' => 'Eloquent related discussions',
         ]);
     }
 
@@ -126,7 +126,7 @@ class CategorySeeder extends Seeder
     {
         $category = \App\Models\ThreadCategory::create([
             'title' => 'Code Review',
-            'description' => 'Code Review related discussions'
+            'description' => 'Code Review related discussions',
         ]);
     }
 }
