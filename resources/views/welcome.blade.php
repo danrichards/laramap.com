@@ -18,6 +18,23 @@
     <br>
 
     <div class="container">
+        <section id="about">
+            <h3 class="text-center">
+                What is Laramap?
+            </h3>
+
+            <br>
+
+            <div class="card">
+                <div class="card-body">
+                    <p class="text-center">Laramap is a platform for laravel-developers around the world. On Laramap you can connect to other laravel developers in your area, create local user-groups and write articles. But you can also follow up whats going on in the community.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <hr width="50%">
+
         <section id="stats">
             <h3 class="text-center">
                 Some numbers from the community
@@ -82,14 +99,7 @@
             </div>
         </section>
 
-        <section id="sponsors">
-            <h3 class="text-center">
-                Our latest users
-            </h3>
-            <br>
-
-            <user-latest></user-latest>
-        </section>
+        <hr width="50%">
 
         <section id="sponsors">
             <h3 class="text-center">
@@ -111,6 +121,17 @@
                     <img src="{{ asset('static/pusher.png') }}" alt="Pusher" style="max-height: 40px;">
                 </div>
             </div>
+        </section>
+
+        <hr width="50%">
+
+        <section id="sponsors">
+            <h3 class="text-center">
+                Our latest users
+            </h3>
+            <br>
+
+            <user-latest></user-latest>
         </section>
 
         <br>

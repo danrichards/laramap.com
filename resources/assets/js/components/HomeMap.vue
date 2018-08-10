@@ -55,12 +55,5 @@
 </script>
 
 <style scoped>
-    .mapboxgl-popup {
-        max-width: 200px;
-    }
 
-    .mapboxgl-popup-content {
-        text-align: center;
-        font-family: 'Open Sans', sans-serif;
-    }
 </style>
