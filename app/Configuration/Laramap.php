@@ -2,7 +2,6 @@
 
 namespace App\Configuration;
 
-
 class Laramap
 {
     /**

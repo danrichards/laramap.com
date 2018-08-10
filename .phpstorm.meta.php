@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2018-08-08 11:36:18.
+    * Generated on 2018-08-09 13:54:55.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -45,6 +45,9 @@ namespace PHPSTORM_META {
         'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'command.generate:diagram' => \BeyondCode\ErdGenerator\GenerateDiagramCommand::class,
         'BeyondCode\ViewXray\Xray' => \BeyondCode\ViewXray\Xray::class,
+        'Cog\Contracts\Love\Like\Models\Like' => \Cog\Laravel\Love\Like\Models\Like::class,
+        'Cog\Contracts\Love\LikeCounter\Models\LikeCounter' => \Cog\Laravel\Love\LikeCounter\Models\LikeCounter::class,
+        'Cog\Contracts\Love\Likeable\Services\LikeableService' => \Cog\Laravel\Love\Likeable\Services\LikeableService::class,
         'feed_manager' => \GetStream\StreamLaravel\StreamLaravelManager::class,
         'Laravel\Horizon\AutoScaler' => \Laravel\Horizon\AutoScaler::class,
         'Laravel\Horizon\Contracts\HorizonCommandQueue' => \Laravel\Horizon\RedisHorizonCommandQueue::class,
@@ -217,6 +220,9 @@ namespace PHPSTORM_META {
         'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'command.generate:diagram' => \BeyondCode\ErdGenerator\GenerateDiagramCommand::class,
         'BeyondCode\ViewXray\Xray' => \BeyondCode\ViewXray\Xray::class,
+        'Cog\Contracts\Love\Like\Models\Like' => \Cog\Laravel\Love\Like\Models\Like::class,
+        'Cog\Contracts\Love\LikeCounter\Models\LikeCounter' => \Cog\Laravel\Love\LikeCounter\Models\LikeCounter::class,
+        'Cog\Contracts\Love\Likeable\Services\LikeableService' => \Cog\Laravel\Love\Likeable\Services\LikeableService::class,
         'feed_manager' => \GetStream\StreamLaravel\StreamLaravelManager::class,
         'Laravel\Horizon\AutoScaler' => \Laravel\Horizon\AutoScaler::class,
         'Laravel\Horizon\Contracts\HorizonCommandQueue' => \Laravel\Horizon\RedisHorizonCommandQueue::class,
@@ -389,6 +395,9 @@ namespace PHPSTORM_META {
         'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'command.generate:diagram' => \BeyondCode\ErdGenerator\GenerateDiagramCommand::class,
         'BeyondCode\ViewXray\Xray' => \BeyondCode\ViewXray\Xray::class,
+        'Cog\Contracts\Love\Like\Models\Like' => \Cog\Laravel\Love\Like\Models\Like::class,
+        'Cog\Contracts\Love\LikeCounter\Models\LikeCounter' => \Cog\Laravel\Love\LikeCounter\Models\LikeCounter::class,
+        'Cog\Contracts\Love\Likeable\Services\LikeableService' => \Cog\Laravel\Love\Likeable\Services\LikeableService::class,
         'feed_manager' => \GetStream\StreamLaravel\StreamLaravelManager::class,
         'Laravel\Horizon\AutoScaler' => \Laravel\Horizon\AutoScaler::class,
         'Laravel\Horizon\Contracts\HorizonCommandQueue' => \Laravel\Horizon\RedisHorizonCommandQueue::class,
@@ -561,6 +570,9 @@ namespace PHPSTORM_META {
         'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'command.generate:diagram' => \BeyondCode\ErdGenerator\GenerateDiagramCommand::class,
         'BeyondCode\ViewXray\Xray' => \BeyondCode\ViewXray\Xray::class,
+        'Cog\Contracts\Love\Like\Models\Like' => \Cog\Laravel\Love\Like\Models\Like::class,
+        'Cog\Contracts\Love\LikeCounter\Models\LikeCounter' => \Cog\Laravel\Love\LikeCounter\Models\LikeCounter::class,
+        'Cog\Contracts\Love\Likeable\Services\LikeableService' => \Cog\Laravel\Love\Likeable\Services\LikeableService::class,
         'feed_manager' => \GetStream\StreamLaravel\StreamLaravelManager::class,
         'Laravel\Horizon\AutoScaler' => \Laravel\Horizon\AutoScaler::class,
         'Laravel\Horizon\Contracts\HorizonCommandQueue' => \Laravel\Horizon\RedisHorizonCommandQueue::class,
@@ -733,6 +745,9 @@ namespace PHPSTORM_META {
         'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'command.generate:diagram' => \BeyondCode\ErdGenerator\GenerateDiagramCommand::class,
         'BeyondCode\ViewXray\Xray' => \BeyondCode\ViewXray\Xray::class,
+        'Cog\Contracts\Love\Like\Models\Like' => \Cog\Laravel\Love\Like\Models\Like::class,
+        'Cog\Contracts\Love\LikeCounter\Models\LikeCounter' => \Cog\Laravel\Love\LikeCounter\Models\LikeCounter::class,
+        'Cog\Contracts\Love\Likeable\Services\LikeableService' => \Cog\Laravel\Love\Likeable\Services\LikeableService::class,
         'feed_manager' => \GetStream\StreamLaravel\StreamLaravelManager::class,
         'Laravel\Horizon\AutoScaler' => \Laravel\Horizon\AutoScaler::class,
         'Laravel\Horizon\Contracts\HorizonCommandQueue' => \Laravel\Horizon\RedisHorizonCommandQueue::class,
@@ -905,6 +920,9 @@ namespace PHPSTORM_META {
         'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'command.generate:diagram' => \BeyondCode\ErdGenerator\GenerateDiagramCommand::class,
         'BeyondCode\ViewXray\Xray' => \BeyondCode\ViewXray\Xray::class,
+        'Cog\Contracts\Love\Like\Models\Like' => \Cog\Laravel\Love\Like\Models\Like::class,
+        'Cog\Contracts\Love\LikeCounter\Models\LikeCounter' => \Cog\Laravel\Love\LikeCounter\Models\LikeCounter::class,
+        'Cog\Contracts\Love\Likeable\Services\LikeableService' => \Cog\Laravel\Love\Likeable\Services\LikeableService::class,
         'feed_manager' => \GetStream\StreamLaravel\StreamLaravelManager::class,
         'Laravel\Horizon\AutoScaler' => \Laravel\Horizon\AutoScaler::class,
         'Laravel\Horizon\Contracts\HorizonCommandQueue' => \Laravel\Horizon\RedisHorizonCommandQueue::class,
@@ -1077,6 +1095,9 @@ namespace PHPSTORM_META {
         'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'command.generate:diagram' => \BeyondCode\ErdGenerator\GenerateDiagramCommand::class,
         'BeyondCode\ViewXray\Xray' => \BeyondCode\ViewXray\Xray::class,
+        'Cog\Contracts\Love\Like\Models\Like' => \Cog\Laravel\Love\Like\Models\Like::class,
+        'Cog\Contracts\Love\LikeCounter\Models\LikeCounter' => \Cog\Laravel\Love\LikeCounter\Models\LikeCounter::class,
+        'Cog\Contracts\Love\Likeable\Services\LikeableService' => \Cog\Laravel\Love\Likeable\Services\LikeableService::class,
         'feed_manager' => \GetStream\StreamLaravel\StreamLaravelManager::class,
         'Laravel\Horizon\AutoScaler' => \Laravel\Horizon\AutoScaler::class,
         'Laravel\Horizon\Contracts\HorizonCommandQueue' => \Laravel\Horizon\RedisHorizonCommandQueue::class,

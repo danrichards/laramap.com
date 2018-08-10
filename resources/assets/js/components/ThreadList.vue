@@ -49,44 +49,34 @@
             </div>
         </div>
 
-        <div class="modal fade" id="newThreadModal" tabindex="-1" role="dialog" aria-labelledby="newThreadModalLabel" aria-hidden="true">
+        <div v-if="currentUser" class="modal fade" id="newThreadModal" tabindex="-1" role="dialog" aria-labelledby="newThreadModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="newThreadModalLabel">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                        <h5 class="modal-title" id="newThreadModalLabel">Start a new thread</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="">
                             <div class="form-group">
-                                <div class="row align-items-center">
-                                    <label class="col-sm-2">To:</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
+                                <label for="title">Title:</label>
+                                <input type="text" id="title" class="form-control" name="title" v-model="newThread.title">
                             </div>
                             <div class="form-group">
-                                <div class="row align-items-center">
-                                    <label class="col-sm-2">Subject:</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
+                                <label for="category">Category:</label>
+                                <select class="form-control custom-select" id="category" v-model="newThread.category_id">
+                                    <option v-for="category in categories" v-bind:value="category.id">{{ category.title }}</option>
+                                </select>
                             </div>
-                            <textarea rows="10" class="form-control"></textarea>
-                            <div class="btn-list mt-4 text-right">
-                                <button type="button" class="btn btn-secondary btn-space">Cancel</button>
-                                <button type="submit" class="btn btn-primary btn-space">Send message</button>
-                            </div>
+
+                            <label for="body">Question:</label>
+                            <textarea rows="10" class="form-control" name="body" id="body" v-model="newThread.body"></textarea>
                         </form>
                     </div>
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-primary" v-on:click="createNewThread">Create Thread</button>
                     </div>
                 </div>
             </div>
@@ -98,8 +88,15 @@
     export default {
         data() {
             return {
+                currentUser: window.Laramap.currentUser,
                 threads: [],
-                categories: []
+                categories: [],
+                newThread: {
+                    title: null,
+                    category_id: null,
+                    body: null,
+                    user_id: window.Laramap.currentUser.id
+                }
             }
         },
 
@@ -153,7 +150,18 @@
                     .catch(function (error) {
                         console.log(error);
                     });
-            }
+            },
+
+            async createNewThread() {
+                let self = this;
+                await axios.post('/api/forums/threads', this.newThread)
+                    .then(function (response) {
+                        window.location = '/forums/threads/' +  response.data.data.slug;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            },
         }
     }
 </script>

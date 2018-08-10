@@ -2,11 +2,11 @@
 
 namespace App\Models;
 
+use Cog\Contracts\Love\Likeable\Models\Likeable as LikeableContract;
+use Cog\Laravel\Love\Likeable\Models\Traits\Likeable;
+use Illuminate\Database\Eloquent\Model;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
-use Illuminate\Database\Eloquent\Model;
-use Cog\Laravel\Love\Likeable\Models\Traits\Likeable;
-use Cog\Contracts\Love\Likeable\Models\Likeable as LikeableContract;
 
 /**
  * App\Models\Thread.
@@ -36,6 +36,18 @@ use Cog\Contracts\Love\Likeable\Models\Likeable as LikeableContract;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Thread whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Thread whereUserId($value)
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Thread[] $likers
+ * @property-read \Cog\Laravel\Love\LikeCounter\Models\LikeCounter $dislikesCounter
+ * @property-read bool $disliked
+ * @property-read int $dislikes_count
+ * @property-read bool $liked
+ * @property-read int $likes_count
+ * @property-read int $likes_diff_dislikes_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Cog\Laravel\Love\Like\Models\Like[] $likesAndDislikes
+ * @property-read \Cog\Laravel\Love\LikeCounter\Models\LikeCounter $likesCounter
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Thread orderByDislikesCount($direction = 'desc')
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Thread orderByLikesCount($direction = 'desc')
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Thread whereDislikedBy($userId = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Thread whereLikedBy($userId = null)
  */
 class Thread extends Model implements LikeableContract
 {

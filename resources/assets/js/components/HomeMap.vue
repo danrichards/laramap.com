@@ -37,11 +37,13 @@
                     .then(function (response) {
                         self.users = response.data.data;
                         self.users.forEach(function(user) {
-                            new window.mapboxgl.Marker()
-                                .setLngLat([user.longitude, user.latitude])
-                                .setPopup(new window.mapboxgl.Popup({ offset: 25 })
-                                    .setHTML('<img class="avatar" src="' + user.avatar + '">' + '<h3>' + user.name + '</h3><p>' + user.username + '</p>'))
-                                .addTo(map);
+                            if (user.longitude) {
+                                new window.mapboxgl.Marker()
+                                    .setLngLat([user.longitude, user.latitude])
+                                    .setPopup(new window.mapboxgl.Popup({ offset: 25 })
+                                        .setHTML('<a href="/@' + user.username + '"><img class="avatar" src="' + user.avatar + '"></a>'))
+                                    .addTo(map);
+                            }
                         });
                     })
                     .catch(function (error) {
