@@ -28,6 +28,29 @@ Coming soon.
 # Sponsors
 Laramap could not be without our sponsors! That´s why we want to say thank you to all of our sponsors!
 
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="middle">
+        <a href="https://m.do.co/c/3dca62b8d69e" target="_blank">
+          <img height="40px" src="https://raw.githubusercontent.com/laramap/laramap.com/master/public/static/DO_Logo_Horizontal_Blue.png">
+        </a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="https://algolia.com" target="_blank">
+          <img width="222px" src="https://raw.githubusercontent.com/laramap/laramap.com/master/public/static/logo-algolia-nebula-blue-whitespaces-1b393e11.png">
+        </a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="https://pusher.com" target="_blank">
+          <img width="222px" src="https://raw.githubusercontent.com/laramap/laramap.com/master/public/static/pusher.png">
+        </a>
+      </td>
+    </tr>
+    <tr>
+  </tbody>
+</table>
+
 <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" >
 <a href="https://www.patreon.com/bePatron?u=3200756" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
 
