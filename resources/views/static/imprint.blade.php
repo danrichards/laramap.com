@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('page_title')
-    Impring
+    Imprint
 @endsection
 
 @push('styles')
