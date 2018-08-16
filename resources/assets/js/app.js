@@ -55,7 +55,7 @@ Vue.component('single-thread', require('./components/SingleThread.vue'));
 if (window.Notification) {
     console.log('Notifications are supported!');
 } else {
-    alert('Notifications aren\'t supported on your browser! :(');
+    console.log('Notifications aren\'t supported on your browser! :(');
 }
 
 import InstantSearch from 'vue-instantsearch';

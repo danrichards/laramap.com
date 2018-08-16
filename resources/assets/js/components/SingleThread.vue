@@ -168,7 +168,7 @@
                 await axios.post('/api/forums/threads/' + this.threadid + '/replies', this.reply)
                     .then(function (response) {
                         self.singleThread.replies.push(response.data.data);
-                        toastr.success('Your profile has been updated', '✅');
+                        toastr.success('Your reply has been saved.', '✅');
                         this.reply.body = '';
                     })
                     .catch(function (error) {

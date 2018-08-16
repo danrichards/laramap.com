@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e7b18fc4944d4d88efb4830d1fee2af",
+    "content-hash": "c51c860f7f5d1aa560a58460a398bfdf",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -160,6 +160,126 @@
                 "toolkit"
             ],
             "time": "2015-05-16T19:24:58+00:00"
+        },
+        {
+            "name": "beyondcode/laravel-confirm-email",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/beyondcode/laravel-confirm-email.git",
+                "reference": "ebf34f22c47ed039e6bbb49bd4a0fb38d7725cf5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/beyondcode/laravel-confirm-email/zipball/ebf34f22c47ed039e6bbb49bd4a0fb38d7725cf5",
+                "reference": "ebf34f22c47ed039e6bbb49bd4a0fb38d7725cf5",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/auth": "~5.5.0|~5.6.0",
+                "illuminate/database": "~5.5.0|~5.6.0",
+                "illuminate/notifications": "~5.5.0|~5.6.0",
+                "illuminate/support": "~5.5.0|~5.6.0",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.5.0|~3.6.0",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BeyondCode\\EmailConfirmation\\EmailConfirmationServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BeyondCode\\EmailConfirmation\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcel Pociot",
+                    "email": "marcel@beyondco.de",
+                    "homepage": "https://beyondcode.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Add email verification to your Laravel projects.",
+            "homepage": "https://github.com/beyondcode/laravel-confirm-email",
+            "keywords": [
+                "beyondcode",
+                "laravel-confirm-email"
+            ],
+            "time": "2018-08-07T11:18:41+00:00"
+        },
+        {
+            "name": "beyondcode/laravel-vouchers",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/beyondcode/laravel-vouchers.git",
+                "reference": "61e39d86599ca59c618855c70a98ad0d83fc867c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/beyondcode/laravel-vouchers/zipball/61e39d86599ca59c618855c70a98ad0d83fc867c",
+                "reference": "61e39d86599ca59c618855c70a98ad0d83fc867c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "~5.5.0|~5.6.0",
+                "illuminate/database": "~5.5.0|~5.6.0",
+                "illuminate/support": "~5.5.0|~5.6.0",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "larapack/dd": "^1.0",
+                "mockery/mockery": "^1.1",
+                "orchestra/testbench": "~3.5.0|~3.6.0",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BeyondCode\\Vouchers\\VouchersServiceProvider"
+                    ],
+                    "aliases": {
+                        "Vouchers": "BeyondCode\\Vouchers\\Facades\\Vouchers"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BeyondCode\\Vouchers\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcel Pociot",
+                    "email": "marcel@beyondco.de",
+                    "homepage": "https://beyondcode.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Allow users to redeem vouchers that are bound to models..",
+            "homepage": "https://github.com/beyondcode/laravel-vouchers",
+            "keywords": [
+                "beyondcode",
+                "laravel-vouchers"
+            ],
+            "time": "2018-07-09T11:55:31+00:00"
         },
         {
             "name": "cakephp/chronos",
@@ -5964,6 +6084,67 @@
                 }
             ],
             "time": "2016-06-13T19:28:20+00:00"
+        },
+        {
+            "name": "beyondcode/laravel-dump-server",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/beyondcode/laravel-dump-server.git",
+                "reference": "d24b641e9c8db7c33ad6e4db7042bbd352b92ad1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/beyondcode/laravel-dump-server/zipball/d24b641e9c8db7c33ad6e4db7042bbd352b92ad1",
+                "reference": "d24b641e9c8db7c33ad6e4db7042bbd352b92ad1",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "5.6.*|5.7.*",
+                "illuminate/http": "5.6.*|5.7.*",
+                "illuminate/support": "5.6.*|5.7.*",
+                "php": "^7.1",
+                "symfony/var-dumper": "^4.1.1"
+            },
+            "require-dev": {
+                "larapack/dd": "^1.0",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BeyondCode\\DumpServer\\DumpServerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BeyondCode\\DumpServer\\": "src"
+                },
+                "files": [
+                    "helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcel Pociot",
+                    "email": "marcel@beyondco.de",
+                    "homepage": "https://beyondcode.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Symfony Var-Dump Server for Laravel",
+            "homepage": "https://github.com/beyondcode/laravel-dump-server",
+            "keywords": [
+                "beyondcode",
+                "laravel-dump-server"
+            ],
+            "time": "2018-08-05T19:09:56+00:00"
         },
         {
             "name": "beyondcode/laravel-er-diagram-generator",
