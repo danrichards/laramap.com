@@ -125,7 +125,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="text-left">
-                            <button type="submit" class="btn btn-danger" v-on:click="deleteAccountPrompt">Delete Account</button>
+                            <button class="btn btn-danger" v-on:click="deleteAccountPrompt">Delete Account</button>
                         </div>
                     </div>
 
