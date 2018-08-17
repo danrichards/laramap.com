@@ -126,17 +126,17 @@ class User extends Authenticatable implements LikerContract
     public static function boot()
     {
         parent::boot();
-        self::created(function ($model) {
+        self::created(function (User $user) {
             $admins = User::all();
             foreach ($admins as $admin) {
                 if (env('APP_ENV') === 'production') {
                     if ($admin->is_admin) {
-                        $admin->notify(new NotifyAboutNewUserNotification($model));
+                        $admin->notify(new NotifyAboutNewUserNotification($user));
                     }
                 }
             }
 
-            self::notify(new WelcomeNotification($model));
+            $user->notify(new WelcomeNotification($user));
         });
     }
 

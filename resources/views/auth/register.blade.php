@@ -30,7 +30,7 @@
                                 <div class="card-title">Create new account</div>
                                 <div class="form-group">
                                     <label class="form-label">Name</label>
-                                    <input type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" placeholder="Enter name">
+                                    <input type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" placeholder="Enter name" value="{{ old('name') }}">
                                     @if ($errors->has('name'))
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('name') }}</strong>
@@ -40,7 +40,7 @@
 
                                 <div class="form-group">
                                     <label class="form-label">Username</label>
-                                    <input type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" placeholder="Enter username">
+                                    <input type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" placeholder="Enter username" value="{{ old('username') }}">
                                     @if ($errors->has('username'))
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('username') }}</strong>
@@ -50,7 +50,7 @@
 
                                 <div class="form-group">
                                     <label class="form-label">Email address</label>
-                                    <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" placeholder="Enter email">
+                                    <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" placeholder="Enter email" value="{{ old('email') }}">
                                     @if ($errors->has('email'))
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -75,7 +75,7 @@
 
                                 <div class="form-group">
                                     <label class="form-label">Terms of Service</label>
-                                    <input type="checkbox" name="terms" class="form-control{{ $errors->has('terms') ? ' is-invalid' : '' }}" value="{{ old('terms') }}"> I agree to the <a href="{{ url('/terms') }}">Terms of Service</a>
+                                    <input type="checkbox" name="terms" class="form-control{{ $errors->has('terms') ? ' is-invalid' : '' }}" value="1" {{ old('terms') ? 'checked' : '' }}> I agree to the <a href="{{ url('/terms') }}">Terms of Service</a>
                                     @if ($errors->has('terms'))
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('terms') }}</strong>
