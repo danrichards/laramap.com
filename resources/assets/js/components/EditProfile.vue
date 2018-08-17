@@ -204,7 +204,7 @@
             },
 
             deleteAccountPrompt() {
-                alert('HA! NEVER! 🖕')
+                alert('This function will come next week.. 😘')
             }
         }
     }
