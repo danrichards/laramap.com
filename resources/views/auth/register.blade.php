@@ -69,7 +69,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="form-label">Conform Password</label>
+                                    <label class="form-label">Confirm Password</label>
                                     <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm password">
                                 </div>
 
