@@ -2,15 +2,15 @@
 
 namespace App\Models;
 
-use Laravel\Scout\Searchable;
-use Laravel\Passport\HasApiTokens;
-use Spatie\Activitylog\Models\Activity;
-use Illuminate\Notifications\Notifiable;
-use Cog\Laravel\Love\Liker\Models\Traits\Liker;
-use App\Notifications\Users\WelcomeNotification;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Notifications\Admin\NotifyAboutNewUserNotification;
+use App\Notifications\Users\WelcomeNotification;
 use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
+use Cog\Laravel\Love\Liker\Models\Traits\Liker;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Passport\HasApiTokens;
+use Laravel\Scout\Searchable;
+use Spatie\Activitylog\Models\Activity;
 
 /**
  * App\Models\User.
@@ -85,6 +85,10 @@ use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User[] $following
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User[] $liking
  * @property-read \Illuminate\Support\Collection $activities
+ * @property string|null $confirmation_code
+ * @property string|null $confirmed_at
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereConfirmationCode($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereConfirmedAt($value)
  */
 class User extends Authenticatable implements LikerContract
 {
