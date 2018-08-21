@@ -3,6 +3,8 @@
 </p>
 
 # What is Laramap?
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Flaramap%2Flaramap.com.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Flaramap%2Flaramap.com?ref=badge_shield)
+
 Laramap is a platform for laravel-developers around the world.
 On Laramap you can connect to other laravel developers in your area, create local user-groups and write articles.
 
