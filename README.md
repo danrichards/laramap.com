@@ -61,3 +61,5 @@ Becoming a sponsor for laramap means that you truly support the community and it
 
 # License
 This project and the Laravel framework are open-sourced software licensed under the MIT license.
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Flaramap%2Flaramap.com.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Flaramap%2Flaramap.com?ref=badge_large)
