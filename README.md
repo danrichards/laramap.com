@@ -48,6 +48,11 @@ Laramap could not be without our sponsors! That´s why we want to say thank you 
           <img width="222px" src="https://raw.githubusercontent.com/laramap/laramap.com/master/public/static/pusher.png">
         </a>
       </td>
+      <td align="center" valign="middle">
+        <a href="https://www.vultr.com/?ref=7514766" target="_blank">
+          <img width="222px" src="https://www.vultr.com/media/logo_onwhite.svg">
+        </a>
+      </td>
     </tr>
     <tr>
   </tbody>
