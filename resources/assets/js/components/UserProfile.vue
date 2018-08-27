@@ -9,10 +9,6 @@
                             <img class="card-profile-img" v-bind:src="user.avatar">
                             <h3 class="mb-3">{{ user.name }}</h3>
 
-                            <p class="mb-4">
-                                {{ user.biography }}
-                            </p>
-
                             <a class="btn btn-outline-primary btn-sm" v-if="user.web_link" v-bind:href="user.web_link">
                                 <i class="fas fa-globe"></i>
                             </a>
@@ -64,25 +60,37 @@
                     <!--</div>-->
                 </div>
 
-                <div class="col-lg-8">
-                    <div class="card">
-                        <div class="card-header">
-                            Latest activity
+                <div class="row">
+                    <div class="col-12" v-show="user.biography">
+                        <div class="card">
+                            <div class="card-header">
+                                Biography
+                            </div>
+
+                            <div class="card-body" v-html="user.biography"></div>
                         </div>
+                    </div>
 
-                        <div class="card-body">
-                           <ul class="timeline" v-if="user.activities">
-                               <li class="timeline-item" v-for="activity in user.activities">
-                                   <div class="timeline-badge bg-green"></div>
-                                   {{ user.name }} {{ activity.description }}
-                                   <div class="timeline-time">{{ activity.created_at | momentFull }}</div>
-                               </li>
-                           </ul>
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                Latest activity
+                            </div>
 
-                            <h4 class="text-center" v-else>
-                                {{ user.name }} has no recent activity
-                            </h4>
-                       </div>
+                            <div class="card-body">
+                                <ul class="timeline" v-if="user.activities">
+                                    <li class="timeline-item" v-for="activity in user.activities">
+                                        <div class="timeline-badge bg-green"></div>
+                                        {{ user.name }} {{ activity.description }}
+                                        <div class="timeline-time">{{ activity.created_at | momentFull }}</div>
+                                    </li>
+                                </ul>
+
+                                <h4 class="text-center" v-else>
+                                    {{ user.name }} has no recent activity
+                                </h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
