@@ -2,20 +2,20 @@
 
 namespace App\Nova;
 
-use App\Nova\Actions\SendInformationEmail;
-use App\Nova\Metrics\NewUsers;
+use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Text;
+use App\Nova\Metrics\NewUsers;
+use Laravel\Nova\Fields\Place;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Country;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Gravatar;
-use Laravel\Nova\Fields\HasMany;
-use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Markdown;
-use Laravel\Nova\Fields\MorphToMany;
 use Laravel\Nova\Fields\Password;
-use Laravel\Nova\Fields\Place;
-use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\MorphToMany;
+use App\Nova\Actions\SendInformationEmail;
 
 class User extends Resource
 {
@@ -150,7 +150,7 @@ class User extends Resource
     public function actions(Request $request)
     {
         return [
-            new SendInformationEmail()
+            new SendInformationEmail(),
         ];
     }
 

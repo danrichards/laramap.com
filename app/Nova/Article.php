@@ -2,11 +2,11 @@
 
 namespace App\Nova;
 
-use Illuminate\Http\Request;
-use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Markdown;
+use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\Markdown;
 
 class Article extends Resource
 {
@@ -30,7 +30,7 @@ class Article extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'title', 'slug'
+        'id', 'title', 'slug',
     ];
 
     /**
@@ -46,7 +46,7 @@ class Article extends Resource
             Text::make('Title', 'title'),
             Markdown::make('Body', 'body'),
             DateTime::make('Created At')->hideFromIndex(),
-            DateTime::make('Updated At')->hideFromIndex()
+            DateTime::make('Updated At')->hideFromIndex(),
         ];
     }
 
