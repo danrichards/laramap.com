@@ -4,9 +4,9 @@ namespace App\Notifications\Users;
 
 use App\Models\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Notification;
 
 class WelcomeNotification extends Notification implements ShouldQueue
 {
@@ -53,8 +53,8 @@ class WelcomeNotification extends Notification implements ShouldQueue
             ->line('Now let´s hit your profile.')
             ->line('In order to place yourself on the map, please make sure that you filled out your address in the settings.')
             ->action('Show Settings', url('/settings'))
-            ->line('Please note that laramap is still in development.')
-            ->line('Thank you for using Laramap!');
+            ->line('Please note that laramap is still in development. 👷‍')
+            ->line('Thank you for using Laramap! 😻');
     }
 
     /**

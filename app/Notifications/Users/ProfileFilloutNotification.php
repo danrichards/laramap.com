@@ -5,12 +5,10 @@ namespace App\Notifications\Users;
 use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Notifications\Channels\BroadcastChannel;
-use Illuminate\Notifications\Messages\BroadcastMessage;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class NewFollowerNotification extends Notification implements ShouldQueue
+class ProfileFilloutNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
@@ -37,7 +35,7 @@ class NewFollowerNotification extends Notification implements ShouldQueue
      */
     public function via($notifiable)
     {
-        return ['mail', 'database', BroadcastChannel::class];
+        return ['mail'];
     }
 
     /**
@@ -49,11 +47,13 @@ class NewFollowerNotification extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->subject('New follower!')
-                    ->greeting('Hey, '.$notifiable->name)
-                    ->line($this->user->username.' started following you!')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using Laramap! 😻');
+            ->subject('Your profile looks so empty 😿')
+            ->greeting('Dear '.$this->user->username)
+            ->line('In order to get the most out of Laramap, we want to encourage you to fill out your profile.')
+            ->line('Otherwise other people here on Laramap will not be able to connect with you.')
+            ->action('Show Settings', url('/settings'))
+            ->line('Please note that laramap is still in development. 👷‍')
+            ->line('Thank you for using Laramap! 😻');
     }
 
     /**
@@ -65,22 +65,7 @@ class NewFollowerNotification extends Notification implements ShouldQueue
     public function toArray($notifiable)
     {
         return [
-            'title' => $this->user->username.'started following you',
-            'from_user' => $this->user,
+            //
         ];
-    }
-
-    /**
-     * Get the broadcastable representation of the notification.
-     *
-     * @param  mixed  $notifiable
-     * @return BroadcastMessage
-     */
-    public function toBroadcast($notifiable)
-    {
-        return new BroadcastMessage([
-            'title' => 'started following you',
-            'from_user' => $this->user,
-        ]);
     }
 }

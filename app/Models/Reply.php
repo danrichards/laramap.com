@@ -4,6 +4,30 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * App\Models\Reply
+ *
+ * @property int $id
+ * @property int|null $thread_id
+ * @property int|null $article_id
+ * @property int $user_id
+ * @property string $body
+ * @property bool $is_marked
+ * @property \Carbon\Carbon|null $created_at
+ * @property \Carbon\Carbon|null $updated_at
+ * @property-read \App\Models\Article|null $article
+ * @property-read \App\Models\Thread|null $thread
+ * @property-read \App\Models\User $user
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Reply whereArticleId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Reply whereBody($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Reply whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Reply whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Reply whereIsMarked($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Reply whereThreadId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Reply whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Reply whereUserId($value)
+ * @mixin \Eloquent
+ */
 class Reply extends Model
 {
     /**

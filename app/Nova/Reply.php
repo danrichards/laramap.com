@@ -2,14 +2,11 @@
 
 namespace App\Nova;
 
-use App\Nova\Metrics\ThreadRepliesPerDay;
+use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
-use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Markdown;
-use Laravel\Nova\Fields\MorphTo;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Reply extends Resource
 {

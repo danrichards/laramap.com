@@ -4,9 +4,9 @@ namespace App\Notifications\Users;
 
 use App\Models\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Notification;
 
 class InfoNotification extends Notification implements ShouldQueue
 {
@@ -57,7 +57,7 @@ class InfoNotification extends Notification implements ShouldQueue
             ->subject('News on Laramap.com 🔥')
             ->greeting('Dear '.$this->user->username)
             ->line($this->data[])
-            ->line('Thank you for using Laramap!');
+            ->line('Thank you for using Laramap! 😻');
     }
 
     /**

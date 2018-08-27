@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Api\Social;
 
-use App\Models\User;
-use App\Models\Thread;
 use App\Http\Controllers\Controller;
+use App\Models\Thread;
+use App\Models\User;
 
 class LikeController extends Controller
 {

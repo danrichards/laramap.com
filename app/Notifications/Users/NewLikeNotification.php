@@ -4,11 +4,11 @@ namespace App\Notifications\Users;
 
 use App\Models\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Channels\BroadcastChannel;
 use Illuminate\Notifications\Messages\BroadcastMessage;
+use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Notification;
 
 class NewLikeNotification extends Notification implements ShouldQueue
 {
@@ -52,7 +52,7 @@ class NewLikeNotification extends Notification implements ShouldQueue
                     ->subject('New Like!')
                     ->greeting('Hey, '.$notifiable->name)
                     ->line($this->user->username.' liked your action')
-                    ->line('Thank you for using '.env('APP_NAME').'!');
+                    ->line('Thank you for using Laramap! 😻');
     }
 
     /**
