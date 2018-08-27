@@ -11,6 +11,7 @@ use App\Notifications\Users\WelcomeNotification;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Notifications\Admin\NotifyAboutNewUserNotification;
 use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
+use Spatie\Permission\Traits\HasRoles;
 
 /**
  * App\Models\User.
@@ -92,7 +93,7 @@ use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
  */
 class User extends Authenticatable implements LikerContract
 {
-    use HasApiTokens, Notifiable, Searchable, Liker;
+    use HasApiTokens, Notifiable, Searchable, Liker, HasRoles;
 
     /**
      * @var array
@@ -188,5 +189,21 @@ class User extends Authenticatable implements LikerContract
     public function getActivitiesAttribute()
     {
         return Activity::where('causer_id', $this->id)->get();
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function threads()
+    {
+        return $this->hasMany(Thread::class, 'user_id', 'id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function threadReplies()
+    {
+        return $this->hasMany(ThreadReply::class, 'user_id', 'id');
     }
 }
