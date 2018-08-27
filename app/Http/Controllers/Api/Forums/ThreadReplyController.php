@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\Forums;
 
 use App\Models\User;
 use App\Models\Thread;
+use App\Notifications\Forums\NewCommentNotification;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ThreadReplyResource;
@@ -43,6 +44,10 @@ class ThreadReplyController extends Controller
             ->performedOn($thread)
             ->withProperties(['title' => $thread->title])
             ->log('replied to ":properties.title".');
+
+        if ($user->id != $thread->user->id) {
+            $thread->user->notify(new NewCommentNotification($user, $thread));
+        }
 
         return ThreadReplyResource::make($reply);
     }

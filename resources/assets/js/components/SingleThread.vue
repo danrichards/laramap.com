@@ -169,7 +169,7 @@
                     .then(function (response) {
                         self.singleThread.replies.push(response.data.data);
                         toastr.success('Your reply has been saved.', '✅');
-                        this.reply.body = '';
+                        self.reply.body = '';
                     })
                     .catch(function (error) {
                         console.log(error);

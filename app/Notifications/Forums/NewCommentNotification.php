@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Notifications\Users;
+namespace App\Notifications\Forums;
 
+use App\Models\Thread;
 use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
@@ -20,13 +21,20 @@ class NewCommentNotification extends Notification implements ShouldQueue
     public $user;
 
     /**
+     * @var Thread
+     */
+    public $thread;
+
+    /**
      * Create a new notification instance.
      *
      * @param User $user
+     * @param Thread $thread
      */
-    public function __construct(User $user)
+    public function __construct(User $user, Thread $thread)
     {
         $this->user = $user;
+        $this->thread = $thread;
     }
 
     /**
@@ -48,11 +56,14 @@ class NewCommentNotification extends Notification implements ShouldQueue
      */
     public function toMail($notifiable)
     {
+        $author = $this->thread->user;
+
         return (new MailMessage)
-                    ->subject('New Like!')
-                    ->greeting('Hey, '.$notifiable->name)
-                    ->line($this->user->username.' liked your action')
-                    ->action('Notification Action', url('/'))
+                    ->subject('New comment 💬')
+                    ->greeting('Hey, '. $author->username)
+                    ->line($this->user->username.' commented on ' . $this->thread->title)
+                    ->action('View Thread 💬', url('/discuss/' . $this->thread->slug))
+                    ->line('Please note that laramap is still in development. 👷‍')
                     ->line('Thank you for using Laramap! 😻');
     }
 
@@ -65,7 +76,7 @@ class NewCommentNotification extends Notification implements ShouldQueue
     public function toArray($notifiable)
     {
         return [
-            'title' => $this->user->username.' commented on your action',
+            'title' => $this->user->username. ' commented on ' . $this->thread->title,
             'from_user' => $this->user,
         ];
     }
@@ -79,7 +90,7 @@ class NewCommentNotification extends Notification implements ShouldQueue
     public function toBroadcast($notifiable)
     {
         return new BroadcastMessage([
-            'title' => 'commented on your action',
+            'title' => 'commented on ' . $this->thread->title,
             'from_user' => $this->user,
         ]);
     }

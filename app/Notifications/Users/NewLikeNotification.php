@@ -52,6 +52,7 @@ class NewLikeNotification extends Notification implements ShouldQueue
                     ->subject('New Like!')
                     ->greeting('Hey, '.$notifiable->name)
                     ->line($this->user->username.' liked your action')
+                    ->line('Please note that laramap is still in development. 👷‍')
                     ->line('Thank you for using Laramap! 😻');
     }
 

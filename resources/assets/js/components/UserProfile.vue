@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-12" v-show="user.biography">
+                    <div class="col-8" v-show="user.biography">
                         <div class="card">
                             <div class="card-header">
                                 Biography
@@ -69,7 +69,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-8">
                         <div class="card">
                             <div class="card-header">
                                 Latest activity
