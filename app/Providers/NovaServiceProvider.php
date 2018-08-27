@@ -59,6 +59,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         return [
             new NewUsers(),
             new NewThreadReplies(),
+            new \NicolasBeauvais\NovaAlgoliaCard\NovaAlgoliaCard('users'),
             new \Kreitje\NovaHorizonStats\JobsPastHour,
             new \Kreitje\NovaHorizonStats\FailedJobsPastHour,
             new \Kreitje\NovaHorizonStats\Processes,
@@ -76,6 +77,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         return [
             new \NathanHeffley\NovaAlgolia\NovaAlgolia,
             new \Vyuldashev\NovaPermission\NovaPermissionTool(),
+            new \Spatie\BackupTool\BackupTool(),
             new \vmitchell85\NovaLinks\Links(),
         ];
     }
