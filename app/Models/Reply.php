@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * App\Models\Reply
+ * App\Models\Reply.
  *
  * @property int $id
  * @property int|null $thread_id

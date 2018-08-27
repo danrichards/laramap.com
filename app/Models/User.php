@@ -2,16 +2,16 @@
 
 namespace App\Models;
 
-use App\Notifications\Admin\NotifyAboutNewUserNotification;
-use App\Notifications\Users\WelcomeNotification;
-use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
-use Cog\Laravel\Love\Liker\Models\Traits\Liker;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Passport\HasApiTokens;
 use Laravel\Scout\Searchable;
-use Spatie\Activitylog\Models\Activity;
+use Laravel\Passport\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
+use Spatie\Activitylog\Models\Activity;
+use Illuminate\Notifications\Notifiable;
+use Cog\Laravel\Love\Liker\Models\Traits\Liker;
+use App\Notifications\Users\WelcomeNotification;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Notifications\Admin\NotifyAboutNewUserNotification;
+use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
 
 /**
  * App\Models\User.
