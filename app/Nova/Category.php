@@ -2,8 +2,8 @@
 
 namespace App\Nova;
 
-use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
 
 class Category extends Resource
@@ -28,7 +28,7 @@ class Category extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'title'
+        'id', 'title',
     ];
 
     /**
@@ -41,7 +41,7 @@ class Category extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Title', 'title')
+            Text::make('Title', 'title'),
         ];
     }
 

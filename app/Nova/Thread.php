@@ -2,12 +2,12 @@
 
 namespace App\Nova;
 
-use Illuminate\Http\Request;
-use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Markdown;
+use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\Markdown;
+use Laravel\Nova\Fields\BelongsTo;
 
 class Thread extends Resource
 {
@@ -31,7 +31,7 @@ class Thread extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'title', 'slug'
+        'id', 'title', 'slug',
     ];
 
     /**

@@ -2,10 +2,10 @@
 
 namespace App\Providers;
 
-use App\Nova\Metrics\NewThreadReplies;
+use Laravel\Nova\Nova;
 use App\Nova\Metrics\NewUsers;
 use Illuminate\Support\Facades\Gate;
-use Laravel\Nova\Nova;
+use App\Nova\Metrics\NewThreadReplies;
 use Laravel\Nova\NovaApplicationServiceProvider;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
@@ -44,7 +44,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         Gate::define('viewNova', function ($user) {
             return in_array($user->email, [
-                'florian@mapawa.de'
+                'florian@mapawa.de',
             ]);
         });
     }
