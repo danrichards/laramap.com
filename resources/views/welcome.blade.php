@@ -111,16 +111,20 @@
             <br>
 
             <div class="row">
-                <div class="col-4 text-center">
+                <div class="col-3 text-center">
                     <img src="{{ asset('static/DO_Logo_Horizontal_Blue.png') }}" alt="DigitalOcean" style="max-height: 40px;">
                 </div>
 
-                <div class="col-4 text-center">
+                <div class="col-3 text-center">
                     <img src="{{ asset('static/logo-algolia-nebula-blue-whitespaces-1b393e11.png') }}" alt="Algolia" style="max-height: 40px;">
                 </div>
 
-                <div class="col-4 text-center">
+                <div class="col-3 text-center">
                     <img src="{{ asset('static/pusher.png') }}" alt="Pusher" style="max-height: 40px;">
+                </div>
+
+                <div class="col-3 text-center">
+                    <img src="{{ asset('static/vultr.png') }}" alt="Vultr" style="max-height: 40px;">
                 </div>
             </div>
         </section>
