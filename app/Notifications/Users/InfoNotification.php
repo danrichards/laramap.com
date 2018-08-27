@@ -54,9 +54,10 @@ class InfoNotification extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject('News on Laramap.com 🔥')
+            ->subject('News on Laramap.com 🗞️')
             ->greeting('Dear '.$this->user->username)
-            ->line($this->data[])
+            ->line($this->data['body'])
+            ->line('Please note that laramap is still in development. 👷‍')
             ->line('Thank you for using Laramap! 😻');
     }
 
