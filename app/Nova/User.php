@@ -3,17 +3,16 @@
 namespace App\Nova;
 
 use App\Nova\Metrics\NewUsers;
-use App\Nova\Metrics\UsersPerDay;
+use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Country;
+use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
-use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\MorphToMany;
+use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Place;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Gravatar;
-use Laravel\Nova\Fields\Password;
 
 class User extends Resource
 {
