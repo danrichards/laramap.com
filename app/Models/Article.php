@@ -88,6 +88,6 @@ class Article extends Model implements LikeableContract
      */
     public function replies()
     {
-        return $this->hasMany(ArticleReply::class, 'article_id', 'id');
+        return $this->hasMany(Reply::class, 'article_id', 'id');
     }
 }

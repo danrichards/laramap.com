@@ -84,8 +84,8 @@
                 <div class="col-6 col-sm-4 col-lg-2">
                     <div class="card">
                         <div class="card-body p-3 text-center">
-                            <div class="h1 m-0">{{ \App\Models\ThreadReply::all()->count() }}</div>
-                            <div class="text-muted mb-4">Thread replies</div>
+                            <div class="h1 m-0">{{ \App\Models\Reply::all()->count() }}</div>
+                            <div class="text-muted mb-4">Replies on resources</div>
                         </div>
                     </div>
                 </div>

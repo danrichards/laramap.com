@@ -98,6 +98,6 @@ class Thread extends Model implements LikeableContract
      */
     public function replies()
     {
-        return $this->hasMany(ThreadReply::class, 'thread_id', 'id');
+        return $this->hasMany(Reply::class, 'thread_id', 'id');
     }
 }
