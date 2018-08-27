@@ -76,6 +76,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
         return [
             new \NathanHeffley\NovaAlgolia\NovaAlgolia,
             new \Vyuldashev\NovaPermission\NovaPermissionTool(),
+            new \vmitchell85\NovaLinks\Links(),
         ];
     }
 

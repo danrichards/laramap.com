@@ -2,24 +2,28 @@
 
 namespace App\Nova;
 
+use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Markdown;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
-class ThreadReply extends Resource
+class Article extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Models\ThreadReply';
+    public static $model = 'App\Models\Article';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'title';
 
     /**
      * The columns that should be searched.
@@ -27,7 +31,7 @@ class ThreadReply extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'id', 'title', 'slug'
     ];
 
     /**
@@ -40,6 +44,10 @@ class ThreadReply extends Resource
     {
         return [
             ID::make()->sortable(),
+            Text::make('Title', 'title'),
+            Markdown::make('Body', 'body'),
+            DateTime::make('Created At')->hideFromIndex(),
+            DateTime::make('Updated At')->hideFromIndex()
         ];
     }
 

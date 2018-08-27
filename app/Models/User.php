@@ -208,8 +208,8 @@ class User extends Authenticatable implements LikerContract
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function threadReplies()
+    public function replies()
     {
-        return $this->hasMany(ThreadReply::class, 'user_id', 'id');
+        return $this->hasMany(Reply::class, 'user_id', 'id');
     }
 }

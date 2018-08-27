@@ -2,6 +2,8 @@
 
 namespace App\Nova;
 
+use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
@@ -57,6 +59,11 @@ class Thread extends Resource
             Markdown::make('Body', 'body'),
             Boolean::make('Closed', 'is_closed'),
             Boolean::make('Pinned', 'is_pinned'),
+
+            DateTime::make('Created At')->hideFromIndex(),
+            DateTime::make('Updated At')->hideFromIndex(),
+
+            HasMany::make('Replies'),
         ];
     }
 

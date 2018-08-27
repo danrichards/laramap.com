@@ -2,17 +2,23 @@
 
 namespace App\Nova;
 
+use App\Nova\Metrics\ThreadRepliesPerDay;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Markdown;
+use Laravel\Nova\Fields\MorphTo;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
-class ThreadCategory extends Resource
+class Reply extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Models\ThreadCategory';
+    public static $model = 'App\Models\Reply';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -27,7 +33,7 @@ class ThreadCategory extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'id', 'title'
     ];
 
     /**
@@ -40,7 +46,21 @@ class ThreadCategory extends Resource
     {
         return [
             ID::make()->sortable(),
+            BelongsTo::make('User'),
+
+            Text::make('Body', 'body')->onlyOnIndex(),
+            Markdown::make('Body', 'body'),
         ];
+    }
+
+    /**
+     * Get the value that should be displayed to represent the resource.
+     *
+     * @return string
+     */
+    public function title()
+    {
+        return $this->user->name;
     }
 
     /**

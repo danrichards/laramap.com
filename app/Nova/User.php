@@ -2,6 +2,9 @@
 
 namespace App\Nova;
 
+use App\Nova\Actions\SendInformationEmail;
+use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
@@ -93,9 +96,13 @@ class User extends Resource
             Boolean::make('Admin', 'is_admin'),
             Boolean::make('Available for hire', 'is_hireable')->hideFromIndex(),
 
+            DateTime::make('Created At')->hideFromIndex(),
+            DateTime::make('Updated At')->hideFromIndex(),
+
+            HasMany::make('Threads'),
+
             MorphToMany::make('Roles', 'roles', \Vyuldashev\NovaPermission\Role::class),
             MorphToMany::make('Permissions', 'permissions', \Vyuldashev\NovaPermission\Permission::class),
-
         ];
     }
 
@@ -142,7 +149,9 @@ class User extends Resource
      */
     public function actions(Request $request)
     {
-        return [];
+        return [
+            new SendInformationEmail()
+        ];
     }
 
     /**
