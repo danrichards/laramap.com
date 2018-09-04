@@ -52,7 +52,7 @@ class WelcomeNotification extends Notification implements ShouldQueue
             ->line('The first step is already done..')
             ->line('Now let´s hit your profile.')
             ->line('In order to place yourself on the map, please make sure that you filled out your address in the settings.')
-            ->action('Show Settings', url('/settings'))
+            ->action('Show Settings', url('/account'))
             ->line('Please note that laramap is still in development. 👷‍')
             ->line('Thank you for using Laramap! 😻');
     }
