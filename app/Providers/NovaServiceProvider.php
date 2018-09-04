@@ -57,6 +57,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function cards()
     {
         return [
+            new \GijsG\SystemResources\SystemResources('ram'),
+            new \GijsG\SystemResources\SystemResources('cpu'),
             new NewUsers(),
             new NewThreadReplies(),
             new \NicolasBeauvais\NovaAlgoliaCard\NovaAlgoliaCard('users'),
@@ -77,6 +79,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             new \NathanHeffley\NovaAlgolia\NovaAlgolia,
             new \Vyuldashev\NovaPermission\NovaPermissionTool(),
             new \Spatie\BackupTool\BackupTool(),
+            new \Infinety\Filemanager\FilemanagerTool(),
+            new \PragmaRX\ArtisanTool\Tool(),
             new \vmitchell85\NovaLinks\Links(),
         ];
     }

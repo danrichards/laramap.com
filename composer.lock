@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5c7ff0ec5ea029c2c1c418de06249a9e",
+    "content-hash": "f05ce5a6953c354d3395aea50e6fd2ec",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -1447,6 +1447,47 @@
             "time": "2018-01-19T07:35:43+00:00"
         },
         {
+            "name": "gijsg/system-resources",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GijsGoudzwaard/nova-system-resources.git",
+                "reference": "732aaa31182addc3c4a3f939499f501279c294c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GijsGoudzwaard/nova-system-resources/zipball/732aaa31182addc3c4a3f939499f501279c294c0",
+                "reference": "732aaa31182addc3c4a3f939499f501279c294c0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "GijsG\\SystemResources\\CardServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GijsG\\SystemResources\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova card.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2018-09-02T20:14:41+00:00"
+        },
+        {
             "name": "graham-campbell/manager",
             "version": "v4.1.0",
             "source": {
@@ -1752,6 +1793,66 @@
                 "youtube"
             ],
             "time": "2018-03-12T16:30:09+00:00"
+        },
+        {
+            "name": "infinety-es/nova-filemanager",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/InfinetyES/Nova-Filemanager.git",
+                "reference": "3b60fe1b67283eb916a6b7391d8381eddb2d7690"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/InfinetyES/Nova-Filemanager/zipball/3b60fe1b67283eb916a6b7391d8381eddb2d7690",
+                "reference": "3b60fe1b67283eb916a6b7391d8381eddb2d7690",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/nova": "*",
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.6",
+                "phpunit/phpunit": "7.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Infinety\\Filemanager\\FilemanagerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Infinety\\Filemanager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eric Lagarda",
+                    "email": "eric@infinety.es",
+                    "role": "Developer"
+                },
+                {
+                    "name": "InfinetyEs",
+                    "email": "apps@infinety.es",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Filemanager tool for Laravel Nova",
+            "homepage": "https://github.com/krato/nova-filemanager",
+            "keywords": [
+                "filemanager",
+                "laravel",
+                "nova"
+            ],
+            "time": "2018-09-04T07:37:50+00:00"
         },
         {
             "name": "inspheric/nova-url-field",
@@ -3945,6 +4046,61 @@
             "time": "2018-04-15T16:55:05+00:00"
         },
         {
+            "name": "pragmarx/artisan-tool",
+            "version": "v0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/antonioribeiro/artisan-tool.git",
+                "reference": "c7dd1ec3ca6146c5c11554e00dda756f8f331a10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/antonioribeiro/artisan-tool/zipball/c7dd1ec3ca6146c5c11554e00dda756f8f331a10",
+                "reference": "c7dd1ec3ca6146c5c11554e00dda756f8f331a10",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/nova": "*",
+                "php": ">=7.1.0",
+                "sensiolabs/ansi-to-html": "~1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.6",
+                "phpunit/phpunit": "7.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "PragmaRX\\ArtisanTool\\ToolServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PragmaRX\\ArtisanTool\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Antonio Carlos Ribeiro",
+                    "email": "acr@antoniocarlosribeiro.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Brings Artisan to Nova",
+            "homepage": "https://github.com/pragmarx/artisan-tool",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2018-09-03T12:07:17+00:00"
+        },
+        {
             "name": "pragmarx/coollection",
             "version": "v0.5.7",
             "source": {
@@ -4840,6 +4996,50 @@
                 "stylesheet"
             ],
             "time": "2016-07-19T19:14:21+00:00"
+        },
+        {
+            "name": "sensiolabs/ansi-to-html",
+            "version": "v1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sensiolabs/ansi-to-html.git",
+                "reference": "8b5d787dca714bd98dd770c078d76528320a8286"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sensiolabs/ansi-to-html/zipball/8b5d787dca714bd98dd770c078d76528320a8286",
+                "reference": "8b5d787dca714bd98dd770c078d76528320a8286",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "suggest": {
+                "twig/twig": "Provides nice templating features"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "SensioLabs\\AnsiConverter": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "A library to convert a text with ANSI codes to HTML",
+            "time": "2017-05-02T00:53:29+00:00"
         },
         {
             "name": "spatie/db-dumper",
@@ -11248,6 +11448,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "gijsg/system-resources": 20,
         "nunomaduro/larastan": 20
     },
     "prefer-stable": true,
