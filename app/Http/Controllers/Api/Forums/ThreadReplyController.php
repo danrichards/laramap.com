@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Api\Forums;
 
+use App\Models\User;
+use App\Models\Thread;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ThreadReplyResource;
-use App\Models\Thread;
-use App\Models\User;
 use App\Notifications\Forums\NewCommentNotification;
-use Illuminate\Http\Request;
 
 class ThreadReplyController extends Controller
 {
