@@ -16,6 +16,7 @@ use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\MorphToMany;
 use App\Nova\Actions\SendInformationEmail;
+use Themsaid\CashierTool\CashierResourceTool;
 
 class User extends Resource
 {
@@ -98,6 +99,8 @@ class User extends Resource
 
             DateTime::make('Created At')->hideFromIndex(),
             DateTime::make('Updated At')->hideFromIndex(),
+
+            CashierResourceTool::make()->onlyOnDetail(),
 
             HasMany::make('Threads'),
 

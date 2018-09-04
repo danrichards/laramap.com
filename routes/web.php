@@ -4,27 +4,31 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('welcome');
+})->name('home');
+
 Auth::routes();
 
 Route::get('auth/social', 'Auth\SocialAuthController@show')->name('social.login');
 Route::get('oauth/{driver}', 'Auth\SocialAuthController@redirectToProvider')->name('social.oauth');
 Route::get('oauth/{driver}/callback', 'Auth\SocialAuthController@handleProviderCallback')->name('social.callback');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/likes', 'Api\Social\LikeController@getLikesForCurrentUser');
 
 Route::get('@{username}', 'Users\UserController@show');
-Route::get('users', 'Users\UserController@index');
+Route::get('users', 'Users\UserController@index')->middleware('cacheResponse:5');
 Route::get('account', 'Users\AccountController@getAccount');
 
 Route::post('search', 'Search\SearchController@getResults');
 
-Route::view('sponsors', 'static.sponsors');
-Route::view('about', 'static.about');
-Route::view('terms', 'static.terms');
-Route::view('privacy', 'static.privacy');
-Route::view('imprint', 'static.imprint');
+Route::view('sponsors', 'static.sponsors')->middleware('cacheResponse');
+Route::view('about', 'static.about')->middleware('cacheResponse');
+Route::view('terms', 'static.terms')->middleware('cacheResponse');
+Route::view('privacy', 'static.privacy')->middleware('cacheResponse');
+Route::view('imprint', 'static.imprint')->middleware('cacheResponse');
+
+Route::view('resources', 'tools.index');
 
 Route::group(['prefix' => 'forums'], function () {
     Route::view('/', 'forums.threads.list');

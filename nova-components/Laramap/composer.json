@@ -1,0 +1,30 @@
+{
+    "name": "laramap/laramap",
+    "description": "The Laramap.com theme for Nova.",
+    "keywords": [
+        "laravel",
+        "nova",
+        "laramap"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laramap\\Laramap\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laramap\\Laramap\\ThemeServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -106,6 +106,10 @@
                         <a href="{{ url('/forums') }}" class="nav-link">Forums</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a href="{{ url('/resources') }}" class="nav-link">Resources</a>
+                    </li>
+
                     {{--<li class="nav-item">--}}
                         {{--<a href="{{ url('/events') }}" class="nav-link">Events</a>--}}
                     {{--</li>--}}

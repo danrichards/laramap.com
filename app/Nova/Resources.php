@@ -5,20 +5,22 @@ namespace App\Nova;
 use Ajhaupt7\ImageUploadPreview\ImageUploadPreview;
 use Benjaminhirsch\NovaSlugField\Slug;
 use Benjaminhirsch\NovaSlugField\TextWithSlug;
+use Inspheric\Fields\Url;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Markdown;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Article extends Resource
+class Resources extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Models\Article';
+    public static $model = 'App\Models\Resource';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -33,7 +35,7 @@ class Article extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'title', 'slug',
+        'id', 'title'
     ];
 
     /**
@@ -48,10 +50,10 @@ class Article extends Resource
             ID::make()->sortable(),
             TextWithSlug::make('Title')->slug('Slug'),
             Slug::make('Slug'),
-            ImageUploadPreview::make('Image', 'article_image')->disk('public'),
-            Markdown::make('Body', 'body'),
-            DateTime::make('Created At')->hideFromIndex(),
-            DateTime::make('Updated At')->hideFromIndex(),
+            ImageUploadPreview::make('Image', 'header_image')->disk('public'),
+            Markdown::make('Body')->hideFromIndex(),
+            Url::make('URL', 'url')->clickableOnIndex(),
+            Boolean::make('Is Published'),
         ];
     }
 
