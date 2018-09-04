@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Api\Forums;
 
 use App\Models\User;
 use App\Models\Thread;
-use App\Notifications\Forums\NewCommentNotification;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ThreadReplyResource;
+use App\Notifications\Forums\NewCommentNotification;
 
 class ThreadReplyController extends Controller
 {

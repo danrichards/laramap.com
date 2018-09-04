@@ -2,8 +2,8 @@
 
 namespace App\Notifications\Forums;
 
-use App\Models\Thread;
 use App\Models\User;
+use App\Models\Thread;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -60,9 +60,9 @@ class NewCommentNotification extends Notification implements ShouldQueue
 
         return (new MailMessage)
                     ->subject('New comment 💬')
-                    ->greeting('Hey, '. $author->username)
-                    ->line($this->user->username.' commented on ' . $this->thread->title)
-                    ->action('View Thread 💬', url('/discuss/' . $this->thread->slug))
+                    ->greeting('Hey, '.$author->username)
+                    ->line($this->user->username.' commented on '.$this->thread->title)
+                    ->action('View Thread 💬', url('/discuss/'.$this->thread->slug))
                     ->line('Please note that laramap is still in development. 👷‍')
                     ->line('Thank you for using Laramap! 😻');
     }
@@ -76,7 +76,7 @@ class NewCommentNotification extends Notification implements ShouldQueue
     public function toArray($notifiable)
     {
         return [
-            'title' => $this->user->username. ' commented on ' . $this->thread->title,
+            'title' => $this->user->username.' commented on '.$this->thread->title,
             'from_user' => $this->user,
         ];
     }
@@ -90,7 +90,7 @@ class NewCommentNotification extends Notification implements ShouldQueue
     public function toBroadcast($notifiable)
     {
         return new BroadcastMessage([
-            'title' => 'commented on ' . $this->thread->title,
+            'title' => 'commented on '.$this->thread->title,
             'from_user' => $this->user,
         ]);
     }
