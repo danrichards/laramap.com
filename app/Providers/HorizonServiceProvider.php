@@ -3,9 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Http\Request;
-use Laravel\Horizon\Horizon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Horizon\Horizon;
 
 class HorizonServiceProvider extends ServiceProvider
 {

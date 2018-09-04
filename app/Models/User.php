@@ -2,16 +2,16 @@
 
 namespace App\Models;
 
-use Laravel\Scout\Searchable;
-use Laravel\Passport\HasApiTokens;
-use Spatie\Permission\Traits\HasRoles;
-use Spatie\Activitylog\Models\Activity;
-use Illuminate\Notifications\Notifiable;
-use Cog\Laravel\Love\Liker\Models\Traits\Liker;
-use App\Notifications\Users\WelcomeNotification;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Notifications\Admin\NotifyAboutNewUserNotification;
+use App\Notifications\Users\WelcomeNotification;
 use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
+use Cog\Laravel\Love\Liker\Models\Traits\Liker;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Passport\HasApiTokens;
+use Laravel\Scout\Searchable;
+use Spatie\Activitylog\Models\Activity;
+use Spatie\Permission\Traits\HasRoles;
 
 /**
  * App\Models\User.
@@ -97,6 +97,14 @@ use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User permission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User role($roles)
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Reply[] $replies
+ * @property string|null $stripe_id
+ * @property string|null $card_brand
+ * @property string|null $card_last_four
+ * @property string|null $trial_ends_at
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereCardBrand($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereCardLastFour($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereStripeId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereTrialEndsAt($value)
  */
 class User extends Authenticatable implements LikerContract
 {
