@@ -2,16 +2,14 @@
 
 namespace App\Nova;
 
-use Ajhaupt7\ImageUploadPreview\ImageUploadPreview;
-use Benjaminhirsch\NovaSlugField\Slug;
-use Benjaminhirsch\NovaSlugField\TextWithSlug;
 use Inspheric\Fields\Url;
-use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Markdown;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Http\Requests\NovaRequest;
+use Benjaminhirsch\NovaSlugField\Slug;
+use Benjaminhirsch\NovaSlugField\TextWithSlug;
+use Ajhaupt7\ImageUploadPreview\ImageUploadPreview;
 
 class Resources extends Resource
 {
@@ -35,7 +33,7 @@ class Resources extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'title'
+        'id', 'title',
     ];
 
     /**
