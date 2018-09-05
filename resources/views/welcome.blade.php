@@ -132,6 +132,31 @@
         <hr width="50%">
 
         <br>
+
+        <section id="resources">
+            <h3 class="text-center">
+                Latest Resources & Tools
+            </h3>
+
+
+            <div class="container">
+                <div class="row">
+                    @foreach(\App\Models\Resource::where('is_published', true)->get()->reverse()->take(4) as $resource)
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <a href="{{ $resource->url}}?utm_source=laramap&utm_medium=website">
+                                    <img class="card-img-top" src="{{ asset('/storage/') . '/' .  $resource->header_image }}" alt="{{ $resource->slug }}">
+                                </a>
+                                <div class="card-body d-flex flex-column">
+                                    <h4><a href="{{ $resource->url}}?utm_source=laramap&utm_medium=website">{{ $resource->title }}</a></h4>
+                                    <div class="text-muted">{{ $resource->body }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
     </div>
 @endsection
 
