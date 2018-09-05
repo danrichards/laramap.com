@@ -115,6 +115,7 @@ class SocialAuthController extends Controller
                 'provider_id' => $providerUser->getId(),
                 'access_token' => $providerUser->token,
                 'password' => bcrypt(str_random(16)),
+                'is_active' => true, // Temporary
             ]);
         }
 
