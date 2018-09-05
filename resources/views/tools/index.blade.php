@@ -27,7 +27,7 @@
                         @foreach(\App\Models\Resource::where('is_published', true)->get() as $resource)
                             <div class="col-sm-3">
                                 <div class="card">
-                                    <a href="{{ $resource->url}}">
+                                    <a href="{{ $resource->url}}?utm_source=laramap&utm_medium=website">
                                         <img class="card-img-top" src="{{ asset('/storage/') . '/' .  $resource->header_image }}" alt="{{ $resource->slug }}">
                                     </a>
                                     <div class="card-body d-flex flex-column">
