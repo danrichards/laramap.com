@@ -42,7 +42,7 @@ class MakeAllActive extends Command
 
         foreach ($users as $user) {
             $user->update([
-                'is_active' => true
+                'is_active' => true,
             ]);
         }
     }
