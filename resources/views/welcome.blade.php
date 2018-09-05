@@ -138,6 +138,7 @@
                 Latest Resources & Tools
             </h3>
 
+            <br>
 
             <div class="container">
                 <div class="row">
@@ -157,6 +158,10 @@
                 </div>
             </div>
         </section>
+
+        <hr width="50%">
+
+        <br>
     </div>
 @endsection
 
