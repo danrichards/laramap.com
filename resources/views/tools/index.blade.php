@@ -31,7 +31,7 @@
                                         <img class="card-img-top" src="{{ asset('/storage/') . '/' .  $resource->header_image }}" alt="{{ $resource->slug }}">
                                     </a>
                                     <div class="card-body d-flex flex-column">
-                                        <h4><a href="{{ $resource->url}}">{{ $resource->title }}</a></h4>
+                                        <h4><a href="{{ $resource->url}}?utm_source=laramap&utm_medium=website">{{ $resource->title }}</a></h4>
                                         <div class="text-muted">{{ $resource->body }}</div>
                                     </div>
                                 </div>
