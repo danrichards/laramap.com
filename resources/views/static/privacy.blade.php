@@ -83,7 +83,7 @@
                                     <li>Don't subscribe to one of the newsletters.</li>
                                     <li>Unsubscribe from one of the newsletters. (Unsubscribe link in the newsletter)</li>
                                     <li>Delete your account on the application. (Delete link in the <a
-                                            href="{{ url('/settings') }}">settings</a> section)</li>
+                                            href="{{ url('/account') }}">settings</a> section)</li>
                                 </ul>
 
                                 <p>We will not sell, distribute or lease your personal information to third parties unless we have your
