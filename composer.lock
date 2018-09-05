@@ -2395,12 +2395,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:fwartner/nova.git",
-                "reference": "06aa7400a7f83c7a9c9c373a6bc3c62217e6ffbb"
+                "reference": "d951c4f222d60e47ac07d3a48910314055e10566"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fwartner/nova/zipball/06aa7400a7f83c7a9c9c373a6bc3c62217e6ffbb",
-                "reference": "06aa7400a7f83c7a9c9c373a6bc3c62217e6ffbb",
+                "url": "https://api.github.com/repos/fwartner/nova/zipball/d951c4f222d60e47ac07d3a48910314055e10566",
+                "reference": "d951c4f222d60e47ac07d3a48910314055e10566",
                 "shasum": ""
             },
             "require": {
@@ -2460,7 +2460,7 @@
                 "source": "https://github.com/fwartner/nova/tree/master",
                 "issues": "https://github.com/fwartner/nova/issues"
             },
-            "time": "2018-09-04T16:31:04+00:00"
+            "time": "2018-09-05T08:21:28+00:00"
         },
         {
             "name": "laravel/passport",
@@ -7875,20 +7875,20 @@
         },
         {
             "name": "beyondcode/laravel-view-xray",
-            "version": "1.0.3",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/beyondcode/laravel-view-xray.git",
-                "reference": "0c0f923b3b95b742b34430746ccdc467009dd7a6"
+                "reference": "080568e87314590fafa7329fd34753d3353c5e92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/beyondcode/laravel-view-xray/zipball/0c0f923b3b95b742b34430746ccdc467009dd7a6",
-                "reference": "0c0f923b3b95b742b34430746ccdc467009dd7a6",
+                "url": "https://api.github.com/repos/beyondcode/laravel-view-xray/zipball/080568e87314590fafa7329fd34753d3353c5e92",
+                "reference": "080568e87314590fafa7329fd34753d3353c5e92",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "5.6.*",
+                "illuminate/support": "^5.6|^5.7",
                 "php": "^7.1"
             },
             "require-dev": {
@@ -7927,7 +7927,7 @@
                 "beyondcode",
                 "laravel-view-xray"
             ],
-            "time": "2018-07-23T09:38:26+00:00"
+            "time": "2018-09-04T17:51:57+00:00"
         },
         {
             "name": "composer/ca-bundle",
