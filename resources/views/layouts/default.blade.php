@@ -49,5 +49,15 @@
         g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
     })();
 </script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-63437005-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-63437005-1');
+</script>
+
 </body>
 </html>
