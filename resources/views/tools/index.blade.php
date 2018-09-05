@@ -25,13 +25,15 @@
                 <div class="container">
                     <div class="row">
                         @foreach(\App\Models\Resource::where('is_published', true)->get() as $resource)
-                            <div class="card col-3">
-                                <a href="{{ $resource->url}}">
-                                    <img class="card-img-top" src="{{ asset('/storage/') . '/' .  $resource->header_image }}" alt="{{ $resource->slug }}">
-                                </a>
-                                <div class="card-body d-flex flex-column">
-                                    <h4><a href="{{ $resource->url}}">{{ $resource->title }}</a></h4>
-                                    <div class="text-muted">{{ $resource->body }}</div>
+                            <div class="col-sm-3">
+                                <div class="card">
+                                    <a href="{{ $resource->url}}">
+                                        <img class="card-img-top" src="{{ asset('/storage/') . '/' .  $resource->header_image }}" alt="{{ $resource->slug }}">
+                                    </a>
+                                    <div class="card-body d-flex flex-column">
+                                        <h4><a href="{{ $resource->url}}">{{ $resource->title }}</a></h4>
+                                        <div class="text-muted">{{ $resource->body }}</div>
+                                    </div>
                                 </div>
                             </div>
                         @endforeach
