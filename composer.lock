@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f05ce5a6953c354d3395aea50e6fd2ec",
+    "content-hash": "78336112b3cc94512bd5c8f235ca4e1b",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -3648,6 +3648,65 @@
                 "php"
             ],
             "time": "2018-07-15T17:25:16+00:00"
+        },
+        {
+            "name": "ohdearapp/laravel-ohdear-webhooks",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ohdearapp/laravel-ohdear-webhooks.git",
+                "reference": "6167531b0f94f70a6daadcfb861b8a00402ccf0c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ohdearapp/laravel-ohdear-webhooks/zipball/6167531b0f94f70a6daadcfb861b8a00402ccf0c",
+                "reference": "6167531b0f94f70a6daadcfb861b8a00402ccf0c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "~5.5.0|~5.6.0",
+                "illuminate/routing": "~5.5.0|~5.6.0",
+                "illuminate/support": "~5.5.0|~5.6.0",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.5.0|~3.6.0",
+                "phpunit/phpunit": "^6.0|^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "OhDear\\LaravelWebhooks\\OhDearWebhooksServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "OhDear\\LaravelWebhooks\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "support@ohdearapp.com",
+                    "homepage": "https://ohdearapp.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Handle Oh Dear webhook calls in a Laravel app",
+            "homepage": "https://github.com/ohdear/laravel-ohdear-webhooks",
+            "keywords": [
+                "laravel-ohdear-webhooks",
+                "monitoring",
+                "ohdear",
+                "uptime"
+            ],
+            "time": "2018-03-12T08:42:44+00:00"
         },
         {
             "name": "paragonie/random_compat",
