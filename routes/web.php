@@ -6,9 +6,9 @@ Route::get('/', function () {
 
 Route::get('/home', function () {
     return view('welcome');
-})->name('home');
+})->name('home')->middleware('verified');
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('auth/social', 'Auth\SocialAuthController@show')->name('social.login');
 Route::get('oauth/{driver}', 'Auth\SocialAuthController@redirectToProvider')->name('social.oauth');
@@ -18,7 +18,7 @@ Route::get('/likes', 'Api\Social\LikeController@getLikesForCurrentUser');
 
 Route::get('@{username}', 'Users\UserController@show');
 Route::get('users', 'Users\UserController@index')->middleware('cacheResponse:5');
-Route::get('account', 'Users\AccountController@getAccount');
+Route::get('account', 'Users\AccountController@getAccount')->middleware('verified');
 
 Route::post('search', 'Search\SearchController@getResults');
 
