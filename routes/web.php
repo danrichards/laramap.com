@@ -22,7 +22,7 @@ Route::get('account', 'Users\AccountController@getAccount')->middleware('verifie
 
 Route::post('search', 'Search\SearchController@getResults');
 
-Route::view('sponsors', 'static.sponsors')->middleware('cacheResponse');
+Route::view('sponsors', 'static.sponsors');
 Route::view('about', 'static.about')->middleware('cacheResponse');
 Route::view('terms', 'static.terms')->middleware('cacheResponse');
 Route::view('privacy', 'static.privacy')->middleware('cacheResponse');
