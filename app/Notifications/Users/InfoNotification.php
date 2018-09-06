@@ -4,9 +4,9 @@ namespace App\Notifications\Users;
 
 use App\Models\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Notification;
 
 class InfoNotification extends Notification implements ShouldQueue
 {
