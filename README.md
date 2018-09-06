@@ -11,7 +11,7 @@ On Laramap you can connect to other laravel developers in your area, create loca
 But you can also follow up whats going on in the community.
 
 # What is the tech-stack (including services)?
-<li><a href="https://laravel.com">Laravel 5.6</a> (Backend)</li>
+<li><a href="https://laravel.com">Laravel 5.7</a> (Backend)</li>
 <li><a href="https://vuejs.org">Vue.js</a> (Frontend)</li>
 <li><a href="https://getbootstrap.com">Bootstrap 4</a> (Frontend)</li>
 <li><a href="https://fontawesome.com">FontAwesome 5</a> (Pro)</li>
