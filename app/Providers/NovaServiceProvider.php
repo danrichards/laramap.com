@@ -5,7 +5,7 @@ namespace App\Providers;
 use Laravel\Nova\Nova;
 use App\Nova\Metrics\NewUsers;
 use Illuminate\Support\Facades\Gate;
-use App\Nova\Metrics\NewThreadReplies;
+use App\Nova\Metrics\NewReplies;
 use Laravel\Nova\NovaApplicationServiceProvider;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
@@ -60,7 +60,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             new \GijsG\SystemResources\SystemResources('ram'),
             new \GijsG\SystemResources\SystemResources('cpu'),
             new NewUsers(),
-            new NewThreadReplies(),
+            new NewReplies(),
             new \NicolasBeauvais\NovaAlgoliaCard\NovaAlgoliaCard('users'),
             new \Kreitje\NovaHorizonStats\JobsPastHour,
             new \Kreitje\NovaHorizonStats\FailedJobsPastHour,
