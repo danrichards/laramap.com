@@ -34,7 +34,7 @@
                             </a>
 
                             <a class="dropdown-item" href="{{ url('/account') }}">
-                                <i class="dropdown-icon fe fe-settings"></i> Settings
+                                <i class="dropdown-icon fe fe-settings"></i> Account
                             </a>
 
                             <div class="dropdown-divider"></div>
