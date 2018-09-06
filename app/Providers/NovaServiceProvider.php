@@ -2,10 +2,10 @@
 
 namespace App\Providers;
 
-use App\Nova\Metrics\NewReplies;
-use App\Nova\Metrics\NewUsers;
-use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Nova;
+use App\Nova\Metrics\NewUsers;
+use App\Nova\Metrics\NewReplies;
+use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\NovaApplicationServiceProvider;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
