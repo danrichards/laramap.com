@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Api\Forums;
 
-use Illuminate\Http\Request;
-use App\Models\ThreadCategory;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ThreadCategoryResource;
+use App\Models\ThreadCategory;
+use Illuminate\Http\Request;
 
 class ThreadCategoryController extends Controller
 {

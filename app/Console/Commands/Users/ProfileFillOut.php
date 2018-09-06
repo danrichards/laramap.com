@@ -3,8 +3,8 @@
 namespace App\Console\Commands\Users;
 
 use App\Models\User;
-use Illuminate\Console\Command;
 use App\Notifications\Users\ProfileFilloutNotification;
+use Illuminate\Console\Command;
 
 class ProfileFillOut extends Command
 {
