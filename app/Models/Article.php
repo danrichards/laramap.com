@@ -5,8 +5,6 @@ namespace App\Models;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Illuminate\Database\Eloquent\Model;
-use Cog\Laravel\Love\Likeable\Models\Traits\Likeable;
-use Cog\Contracts\Love\Likeable\Models\Likeable as LikeableContract;
 
 /**
  * App\Models\Article.
@@ -47,9 +45,9 @@ use Cog\Contracts\Love\Likeable\Models\Likeable as LikeableContract;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Article whereUserId($value)
  * @mixin \Eloquent
  */
-class Article extends Model implements LikeableContract
+class Article extends Model
 {
-    use HasSlug, Likeable;
+    use HasSlug;
 
     /**
      * @var array

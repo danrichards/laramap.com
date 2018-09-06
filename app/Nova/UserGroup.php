@@ -12,7 +12,7 @@ class UserGroup extends Resource
      *
      * @var string
      */
-    public static $model = 'App\Models\UserGroup';
+    public static $model = \App\Models\UserGroup::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.

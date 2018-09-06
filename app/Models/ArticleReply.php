@@ -3,8 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Cog\Laravel\Love\Likeable\Models\Traits\Likeable;
-use Cog\Contracts\Love\Likeable\Models\Likeable as LikeableContract;
 
 /**
  * App\Models\ArticleReply.
@@ -39,10 +37,8 @@ use Cog\Contracts\Love\Likeable\Models\Likeable as LikeableContract;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\ArticleReply whereUserId($value)
  * @mixin \Eloquent
  */
-class ArticleReply extends Model implements LikeableContract
+class ArticleReply extends Model
 {
-    use Likeable;
-
     /**
      * @var array
      */

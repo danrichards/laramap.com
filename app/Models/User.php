@@ -2,17 +2,16 @@
 
 namespace App\Models;
 
-use Laravel\Cashier\Billable;
 use Laravel\Scout\Searchable;
 use Laravel\Passport\HasApiTokens;
+use Illuminate\Auth\MustVerifyEmail;
 use Spatie\Permission\Traits\HasRoles;
 use Spatie\Activitylog\Models\Activity;
 use Illuminate\Notifications\Notifiable;
-use Cog\Laravel\Love\Liker\Models\Traits\Liker;
 use App\Notifications\Users\WelcomeNotification;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Notifications\Admin\NotifyAboutNewUserNotification;
-use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
+use Illuminate\Contracts\Auth\MustVerifyEmail as MustVerifyEmailContract;
 
 /**
  * App\Models\User.
@@ -107,9 +106,9 @@ use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereStripeId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereTrialEndsAt($value)
  */
-class User extends Authenticatable implements LikerContract
+class User extends Authenticatable implements MustVerifyEmailContract
 {
-    use HasApiTokens, Notifiable, Searchable, Liker, HasRoles, Billable;
+    use HasApiTokens, Notifiable, Searchable, HasRoles, MustVerifyEmail;
 
     /**
      * @var array

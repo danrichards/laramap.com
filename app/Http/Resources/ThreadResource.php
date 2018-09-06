@@ -23,8 +23,6 @@ class ThreadResource extends JsonResource
             'category' => ThreadCategoryResource::make($this->category),
             'replies' => ThreadReplyResource::collection($this->replies),
             'reply_count' => count($this->replies),
-            'likers' => UserResource::collection($this->collectLikers()),
-            'like_count' => $this->likesCount,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

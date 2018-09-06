@@ -2,11 +2,11 @@
 
 namespace App\Nova\Metrics;
 
-use App\Models\ThreadReply;
+use App\Models\Reply;
 use Illuminate\Http\Request;
 use Laravel\Nova\Metrics\Value;
 
-class NewThreadReplies extends Value
+class NewReplies extends Value
 {
     /**
      * Calculate the value of the metric.
@@ -16,7 +16,7 @@ class NewThreadReplies extends Value
      */
     public function calculate(Request $request)
     {
-        return $this->count($request, ThreadReply::class);
+        return $this->count($request, Reply::class);
     }
 
     /**
