@@ -39,6 +39,6 @@ Route::group(['prefix' => 'forums'], function () {
 
 Route::ohDearWebhooks('/security/checks/ohdear');
 
-Route::group(['prefix' => 'payments'], function() {
+Route::group(['prefix' => 'payments'], function () {
     Route::apiResource('subscription', 'Api\Payments\SponsorController');
 });
