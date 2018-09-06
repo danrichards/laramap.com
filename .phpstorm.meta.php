@@ -5,7 +5,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2018-09-04 18:10:16.
+    * Generated on 2018-09-06 11:03:58.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -15,9 +15,6 @@ namespace PHPSTORM_META {
         'App\Services\Seo\Meta' => \App\Services\Seo\Meta::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'BeyondCode\ViewXray\Xray' => \BeyondCode\ViewXray\Xray::class,
-        'Cog\Contracts\Love\LikeCounter\Models\LikeCounter' => \Cog\Laravel\Love\LikeCounter\Models\LikeCounter::class,
-        'Cog\Contracts\Love\Like\Models\Like' => \Cog\Laravel\Love\Like\Models\Like::class,
-        'Cog\Contracts\Love\Likeable\Services\LikeableService' => \Cog\Laravel\Love\Likeable\Services\LikeableService::class,
         'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
         'Illuminate\Bus\Dispatcher' => \Illuminate\Bus\Dispatcher::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
@@ -120,6 +117,8 @@ namespace PHPSTORM_META {
         'command.notification.make' => \Illuminate\Foundation\Console\NotificationMakeCommand::class,
         'command.notification.table' => \Illuminate\Notifications\Console\NotificationTableCommand::class,
         'command.observer.make' => \Illuminate\Foundation\Console\ObserverMakeCommand::class,
+        'command.optimize' => \Illuminate\Foundation\Console\OptimizeCommand::class,
+        'command.optimize.clear' => \Illuminate\Foundation\Console\OptimizeClearCommand::class,
         'command.package.discover' => \Illuminate\Foundation\Console\PackageDiscoverCommand::class,
         'command.policy.make' => \Illuminate\Foundation\Console\PolicyMakeCommand::class,
         'command.preset' => \Illuminate\Foundation\Console\PresetCommand::class,
@@ -197,16 +196,12 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
-        'vouchers' => \BeyondCode\Vouchers\Vouchers::class,
     ]));
     override(\Illuminate\Contracts\Container\Container::make(0), map([
         '' => '@',
         'App\Services\Seo\Meta' => \App\Services\Seo\Meta::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'BeyondCode\ViewXray\Xray' => \BeyondCode\ViewXray\Xray::class,
-        'Cog\Contracts\Love\LikeCounter\Models\LikeCounter' => \Cog\Laravel\Love\LikeCounter\Models\LikeCounter::class,
-        'Cog\Contracts\Love\Like\Models\Like' => \Cog\Laravel\Love\Like\Models\Like::class,
-        'Cog\Contracts\Love\Likeable\Services\LikeableService' => \Cog\Laravel\Love\Likeable\Services\LikeableService::class,
         'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
         'Illuminate\Bus\Dispatcher' => \Illuminate\Bus\Dispatcher::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
@@ -309,6 +304,8 @@ namespace PHPSTORM_META {
         'command.notification.make' => \Illuminate\Foundation\Console\NotificationMakeCommand::class,
         'command.notification.table' => \Illuminate\Notifications\Console\NotificationTableCommand::class,
         'command.observer.make' => \Illuminate\Foundation\Console\ObserverMakeCommand::class,
+        'command.optimize' => \Illuminate\Foundation\Console\OptimizeCommand::class,
+        'command.optimize.clear' => \Illuminate\Foundation\Console\OptimizeClearCommand::class,
         'command.package.discover' => \Illuminate\Foundation\Console\PackageDiscoverCommand::class,
         'command.policy.make' => \Illuminate\Foundation\Console\PolicyMakeCommand::class,
         'command.preset' => \Illuminate\Foundation\Console\PresetCommand::class,
@@ -386,16 +383,12 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
-        'vouchers' => \BeyondCode\Vouchers\Vouchers::class,
     ]));
     override(\Illuminate\Contracts\Container\Container::makeWith(0), map([
         '' => '@',
         'App\Services\Seo\Meta' => \App\Services\Seo\Meta::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'BeyondCode\ViewXray\Xray' => \BeyondCode\ViewXray\Xray::class,
-        'Cog\Contracts\Love\LikeCounter\Models\LikeCounter' => \Cog\Laravel\Love\LikeCounter\Models\LikeCounter::class,
-        'Cog\Contracts\Love\Like\Models\Like' => \Cog\Laravel\Love\Like\Models\Like::class,
-        'Cog\Contracts\Love\Likeable\Services\LikeableService' => \Cog\Laravel\Love\Likeable\Services\LikeableService::class,
         'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
         'Illuminate\Bus\Dispatcher' => \Illuminate\Bus\Dispatcher::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
@@ -498,6 +491,8 @@ namespace PHPSTORM_META {
         'command.notification.make' => \Illuminate\Foundation\Console\NotificationMakeCommand::class,
         'command.notification.table' => \Illuminate\Notifications\Console\NotificationTableCommand::class,
         'command.observer.make' => \Illuminate\Foundation\Console\ObserverMakeCommand::class,
+        'command.optimize' => \Illuminate\Foundation\Console\OptimizeCommand::class,
+        'command.optimize.clear' => \Illuminate\Foundation\Console\OptimizeClearCommand::class,
         'command.package.discover' => \Illuminate\Foundation\Console\PackageDiscoverCommand::class,
         'command.policy.make' => \Illuminate\Foundation\Console\PolicyMakeCommand::class,
         'command.preset' => \Illuminate\Foundation\Console\PresetCommand::class,
@@ -575,16 +570,12 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
-        'vouchers' => \BeyondCode\Vouchers\Vouchers::class,
     ]));
     override(\App::make(0), map([
         '' => '@',
         'App\Services\Seo\Meta' => \App\Services\Seo\Meta::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'BeyondCode\ViewXray\Xray' => \BeyondCode\ViewXray\Xray::class,
-        'Cog\Contracts\Love\LikeCounter\Models\LikeCounter' => \Cog\Laravel\Love\LikeCounter\Models\LikeCounter::class,
-        'Cog\Contracts\Love\Like\Models\Like' => \Cog\Laravel\Love\Like\Models\Like::class,
-        'Cog\Contracts\Love\Likeable\Services\LikeableService' => \Cog\Laravel\Love\Likeable\Services\LikeableService::class,
         'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
         'Illuminate\Bus\Dispatcher' => \Illuminate\Bus\Dispatcher::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
@@ -687,6 +678,8 @@ namespace PHPSTORM_META {
         'command.notification.make' => \Illuminate\Foundation\Console\NotificationMakeCommand::class,
         'command.notification.table' => \Illuminate\Notifications\Console\NotificationTableCommand::class,
         'command.observer.make' => \Illuminate\Foundation\Console\ObserverMakeCommand::class,
+        'command.optimize' => \Illuminate\Foundation\Console\OptimizeCommand::class,
+        'command.optimize.clear' => \Illuminate\Foundation\Console\OptimizeClearCommand::class,
         'command.package.discover' => \Illuminate\Foundation\Console\PackageDiscoverCommand::class,
         'command.policy.make' => \Illuminate\Foundation\Console\PolicyMakeCommand::class,
         'command.preset' => \Illuminate\Foundation\Console\PresetCommand::class,
@@ -764,16 +757,12 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
-        'vouchers' => \BeyondCode\Vouchers\Vouchers::class,
     ]));
     override(\App::makeWith(0), map([
         '' => '@',
         'App\Services\Seo\Meta' => \App\Services\Seo\Meta::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'BeyondCode\ViewXray\Xray' => \BeyondCode\ViewXray\Xray::class,
-        'Cog\Contracts\Love\LikeCounter\Models\LikeCounter' => \Cog\Laravel\Love\LikeCounter\Models\LikeCounter::class,
-        'Cog\Contracts\Love\Like\Models\Like' => \Cog\Laravel\Love\Like\Models\Like::class,
-        'Cog\Contracts\Love\Likeable\Services\LikeableService' => \Cog\Laravel\Love\Likeable\Services\LikeableService::class,
         'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
         'Illuminate\Bus\Dispatcher' => \Illuminate\Bus\Dispatcher::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
@@ -876,6 +865,8 @@ namespace PHPSTORM_META {
         'command.notification.make' => \Illuminate\Foundation\Console\NotificationMakeCommand::class,
         'command.notification.table' => \Illuminate\Notifications\Console\NotificationTableCommand::class,
         'command.observer.make' => \Illuminate\Foundation\Console\ObserverMakeCommand::class,
+        'command.optimize' => \Illuminate\Foundation\Console\OptimizeCommand::class,
+        'command.optimize.clear' => \Illuminate\Foundation\Console\OptimizeClearCommand::class,
         'command.package.discover' => \Illuminate\Foundation\Console\PackageDiscoverCommand::class,
         'command.policy.make' => \Illuminate\Foundation\Console\PolicyMakeCommand::class,
         'command.preset' => \Illuminate\Foundation\Console\PresetCommand::class,
@@ -953,16 +944,12 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
-        'vouchers' => \BeyondCode\Vouchers\Vouchers::class,
     ]));
     override(\app(0), map([
         '' => '@',
         'App\Services\Seo\Meta' => \App\Services\Seo\Meta::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'BeyondCode\ViewXray\Xray' => \BeyondCode\ViewXray\Xray::class,
-        'Cog\Contracts\Love\LikeCounter\Models\LikeCounter' => \Cog\Laravel\Love\LikeCounter\Models\LikeCounter::class,
-        'Cog\Contracts\Love\Like\Models\Like' => \Cog\Laravel\Love\Like\Models\Like::class,
-        'Cog\Contracts\Love\Likeable\Services\LikeableService' => \Cog\Laravel\Love\Likeable\Services\LikeableService::class,
         'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
         'Illuminate\Bus\Dispatcher' => \Illuminate\Bus\Dispatcher::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
@@ -1065,6 +1052,8 @@ namespace PHPSTORM_META {
         'command.notification.make' => \Illuminate\Foundation\Console\NotificationMakeCommand::class,
         'command.notification.table' => \Illuminate\Notifications\Console\NotificationTableCommand::class,
         'command.observer.make' => \Illuminate\Foundation\Console\ObserverMakeCommand::class,
+        'command.optimize' => \Illuminate\Foundation\Console\OptimizeCommand::class,
+        'command.optimize.clear' => \Illuminate\Foundation\Console\OptimizeClearCommand::class,
         'command.package.discover' => \Illuminate\Foundation\Console\PackageDiscoverCommand::class,
         'command.policy.make' => \Illuminate\Foundation\Console\PolicyMakeCommand::class,
         'command.preset' => \Illuminate\Foundation\Console\PresetCommand::class,
@@ -1142,16 +1131,12 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
-        'vouchers' => \BeyondCode\Vouchers\Vouchers::class,
     ]));
     override(\resolve(0), map([
         '' => '@',
         'App\Services\Seo\Meta' => \App\Services\Seo\Meta::class,
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'BeyondCode\ViewXray\Xray' => \BeyondCode\ViewXray\Xray::class,
-        'Cog\Contracts\Love\LikeCounter\Models\LikeCounter' => \Cog\Laravel\Love\LikeCounter\Models\LikeCounter::class,
-        'Cog\Contracts\Love\Like\Models\Like' => \Cog\Laravel\Love\Like\Models\Like::class,
-        'Cog\Contracts\Love\Likeable\Services\LikeableService' => \Cog\Laravel\Love\Likeable\Services\LikeableService::class,
         'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
         'Illuminate\Bus\Dispatcher' => \Illuminate\Bus\Dispatcher::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
@@ -1254,6 +1239,8 @@ namespace PHPSTORM_META {
         'command.notification.make' => \Illuminate\Foundation\Console\NotificationMakeCommand::class,
         'command.notification.table' => \Illuminate\Notifications\Console\NotificationTableCommand::class,
         'command.observer.make' => \Illuminate\Foundation\Console\ObserverMakeCommand::class,
+        'command.optimize' => \Illuminate\Foundation\Console\OptimizeCommand::class,
+        'command.optimize.clear' => \Illuminate\Foundation\Console\OptimizeClearCommand::class,
         'command.package.discover' => \Illuminate\Foundation\Console\PackageDiscoverCommand::class,
         'command.policy.make' => \Illuminate\Foundation\Console\PolicyMakeCommand::class,
         'command.preset' => \Illuminate\Foundation\Console\PresetCommand::class,
@@ -1331,7 +1318,6 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
-        'vouchers' => \BeyondCode\Vouchers\Vouchers::class,
     ]));
 
     override(\Illuminate\Support\Arr::add(0), type(0));

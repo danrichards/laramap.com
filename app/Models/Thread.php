@@ -5,8 +5,6 @@ namespace App\Models;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Illuminate\Database\Eloquent\Model;
-use Cog\Laravel\Love\Likeable\Models\Traits\Likeable;
-use Cog\Contracts\Love\Likeable\Models\Likeable as LikeableContract;
 
 /**
  * App\Models\Thread.
@@ -49,9 +47,9 @@ use Cog\Contracts\Love\Likeable\Models\Likeable as LikeableContract;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Thread whereDislikedBy($userId = null)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Thread whereLikedBy($userId = null)
  */
-class Thread extends Model implements LikeableContract
+class Thread extends Model
 {
-    use HasSlug, Likeable;
+    use HasSlug;
 
     /**
      * @var array

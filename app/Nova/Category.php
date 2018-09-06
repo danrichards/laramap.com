@@ -13,7 +13,7 @@ class Category extends Resource
      *
      * @var string
      */
-    public static $model = 'App\Models\ThreadCategory';
+    public static $model = \App\Models\ThreadCategory::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
