@@ -8,7 +8,6 @@ use Illuminate\Auth\MustVerifyEmail;
 use Spatie\Permission\Traits\HasRoles;
 use Spatie\Activitylog\Models\Activity;
 use Illuminate\Notifications\Notifiable;
-use Cog\Laravel\Love\Liker\Models\Traits\Liker;
 use App\Notifications\Users\WelcomeNotification;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Notifications\Admin\NotifyAboutNewUserNotification;
