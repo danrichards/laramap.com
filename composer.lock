@@ -2119,16 +2119,16 @@
         },
         {
             "name": "laravel/cashier",
-            "version": "v7.1.3",
+            "version": "v7.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/cashier.git",
-                "reference": "534049509cdd483c5a685bd08adea49789a4a133"
+                "reference": "445fd85263b4fa2395135f7881feedbd2609c09f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/cashier/zipball/534049509cdd483c5a685bd08adea49789a4a133",
-                "reference": "534049509cdd483c5a685bd08adea49789a4a133",
+                "url": "https://api.github.com/repos/laravel/cashier/zipball/445fd85263b4fa2395135f7881feedbd2609c09f",
+                "reference": "445fd85263b4fa2395135f7881feedbd2609c09f",
                 "shasum": ""
             },
             "require": {
@@ -2180,7 +2180,7 @@
                 "laravel",
                 "stripe"
             ],
-            "time": "2018-08-31T13:01:07+00:00"
+            "time": "2018-09-05T21:39:18+00:00"
         },
         {
             "name": "laravel/framework",
@@ -2391,16 +2391,16 @@
         },
         {
             "name": "laravel/nova",
-            "version": "dev-master",
+            "version": "v1.0.12",
             "source": {
                 "type": "git",
                 "url": "git@github.com:fwartner/nova.git",
-                "reference": "d951c4f222d60e47ac07d3a48910314055e10566"
+                "reference": "83e55bc9685067571e7917582ff5472433ed2677"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fwartner/nova/zipball/d951c4f222d60e47ac07d3a48910314055e10566",
-                "reference": "d951c4f222d60e47ac07d3a48910314055e10566",
+                "url": "https://api.github.com/repos/fwartner/nova/zipball/83e55bc9685067571e7917582ff5472433ed2677",
+                "reference": "83e55bc9685067571e7917582ff5472433ed2677",
                 "shasum": ""
             },
             "require": {
@@ -2457,10 +2457,10 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/fwartner/nova/tree/master",
+                "source": "https://github.com/fwartner/nova/tree/v1.0.12",
                 "issues": "https://github.com/fwartner/nova/issues"
             },
-            "time": "2018-09-05T08:21:28+00:00"
+            "time": "2018-09-06T10:21:12+00:00"
         },
         {
             "name": "laravel/passport",
@@ -3049,21 +3049,21 @@
         },
         {
             "name": "llaski/nova-scheduled-jobs",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/llaski/nova-scheduled-jobs.git",
-                "reference": "ce88f1fc01d2fbae49522be4777934b865358cee"
+                "reference": "d551d2f7b14f269a8452501dc866872cb0ea254c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/llaski/nova-scheduled-jobs/zipball/ce88f1fc01d2fbae49522be4777934b865358cee",
-                "reference": "ce88f1fc01d2fbae49522be4777934b865358cee",
+                "url": "https://api.github.com/repos/llaski/nova-scheduled-jobs/zipball/d551d2f7b14f269a8452501dc866872cb0ea254c",
+                "reference": "d551d2f7b14f269a8452501dc866872cb0ea254c",
                 "shasum": ""
             },
             "require": {
                 "dragonmantank/cron-expression": "^2.2",
-                "illuminate/console": "^5.6",
+                "illuminate/console": "^5.6|^5.7",
                 "php": ">=7.1.0"
             },
             "require-dev": {
@@ -3102,7 +3102,7 @@
                 "laravel",
                 "nova"
             ],
-            "time": "2018-08-28T03:33:57+00:00"
+            "time": "2018-09-06T00:16:45+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -4804,16 +4804,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.9.7",
+            "version": "v0.9.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "4f5b6c090948773a8bfeea6a0f07ab7d0b24e932"
+                "reference": "ed3c32c4304e1a678a6e0f9dc11dd2d927d89555"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/4f5b6c090948773a8bfeea6a0f07ab7d0b24e932",
-                "reference": "4f5b6c090948773a8bfeea6a0f07ab7d0b24e932",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/ed3c32c4304e1a678a6e0f9dc11dd2d927d89555",
+                "reference": "ed3c32c4304e1a678a6e0f9dc11dd2d927d89555",
                 "shasum": ""
             },
             "require": {
@@ -4874,7 +4874,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2018-08-11T15:54:43+00:00"
+            "time": "2018-09-05T11:40:09+00:00"
         },
         {
             "name": "pusher/pusher-php-server",
@@ -7496,16 +7496,16 @@
         },
         {
             "name": "zendframework/zend-diactoros",
-            "version": "1.8.5",
+            "version": "1.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "3e4edb822c942f37ade0d09579cfbab11e2fee87"
+                "reference": "20da13beba0dde8fb648be3cc19765732790f46e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/3e4edb822c942f37ade0d09579cfbab11e2fee87",
-                "reference": "3e4edb822c942f37ade0d09579cfbab11e2fee87",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/20da13beba0dde8fb648be3cc19765732790f46e",
+                "reference": "20da13beba0dde8fb648be3cc19765732790f46e",
                 "shasum": ""
             },
             "require": {
@@ -7518,6 +7518,7 @@
             "require-dev": {
                 "ext-dom": "*",
                 "ext-libxml": "*",
+                "php-http/psr7-integration-tests": "dev-master",
                 "phpunit/phpunit": "^5.7.16 || ^6.0.8 || ^7.2.7",
                 "zendframework/zend-coding-standard": "~1.0"
             },
@@ -7555,7 +7556,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2018-08-10T14:16:32+00:00"
+            "time": "2018-09-05T19:29:37+00:00"
         }
     ],
     "packages-dev": [
@@ -10358,16 +10359,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.3.3",
+            "version": "7.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "1bd5629cccfb2c0a9ef5474b4ff772349e1ec898"
+                "reference": "0356331bf62896dc56e3a15030b23b73f38b2935"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/1bd5629cccfb2c0a9ef5474b4ff772349e1ec898",
-                "reference": "1bd5629cccfb2c0a9ef5474b4ff772349e1ec898",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/0356331bf62896dc56e3a15030b23b73f38b2935",
+                "reference": "0356331bf62896dc56e3a15030b23b73f38b2935",
                 "shasum": ""
             },
             "require": {
@@ -10438,7 +10439,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-09-01T15:49:55+00:00"
+            "time": "2018-09-05T09:58:53+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
