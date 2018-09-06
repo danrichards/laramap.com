@@ -12,7 +12,12 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.9.0/dist/instantsearch.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
+    @stack('styles')
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    @stack('header_scripts')
+    <script src="https://js.stripe.com/v3/"></script>
 
     <script>
         window.Laramap = <?php echo json_encode(array_merge(
@@ -58,6 +63,7 @@
 
     gtag('config', 'UA-63437005-1');
 </script>
+@stack('footer_scripts')
 
 </body>
 </html>

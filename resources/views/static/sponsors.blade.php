@@ -83,6 +83,88 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="text-wrap p-lg-6">
+                            <section id="become-a-sponsor">
+                                <h3 class="text-center">
+                                    Want to become a sponsor?
+                                </h3>
+
+                                <br>
+
+                                <div class="row">
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <div class="card-category">Artisan 💌</div>
+                                                <div class="display-3 my-4">$5 <small>/ month</small></div>
+                                                <ul class="list-unstyled leading-loose">
+                                                    <li><i class="fe fe-check text-success mr-2" aria-hidden="true"></i> Sponsor-Badge on your profile</li>
+                                                    <li><i class="fe fe-x text-danger mr-2" aria-hidden="true"></i> Listed on the backers section on GitHub</li>
+                                                    <li><i class="fe fe-x text-danger mr-2" aria-hidden="true"></i> Access to the private slack channel</li>
+                                                </ul>
+
+                                                <div class="text-center mt-6">
+                                                    <form action="/payments/subscription" method="POST">
+                                                        @csrf
+                                                        <script
+                                                            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                                            data-key="pk_test_5VRlAe4YMBRz4mVxB5nT6fIk"
+                                                            data-name="Laramap.com"
+                                                            data-description="Artisan Monthl"
+                                                            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                                                            data-locale="auto">
+                                                        </script>
+                                                    </form>
+                                                    <button class="btn btn-secondary btn-block" id="artisan">Choose plan</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <div class="card-category">Supporter 😍</div>
+                                                <div class="display-3 my-4">$10 <small>/ month</small></div>
+                                                <ul class="list-unstyled leading-loose">
+                                                    <li><i class="fe fe-check text-success mr-2" aria-hidden="true"></i> Sponsor-Badge on your profile</li>
+                                                    <li><i class="fe fe-x text-success mr-2" aria-hidden="true"></i> Listed on the backers section on GitHub</li>
+                                                    <li><i class="fe fe-x text-danger mr-2" aria-hidden="true"></i> Access to the private slack channel</li>
+                                                </ul>
+
+                                                <div class="text-center mt-6">
+                                                    <button class="btn btn-secondary btn-block" id="supporter">Choose plan</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <div class="card-category">Lover ❤️</div>
+                                                <div class="display-3 my-4">$15 <small>/ month</small></div>
+                                                <ul class="list-unstyled leading-loose">
+                                                    <li><i class="fe fe-check text-success mr-2" aria-hidden="true"></i> Sponsor-Badge on your profile</li>
+                                                    <li><i class="fe fe-x text-success mr-2" aria-hidden="true"></i> Listed on the backers section on GitHub</li>
+                                                    <li><i class="fe fe-x text-success mr-2" aria-hidden="true"></i> Access to the private slack channel</li>
+                                                </ul>
+
+                                                <div class="text-center mt-6">
+                                                    <button class="btn btn-secondary btn-block" id="lover">Choose plan</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>

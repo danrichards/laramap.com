@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Laravel\Cashier\Billable;
 use Laravel\Scout\Searchable;
 use Laravel\Passport\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
@@ -108,7 +109,7 @@ use Cog\Contracts\Love\Liker\Models\Liker as LikerContract;
  */
 class User extends Authenticatable implements LikerContract
 {
-    use HasApiTokens, Notifiable, Searchable, Liker, HasRoles;
+    use HasApiTokens, Notifiable, Searchable, Liker, HasRoles, Billable;
 
     /**
      * @var array
