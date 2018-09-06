@@ -18,7 +18,7 @@ class Resources extends Resource
      *
      * @var string
      */
-    public static $model = 'App\Models\Resource';
+    public static $model = \App\Models\Resource::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
