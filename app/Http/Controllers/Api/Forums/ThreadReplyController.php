@@ -45,7 +45,7 @@ class ThreadReplyController extends Controller
             ->withProperties(['title' => $thread->title])
             ->log('replied to ":properties.title".');
 
-        if ($user->id != $thread->user->id) {
+        if ($user->id !== $thread->user_id) {
             $thread->user->notify(new NewCommentNotification($user, $thread));
         }
 
