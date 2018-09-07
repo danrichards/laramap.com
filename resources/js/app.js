@@ -9,9 +9,6 @@
 window.Vue = require('vue');
 require('./bootstrap');
 
-import VueRouter from 'vue-router';
-Vue.use(VueRouter);
-
 import VuePrism from 'vue-prism';
 Vue.use(VuePrism);
 import 'prismjs/themes/prism.css';
@@ -66,24 +63,8 @@ Vue.use(InstantSearch);
 
 Vue.config.productionTip = false;
 
-router.beforeEach((to, from, next) => {
-    document.title = to.meta.title + ' - Laramap.com';
-    next()
-});
-
-// import App from './views/App';
-
-/**
- * Pages
- */
-import Welcome from './views/Welcome';
-import About from './views/About';
-import NotFound from './views/NotFound';
-
 const app = new Vue({
     el: '#app',
-    // components: { App },
-    // router,
     mounted() {
         this.listenForChanges();
     },
@@ -99,29 +80,6 @@ const app = new Vue({
         listenForChanges() {
             let self = this;
             console.log('Current User ID:' + this.userId);
-            Echo.channel('private-App.Models.User.' + this.userId)
-                .notification((notification) => {
-                    console.log('hghjhfhf');
-                });
-
-            Echo.channel('posts')
-                .listen('PostPublished', post => {
-                    if (! ('Notification' in window)) {
-                        console.log('Web Notifications are not supported on your browser');
-                        return;
-                    }
-
-                    Notification.requestPermission( permission => {
-                        let notification = new Notification('New post published', {
-                            body: post.title,
-                            icon: "https://laramap.com/images/logo_500x500.png"
-                        });
-
-                        notification.onclick = () => {
-                            window.open(window.location.href);
-                        };
-                    });
-                })
         }
     }
 });

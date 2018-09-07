@@ -3,10 +3,10 @@
         <div class="content">
             <div  class="m-b-md">
                 <h2 class="title m-b-md">
-                    projctr.io
+                    Laramap.com
                 </h2>
                 <h3>
-                    Self hosted CDN
+                    Find artisans around the world
                 </h3>
             </div>
         </div>
