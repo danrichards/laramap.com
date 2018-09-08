@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "207a5c94f8dfe79750c55c05330ba019",
+    "content-hash": "60424f96bc5a7decb6f72999c213f9c1",
     "packages": [
         {
             "name": "ajhaupt7/image-upload-preview",
@@ -2153,16 +2153,16 @@
         },
         {
             "name": "laravel/nova",
-            "version": "v1.0.13",
+            "version": "v1.0.12",
             "source": {
                 "type": "git",
                 "url": "git@github.com:fwartner/nova.git",
-                "reference": "e93220209f3a5eed81f4cff9b2f67d098007c891"
+                "reference": "83e55bc9685067571e7917582ff5472433ed2677"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fwartner/nova/zipball/e93220209f3a5eed81f4cff9b2f67d098007c891",
-                "reference": "e93220209f3a5eed81f4cff9b2f67d098007c891",
+                "url": "https://api.github.com/repos/fwartner/nova/zipball/83e55bc9685067571e7917582ff5472433ed2677",
+                "reference": "83e55bc9685067571e7917582ff5472433ed2677",
                 "shasum": ""
             },
             "require": {
@@ -2219,10 +2219,10 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/fwartner/nova/tree/v1.0.13",
+                "source": "https://github.com/fwartner/nova/tree/v1.0.12",
                 "issues": "https://github.com/fwartner/nova/issues"
             },
-            "time": "2018-09-08T10:52:58+00:00"
+            "time": "2018-09-06T10:21:12+00:00"
         },
         {
             "name": "laravel/passport",
