@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "60424f96bc5a7decb6f72999c213f9c1",
+    "content-hash": "f9084efb974f23cc49e52bde5e1e1b49",
     "packages": [
         {
             "name": "ajhaupt7/image-upload-preview",
