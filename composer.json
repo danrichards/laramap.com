@@ -30,13 +30,13 @@
         "laravel/socialite": "^3.0",
         "laravel/tinker": "^1.0",
         "llaski/nova-scheduled-jobs": "^1.0",
+        "maatwebsite/laravel-nova-excel": "^1.0",
         "nathanheffley/nova-algolia": "^0.1.1",
         "nicolasbeauvais/nova-algolia-card": "^1.0",
         "ohdearapp/laravel-ohdear-webhooks": "^1.0",
         "pdewit/nova-external-url": "^1.0",
         "pragmarx/artisan-tool": "^0.2.1",
         "pragmarx/countries": "^0.5.8",
-        "pragmarx/countries-laravel": "^0.5.2",
         "predis/predis": "^1.1",
         "pusher/pusher-php-server": "^3.1",
         "spatie/geocoder": "^3.3",
@@ -123,10 +123,6 @@
         {
             "type": "vcs",
             "url": "https://github.com/fwartner/nova.git"
-        },
-        {
-            "type": "path",
-            "url": "./nova-components/Laramap"
         }
     ],
     "config": {

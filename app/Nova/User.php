@@ -17,6 +17,7 @@ use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\MorphToMany;
 use App\Nova\Actions\SendInformationEmail;
 use Themsaid\CashierTool\CashierResourceTool;
+use Maatwebsite\LaravelNovaExcel\Actions\DownloadExcel;
 
 class User extends Resource
 {
@@ -153,7 +154,8 @@ class User extends Resource
     public function actions(Request $request)
     {
         return [
-            new SendInformationEmail(),
+            new SendInformationEmail,
+            new DownloadExcel,
         ];
     }
 
