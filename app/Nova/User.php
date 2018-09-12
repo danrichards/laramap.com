@@ -96,6 +96,7 @@ class User extends Resource
             Boolean::make('Active', 'is_active'),
             Boolean::make('Sponsor', 'is_sponsor'),
             Boolean::make('Admin', 'is_admin'),
+            Boolean::make('Is Verified', 'is_verfied')->hideWhenCreating()->hideWhenUpdating(),
             Boolean::make('Available for hire', 'is_hireable')->hideFromIndex(),
 
             DateTime::make('Created At')->hideFromIndex(),
