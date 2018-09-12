@@ -74,8 +74,18 @@
 
                 <div class="col-6 col-sm-4 col-lg-2">
                     <div class="card">
+                        <div id="carbonads">
+  <span>
+    <span class="carbon-wrap">
+      <a href="[link]" class="carbon-img" target="_blank">
+        <img src="[image]" alt="" border="0" height="100" width="130" style="max-width:130px;">
+      </a>
+      <a href="[link]" class="carbon-text" target="_blank">[text]</a>
+    </span>
+    <a href="http://carbonads.net/" class="carbon-poweredby" target="_blank">ads via Carbon</a>
+  </span>
+                        </div>
                         <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7DPKJL&placement=laramapcom" id="_carbonads_js"></script>
-
                     </div>
                 </div>
             </div>
