@@ -2,13 +2,13 @@
 
 namespace App\Nova;
 
-use Ajhaupt7\ImageUploadPreview\ImageUploadPreview;
-use Benjaminhirsch\NovaSlugField\Slug;
-use Benjaminhirsch\NovaSlugField\TextWithSlug;
+use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\DateTime;
-use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Markdown;
+use Benjaminhirsch\NovaSlugField\Slug;
+use Benjaminhirsch\NovaSlugField\TextWithSlug;
+use Ajhaupt7\ImageUploadPreview\ImageUploadPreview;
 
 class Article extends Resource
 {

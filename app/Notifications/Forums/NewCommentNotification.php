@@ -2,14 +2,14 @@
 
 namespace App\Notifications\Forums;
 
-use App\Models\Thread;
 use App\Models\User;
+use App\Models\Thread;
 use Illuminate\Bus\Queueable;
+use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Channels\BroadcastChannel;
 use Illuminate\Notifications\Messages\BroadcastMessage;
-use Illuminate\Notifications\Messages\MailMessage;
-use Illuminate\Notifications\Notification;
 
 class NewCommentNotification extends Notification implements ShouldQueue
 {
