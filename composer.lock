@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d93bb53daaa679a932da58ddc682856e",
+    "content-hash": "59ca71efc33c5b667a2b5d8dc11769e2",
     "packages": [
         {
             "name": "ajhaupt7/image-upload-preview",
@@ -1835,6 +1835,47 @@
                 }
             ],
             "time": "2015-04-20T18:58:01+00:00"
+        },
+        {
+            "name": "jameslkingsley/nova-stripe-theme",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jameslkingsley/nova-stripe-theme.git",
+                "reference": "570e2768f6c00e288f09f9b9676017a38567d7ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jameslkingsley/nova-stripe-theme/zipball/570e2768f6c00e288f09f9b9676017a38567d7ea",
+                "reference": "570e2768f6c00e288f09f9b9676017a38567d7ea",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Kingsley\\NovaStripeTheme\\NovaStripeThemeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kingsley\\NovaStripeTheme\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova theme closely resembling Stripe.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2018-09-05T14:49:15+00:00"
         },
         {
             "name": "kreitje/nova-horizon-stats",
