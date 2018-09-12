@@ -72,8 +72,8 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-sm-4 col-lg-2">
-                    <div class="card">
+                {{--<div class="col-6 col-sm-4 col-lg-2">--}}
+                    {{--<div class="card">--}}
                         {{--<div id="carbonads">--}}
                           {{--<span>--}}
                             {{--<span class="carbon-wrap">--}}
@@ -85,9 +85,9 @@
                             {{--<a href="http://carbonads.net/" class="carbon-poweredby" target="_blank">ads via Carbon</a>--}}
                           {{--</span>--}}
                         {{--</div>--}}
-                        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7DPKJL&placement=laramapcom" id="_carbonads_js"></script>
-                    </div>
-                </div>
+                        {{--<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7DPKJL&placement=laramapcom" id="_carbonads_js"></script>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             </div>
         </section>
 
