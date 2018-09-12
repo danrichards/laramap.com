@@ -54,14 +54,13 @@
                     </div>
                 </div>
 
-                {{--<div class="col-6 col-sm-4 col-lg-2">--}}
-                    {{--<div class="card">--}}
-                        {{--<div class="card-body p-3 text-center">--}}
-                            {{--<div class="h1 m-0">{{ \App\Models\UserGroup::all()->count() }}</div>--}}
-                            {{--<div class="text-muted mb-4">Laravel usergroups</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
+                <div class="col-6 col-sm-4 col-lg-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7DPKJL&placement=laramapcom" id="_carbonads_js"></script>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="col-6 col-sm-4 col-lg-2">
                     <div class="card">
@@ -71,15 +70,6 @@
                         </div>
                     </div>
                 </div>
-
-                {{--<div class="col-6 col-sm-4 col-lg-2">--}}
-                    {{--<div class="card">--}}
-                        {{--<div class="card-body p-3 text-center">--}}
-                            {{--<div class="h1 m-0">{{ \App\Models\Article::all()->count() }}</div>--}}
-                            {{--<div class="text-muted mb-4">User written articles</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
 
                 <div class="col-6 col-sm-4 col-lg-2">
                     <div class="card">
@@ -160,7 +150,6 @@
         </section>
 
         <hr width="50%">
-
         <br>
     </div>
 @endsection

@@ -5,6 +5,22 @@
                 <div class="col-md-3">
                     <h3 class="page-title mb-5">Categories</h3>
                     <div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div id="carbonads">
+                                  <span>
+                                    <span class="carbon-wrap">
+                                      <a href="[link]" class="carbon-img" target="_blank">
+                                        <img src="[image]" alt="" border="0" height="100" width="130" style="max-width:130px;">
+                                      </a>
+                                      <a href="[link]" class="carbon-text" target="_blank">[text]</a>
+                                    </span>
+                                    <a href="http://carbonads.net/" class="carbon-poweredby" target="_blank">ads via Carbon</a>
+                                  </span>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="list-group list-group-transparent mb-0">
                             <a v-for="category in categories" v-bind:href="'/forums/categories/' + category.slug" class="list-group-item list-group-item-action d-flex align-items-center active">
                                 {{ category.title }} <span class="ml-auto badge badge-primary">{{ category.thread_count }}</span>
