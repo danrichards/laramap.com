@@ -38,6 +38,9 @@
                             <li class="breadcrumb-item active" aria-current="page">{{ $thread->title }}</li>
                         </ol>
                     </nav>
+
+                    <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7DPKJL&placement=laramapcom" id="_carbonads_js"></script>
+
                 </div>
 
                 <single-thread :threadid="{{ $thread->id }}"></single-thread>
