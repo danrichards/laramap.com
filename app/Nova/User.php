@@ -100,6 +100,7 @@ class User extends Resource
 
             DateTime::make('Created At')->hideFromIndex(),
             DateTime::make('Updated At')->hideFromIndex(),
+            DateTime::make('Verified At', 'email_verified_at')->hideFromIndex(),
 
             CashierResourceTool::make()->onlyOnDetail(),
 

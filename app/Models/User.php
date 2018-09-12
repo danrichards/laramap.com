@@ -135,6 +135,13 @@ class User extends Authenticatable implements MustVerifyEmailContract
         'is_hireable' => 'boolean',
     ];
 
+    /**
+     * @var array
+     */
+    protected $dates = [
+        'email_verified_at'
+    ];
+
     /***
      * @var array
      */
