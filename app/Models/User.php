@@ -146,7 +146,7 @@ class User extends Authenticatable implements MustVerifyEmailContract
      * @var array
      */
     protected $appends = [
-        'gravatar', 'avatar', 'activities', 'is_verfied'
+        'gravatar', 'avatar', 'activities', 'is_verfied',
     ];
 
     /**
@@ -231,7 +231,7 @@ class User extends Authenticatable implements MustVerifyEmailContract
         return $this->hasMany(Reply::class, 'user_id', 'id');
     }
 
-    public function getIsVerifiedAttribute() 
+    public function getIsVerifiedAttribute()
     {
         return ! is_null($this->email_verified_at);
     }
