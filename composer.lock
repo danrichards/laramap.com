@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "191b08389e57d29765829bff44429924",
+    "content-hash": "d93bb53daaa679a932da58ddc682856e",
     "packages": [
         {
             "name": "ajhaupt7/image-upload-preview",
@@ -1944,16 +1944,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.7.2",
+            "version": "v5.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "86e1f98a6d2aab018e0257a7cb2ef2110d64a873"
+                "reference": "536a024e3ef6b93f55f4039a7f4568efa7e60aea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/86e1f98a6d2aab018e0257a7cb2ef2110d64a873",
-                "reference": "86e1f98a6d2aab018e0257a7cb2ef2110d64a873",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/536a024e3ef6b93f55f4039a7f4568efa7e60aea",
+                "reference": "536a024e3ef6b93f55f4039a7f4568efa7e60aea",
                 "shasum": ""
             },
             "require": {
@@ -2081,7 +2081,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2018-09-06T14:01:05+00:00"
+            "time": "2018-09-11T13:42:55+00:00"
         },
         {
             "name": "laravel/horizon",
@@ -2153,16 +2153,16 @@
         },
         {
             "name": "laravel/nova",
-            "version": "v1.0.12",
+            "version": "v1.0.15",
             "source": {
                 "type": "git",
                 "url": "git@github.com:fwartner/nova.git",
-                "reference": "83e55bc9685067571e7917582ff5472433ed2677"
+                "reference": "0339845da8eafe059d3dcd551f028ff5d377f3c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fwartner/nova/zipball/83e55bc9685067571e7917582ff5472433ed2677",
-                "reference": "83e55bc9685067571e7917582ff5472433ed2677",
+                "url": "https://api.github.com/repos/fwartner/nova/zipball/0339845da8eafe059d3dcd551f028ff5d377f3c1",
+                "reference": "0339845da8eafe059d3dcd551f028ff5d377f3c1",
                 "shasum": ""
             },
             "require": {
@@ -2219,10 +2219,10 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/fwartner/nova/tree/v1.0.12",
+                "source": "https://github.com/fwartner/nova/tree/v1.0.15",
                 "issues": "https://github.com/fwartner/nova/issues"
             },
-            "time": "2018-09-06T10:21:12+00:00"
+            "time": "2018-09-12T11:56:21+00:00"
         },
         {
             "name": "laravel/passport",
@@ -6920,16 +6920,16 @@
         },
         {
             "name": "spatie/laravel-permission",
-            "version": "2.18.0",
+            "version": "2.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-permission.git",
-                "reference": "0319fefd54319e7a1155ded3c9a754ef3f7f58d8"
+                "reference": "cf4f3afb093a524bbdfb32f02a644a37694ff4c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/0319fefd54319e7a1155ded3c9a754ef3f7f58d8",
-                "reference": "0319fefd54319e7a1155ded3c9a754ef3f7f58d8",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/cf4f3afb093a524bbdfb32f02a644a37694ff4c6",
+                "reference": "cf4f3afb093a524bbdfb32f02a644a37694ff4c6",
                 "shasum": ""
             },
             "require": {
@@ -6977,7 +6977,7 @@
                 "security",
                 "spatie"
             ],
-            "time": "2018-09-06T14:30:14+00:00"
+            "time": "2018-09-10T19:52:52+00:00"
         },
         {
             "name": "spatie/laravel-query-builder",
@@ -7523,16 +7523,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v6.1.2",
+            "version": "v6.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "7d760881d266d63c5e7a1155cbcf2ac656a31ca8"
+                "reference": "8ddcb66ac10c392d3beb54829eef8ac1438595f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/7d760881d266d63c5e7a1155cbcf2ac656a31ca8",
-                "reference": "7d760881d266d63c5e7a1155cbcf2ac656a31ca8",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/8ddcb66ac10c392d3beb54829eef8ac1438595f4",
+                "reference": "8ddcb66ac10c392d3beb54829eef8ac1438595f4",
                 "shasum": ""
             },
             "require": {
@@ -7578,7 +7578,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2018-07-13T07:04:35+00:00"
+            "time": "2018-09-11T07:12:52+00:00"
         },
         {
             "name": "symfony/console",
@@ -8654,12 +8654,12 @@
             "version": "v1.0.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/TitasGailius/search-relations.git",
+                "url": "https://github.com/TitasGailius/nova-search-relations.git",
                 "reference": "add69b7d7bf8b849fafb5f3599daf1a2a033a046"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TitasGailius/search-relations/zipball/add69b7d7bf8b849fafb5f3599daf1a2a033a046",
+                "url": "https://api.github.com/repos/TitasGailius/nova-search-relations/zipball/add69b7d7bf8b849fafb5f3599daf1a2a033a046",
                 "reference": "add69b7d7bf8b849fafb5f3599daf1a2a033a046",
                 "shasum": ""
             },
@@ -10615,12 +10615,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/larastan.git",
-                "reference": "6c58253e0665996d1f1a7c12dc5605f6e2f697b0"
+                "reference": "661e2f91021c739bf1ee04604fb717de94f1adca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/larastan/zipball/6c58253e0665996d1f1a7c12dc5605f6e2f697b0",
-                "reference": "6c58253e0665996d1f1a7c12dc5605f6e2f697b0",
+                "url": "https://api.github.com/repos/nunomaduro/larastan/zipball/661e2f91021c739bf1ee04604fb717de94f1adca",
+                "reference": "661e2f91021c739bf1ee04604fb717de94f1adca",
                 "shasum": ""
             },
             "require": {
@@ -10674,7 +10674,7 @@
                 "php",
                 "static analysis"
             ],
-            "time": "2018-09-01T20:35:46+00:00"
+            "time": "2018-09-12T11:39:47+00:00"
         },
         {
             "name": "ocramius/package-versions",
