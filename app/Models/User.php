@@ -146,7 +146,7 @@ class User extends Authenticatable implements MustVerifyEmailContract
      * @var array
      */
     protected $appends = [
-        'gravatar', 'avatar', 'activities'
+        'gravatar', 'avatar', 'activities',
     ];
 
     /**
