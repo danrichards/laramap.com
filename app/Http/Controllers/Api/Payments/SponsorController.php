@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Api\Payments;
 
+use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class SponsorController extends Controller
 {

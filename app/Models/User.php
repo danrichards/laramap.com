@@ -2,16 +2,16 @@
 
 namespace App\Models;
 
-use Laravel\Scout\Searchable;
-use Laravel\Passport\HasApiTokens;
-use Illuminate\Auth\MustVerifyEmail;
-use Spatie\Permission\Traits\HasRoles;
-use Spatie\Activitylog\Models\Activity;
-use Illuminate\Notifications\Notifiable;
-use App\Notifications\Users\WelcomeNotification;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Notifications\Admin\NotifyAboutNewUserNotification;
+use App\Notifications\Users\WelcomeNotification;
+use Illuminate\Auth\MustVerifyEmail;
 use Illuminate\Contracts\Auth\MustVerifyEmail as MustVerifyEmailContract;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Passport\HasApiTokens;
+use Laravel\Scout\Searchable;
+use Spatie\Activitylog\Models\Activity;
+use Spatie\Permission\Traits\HasRoles;
 
 /**
  * App\Models\User.
@@ -105,6 +105,8 @@ use Illuminate\Contracts\Auth\MustVerifyEmail as MustVerifyEmailContract;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereCardLastFour($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereStripeId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereTrialEndsAt($value)
+ * @property string|null $email_verified_at
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereEmailVerifiedAt($value)
  */
 class User extends Authenticatable implements MustVerifyEmailContract
 {

@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.7.1 on 2018-09-06 11:03:58.
+ * Generated for Laravel 5.7.3 on 2018-09-12 12:02:37.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -1666,6 +1666,31 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
+         * Log a user into the application without firing the Login event.
+         *
+         * @param \Illuminate\Contracts\Auth\Authenticatable $user
+         * @return void 
+         * @static 
+         */ 
+        public static function quietLogin($user)
+        {
+            \Lab404\Impersonate\Guard\SessionGuard::quietLogin($user);
+        }
+        
+        /**
+         * Logout the user without updating remember_token
+         * and without firing the Logout event.
+         *
+         * @param void
+         * @return void 
+         * @static 
+         */ 
+        public static function quietLogout()
+        {
+            \Lab404\Impersonate\Guard\SessionGuard::quietLogout();
+        }
+        
+        /**
          * Get the currently authenticated user.
          *
          * @return \App\Models\User|null 
@@ -1673,7 +1698,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function user()
         {
-            return \Illuminate\Auth\SessionGuard::user();
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::user();
         }
         
         /**
@@ -1684,7 +1710,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function id()
         {
-            return \Illuminate\Auth\SessionGuard::id();
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::id();
         }
         
         /**
@@ -1696,7 +1723,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function once($credentials = array())
         {
-            return \Illuminate\Auth\SessionGuard::once($credentials);
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::once($credentials);
         }
         
         /**
@@ -1708,7 +1736,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function onceUsingId($id)
         {
-            return \Illuminate\Auth\SessionGuard::onceUsingId($id);
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::onceUsingId($id);
         }
         
         /**
@@ -1720,7 +1749,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function validate($credentials = array())
         {
-            return \Illuminate\Auth\SessionGuard::validate($credentials);
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::validate($credentials);
         }
         
         /**
@@ -1733,7 +1763,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function basic($field = 'email', $extraConditions = array())
         {
-            return \Illuminate\Auth\SessionGuard::basic($field, $extraConditions);
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::basic($field, $extraConditions);
         }
         
         /**
@@ -1746,7 +1777,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function onceBasic($field = 'email', $extraConditions = array())
         {
-            return \Illuminate\Auth\SessionGuard::onceBasic($field, $extraConditions);
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::onceBasic($field, $extraConditions);
         }
         
         /**
@@ -1759,7 +1791,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function attempt($credentials = array(), $remember = false)
         {
-            return \Illuminate\Auth\SessionGuard::attempt($credentials, $remember);
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::attempt($credentials, $remember);
         }
         
         /**
@@ -1772,7 +1805,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function loginUsingId($id, $remember = false)
         {
-            return \Illuminate\Auth\SessionGuard::loginUsingId($id, $remember);
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::loginUsingId($id, $remember);
         }
         
         /**
@@ -1785,7 +1819,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function login($user, $remember = false)
         {
-            \Illuminate\Auth\SessionGuard::login($user, $remember);
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            \Lab404\Impersonate\Guard\SessionGuard::login($user, $remember);
         }
         
         /**
@@ -1796,7 +1831,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function logout()
         {
-            \Illuminate\Auth\SessionGuard::logout();
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            \Lab404\Impersonate\Guard\SessionGuard::logout();
         }
         
         /**
@@ -1811,7 +1847,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function logoutOtherDevices($password, $attribute = 'password')
         {
-            return \Illuminate\Auth\SessionGuard::logoutOtherDevices($password, $attribute);
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::logoutOtherDevices($password, $attribute);
         }
         
         /**
@@ -1823,7 +1860,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function attempting($callback)
         {
-            \Illuminate\Auth\SessionGuard::attempting($callback);
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            \Lab404\Impersonate\Guard\SessionGuard::attempting($callback);
         }
         
         /**
@@ -1834,7 +1872,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getLastAttempted()
         {
-            return \Illuminate\Auth\SessionGuard::getLastAttempted();
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::getLastAttempted();
         }
         
         /**
@@ -1845,7 +1884,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getName()
         {
-            return \Illuminate\Auth\SessionGuard::getName();
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::getName();
         }
         
         /**
@@ -1856,7 +1896,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getRecallerName()
         {
-            return \Illuminate\Auth\SessionGuard::getRecallerName();
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::getRecallerName();
         }
         
         /**
@@ -1867,7 +1908,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function viaRemember()
         {
-            return \Illuminate\Auth\SessionGuard::viaRemember();
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::viaRemember();
         }
         
         /**
@@ -1879,7 +1921,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getCookieJar()
         {
-            return \Illuminate\Auth\SessionGuard::getCookieJar();
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::getCookieJar();
         }
         
         /**
@@ -1891,7 +1934,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function setCookieJar($cookie)
         {
-            \Illuminate\Auth\SessionGuard::setCookieJar($cookie);
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            \Lab404\Impersonate\Guard\SessionGuard::setCookieJar($cookie);
         }
         
         /**
@@ -1902,7 +1946,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getDispatcher()
         {
-            return \Illuminate\Auth\SessionGuard::getDispatcher();
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::getDispatcher();
         }
         
         /**
@@ -1914,7 +1959,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function setDispatcher($events)
         {
-            \Illuminate\Auth\SessionGuard::setDispatcher($events);
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            \Lab404\Impersonate\Guard\SessionGuard::setDispatcher($events);
         }
         
         /**
@@ -1925,7 +1971,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getSession()
         {
-            return \Illuminate\Auth\SessionGuard::getSession();
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::getSession();
         }
         
         /**
@@ -1936,7 +1983,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getUser()
         {
-            return \Illuminate\Auth\SessionGuard::getUser();
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::getUser();
         }
         
         /**
@@ -1948,7 +1996,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function setUser($user)
         {
-            return \Illuminate\Auth\SessionGuard::setUser($user);
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::setUser($user);
         }
         
         /**
@@ -1959,7 +2008,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getRequest()
         {
-            return \Illuminate\Auth\SessionGuard::getRequest();
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::getRequest();
         }
         
         /**
@@ -1971,7 +2021,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function setRequest($request)
         {
-            return \Illuminate\Auth\SessionGuard::setRequest($request);
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::setRequest($request);
         }
         
         /**
@@ -1983,7 +2034,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function authenticate()
         {
-            return \Illuminate\Auth\SessionGuard::authenticate();
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::authenticate();
         }
         
         /**
@@ -1994,7 +2046,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function hasUser()
         {
-            return \Illuminate\Auth\SessionGuard::hasUser();
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::hasUser();
         }
         
         /**
@@ -2005,7 +2058,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function check()
         {
-            return \Illuminate\Auth\SessionGuard::check();
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::check();
         }
         
         /**
@@ -2016,7 +2070,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function guest()
         {
-            return \Illuminate\Auth\SessionGuard::guest();
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::guest();
         }
         
         /**
@@ -2027,7 +2082,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getProvider()
         {
-            return \Illuminate\Auth\SessionGuard::getProvider();
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::getProvider();
         }
         
         /**
@@ -2039,7 +2095,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function setProvider($provider)
         {
-            \Illuminate\Auth\SessionGuard::setProvider($provider);
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            \Lab404\Impersonate\Guard\SessionGuard::setProvider($provider);
         }
         
         /**
@@ -2052,7 +2109,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function macro($name, $macro)
         {
-            \Illuminate\Auth\SessionGuard::macro($name, $macro);
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            \Lab404\Impersonate\Guard\SessionGuard::macro($name, $macro);
         }
         
         /**
@@ -2065,7 +2123,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function mixin($mixin)
         {
-            \Illuminate\Auth\SessionGuard::mixin($mixin);
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            \Lab404\Impersonate\Guard\SessionGuard::mixin($mixin);
         }
         
         /**
@@ -2077,7 +2136,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function hasMacro($name)
         {
-            return \Illuminate\Auth\SessionGuard::hasMacro($name);
+            //Method inherited from \Illuminate\Auth\SessionGuard            
+            return \Lab404\Impersonate\Guard\SessionGuard::hasMacro($name);
         }
          
     }
@@ -6073,8 +6133,6 @@ namespace Illuminate\Support\Facades {
      * @method static void log($level, string $message, array $context = [])
      * @method static mixed channel(string $channel = null)
      * @method static \Psr\Log\LoggerInterface stack(array $channels, string $channel = null)
-     * @method static self channel(string $channel)
-     * @method static self stack(array $channels)
      * @see \Illuminate\Log\Logger
      */ 
     class Log {
@@ -7660,7 +7718,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Create a new redirect response to a controller action.
          *
-         * @param string $action
+         * @param string|array $action
          * @param mixed $parameters
          * @param int $status
          * @param array $headers
@@ -10981,6 +11039,16 @@ namespace Illuminate\Support\Facades {
         public static function macroCall($method, $parameters)
         {
             return \Illuminate\Routing\Router::macroCall($method, $parameters);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function impersonate()
+        {
+            return \Illuminate\Routing\Router::impersonate();
         }
         
         /**
@@ -14606,13 +14674,118 @@ namespace Laravel\Socialite\Facades {
  
 }
 
-namespace PragmaRX\CountriesLaravel\Package { 
+namespace Maatwebsite\Excel\Facades { 
 
     /**
      * 
      *
+     * @method static BinaryFileResponse download(object $export, string $fileName, string $writerType = null)
+     * @method static bool store(object $export, string $filePath, string $disk = null, string $writerType = null)
+     * @method static bool queue(object $export, string $filePath, string $disk = null, string $writerType = null)
+     * @method static void assertDownloaded(string $fileName, callable $callback = null)
+     * @method static void assertStored(string $filePath, string $disk = null, callable $callback = null)
+     * @method static void assertQueued(string $filePath, string $disk = null, callable $callback = null)
      */ 
-    class Facade {
+    class Excel {
+        
+        /**
+         * 
+         *
+         * @param object $export
+         * @param string|null $fileName
+         * @param string $writerType
+         * @throws \PhpOffice\PhpSpreadsheet\Exception
+         * @throws \PhpOffice\PhpSpreadsheet\Writer\Exception
+         * @return \Maatwebsite\Excel\BinaryFileResponse 
+         * @static 
+         */ 
+        public static function download($export, $fileName, $writerType = null)
+        {
+            return \Maatwebsite\Excel\Excel::download($export, $fileName, $writerType);
+        }
+        
+        /**
+         * 
+         *
+         * @param object $export
+         * @param string $filePath
+         * @param string|null $disk
+         * @param string $writerType
+         * @throws \PhpOffice\PhpSpreadsheet\Exception
+         * @throws \PhpOffice\PhpSpreadsheet\Writer\Exception
+         * @return bool 
+         * @static 
+         */ 
+        public static function store($export, $filePath, $disk = null, $writerType = null)
+        {
+            return \Maatwebsite\Excel\Excel::store($export, $filePath, $disk, $writerType);
+        }
+        
+        /**
+         * 
+         *
+         * @param object $export
+         * @param string $filePath
+         * @param string|null $disk
+         * @param string $writerType
+         * @return \Maatwebsite\Excel\PendingDispatch 
+         * @static 
+         */ 
+        public static function queue($export, $filePath, $disk = null, $writerType = null)
+        {
+            return \Maatwebsite\Excel\Excel::queue($export, $filePath, $disk, $writerType);
+        }
+        
+        /**
+         * 
+         *
+         * @param string $concern
+         * @param callable $handler
+         * @param string $event
+         * @static 
+         */ 
+        public static function extend($concern, $handler, $event = 'Maatwebsite\Excel\Events\BeforeWriting')
+        {
+            return \Maatwebsite\Excel\Excel::extend($concern, $handler, $event);
+        }
+        
+        /**
+         * 
+         *
+         * @param string $fileName
+         * @param callable|null $callback
+         * @static 
+         */ 
+        public static function assertDownloaded($fileName, $callback = null)
+        {
+            return \Maatwebsite\Excel\Fakes\ExcelFake::assertDownloaded($fileName, $callback);
+        }
+        
+        /**
+         * 
+         *
+         * @param string $filePath
+         * @param string|callable|null $disk
+         * @param callable|null $callback
+         * @static 
+         */ 
+        public static function assertStored($filePath, $disk = null, $callback = null)
+        {
+            return \Maatwebsite\Excel\Fakes\ExcelFake::assertStored($filePath, $disk, $callback);
+        }
+        
+        /**
+         * 
+         *
+         * @param string $filePath
+         * @param string|callable|null $disk
+         * @param callable|null $callback
+         * @static 
+         */ 
+        public static function assertQueued($filePath, $disk = null, $callback = null)
+        {
+            return \Maatwebsite\Excel\Fakes\ExcelFake::assertQueued($filePath, $disk, $callback);
+        }
          
     }
  
@@ -16575,6 +16748,35 @@ namespace  {
             }
          
             /**
+             * Add a "where JSON length" clause to the query.
+             *
+             * @param string $column
+             * @param mixed $operator
+             * @param mixed $value
+             * @param string $boolean
+             * @return $this 
+             * @static 
+             */ 
+            public static function whereJsonLength($column, $operator, $value = null, $boolean = 'and')
+            {    
+                return \Illuminate\Database\Query\Builder::whereJsonLength($column, $operator, $value, $boolean);
+            }
+         
+            /**
+             * Add a "or where JSON length" clause to the query.
+             *
+             * @param string $column
+             * @param mixed $operator
+             * @param mixed $value
+             * @return $this 
+             * @static 
+             */ 
+            public static function orWhereJsonLength($column, $operator, $value = null)
+            {    
+                return \Illuminate\Database\Query\Builder::orWhereJsonLength($column, $operator, $value);
+            }
+         
+            /**
              * Handles dynamic "where" clauses to the query.
              *
              * @param string $method
@@ -17280,7 +17482,7 @@ namespace  {
 
     class Socialite extends \Laravel\Socialite\Facades\Socialite {}
 
-    class Countries extends \PragmaRX\CountriesLaravel\Package\Facade {}
+    class Excel extends \Maatwebsite\Excel\Facades\Excel {}
 
     class Geocoder extends \Spatie\Geocoder\Facades\Geocoder {}
 

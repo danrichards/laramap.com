@@ -2,14 +2,14 @@
 
 namespace App\Nova;
 
-use Inspheric\Fields\Url;
-use Laravel\Nova\Fields\ID;
-use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Boolean;
-use Laravel\Nova\Fields\Markdown;
+use Ajhaupt7\ImageUploadPreview\ImageUploadPreview;
 use Benjaminhirsch\NovaSlugField\Slug;
 use Benjaminhirsch\NovaSlugField\TextWithSlug;
-use Ajhaupt7\ImageUploadPreview\ImageUploadPreview;
+use Illuminate\Http\Request;
+use Inspheric\Fields\Url;
+use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Markdown;
 
 class Resources extends Resource
 {
