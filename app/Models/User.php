@@ -139,7 +139,7 @@ class User extends Authenticatable implements MustVerifyEmailContract
      * @var array
      */
     protected $dates = [
-        'email_verified_at'
+        'email_verified_at',
     ];
 
     /***
