@@ -6,8 +6,6 @@
                     <h3 class="page-title mb-5">Categories</h3>
 
                     <div>
-                        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7DPKJL&placement=laramapcom" id="_carbonads_js"></script>
-
                         <div class="list-group list-group-transparent mb-0">
                             <a v-for="category in categories" v-bind:href="'/forums/categories/' + category.slug" class="list-group-item list-group-item-action d-flex align-items-center active">
                                 {{ category.title }} <span class="ml-auto badge badge-primary">{{ category.thread_count }}</span>
