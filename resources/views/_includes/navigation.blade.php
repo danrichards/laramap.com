@@ -122,7 +122,7 @@
                         <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown">Connect</a>
                         <div class="dropdown-menu dropdown-menu-arrow">
                             <a href="https://t.me/joinchat/AAAAAE16XDv-NO3kZzGooA" target="_blank" class="dropdown-item">Telegram Channel</a>
-                            <a href="https://t.me/joinchat/BH0YVBGdn90dRYLBuioJAQ" target="_blank" class="dropdown-item">Telegram Group</a>
+                            <a href="https://t.me/laravel_worldwide" target="_blank" class="dropdown-item">Telegram Group</a>
                             <a href="https://discordapp.com/invite/mPZNm7A" target="_blank" class="dropdown-item">Discord</a>
                             <a href="https://larachat.co/" target="_blank" class="dropdown-item">Slack</a>
                         </div>
