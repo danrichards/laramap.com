@@ -119,14 +119,20 @@
                     {{--</li>--}}
 
                     <li class="nav-item">
-                        <a href="https://t.me/joinchat/AAAAAE16XDv-NO3kZzGooA" target="_blank" class="nav-link">Telegram Channel</a>
+                        <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown">Connect</a>
+                        <div class="dropdown-menu dropdown-menu-arrow">
+                            <a href="https://t.me/joinchat/AAAAAE16XDv-NO3kZzGooA" target="_blank" class="dropdown-item">Telegram Channel</a>
+                            <a href="https://t.me/joinchat/BH0YVBGdn90dRYLBuioJAQ" target="_blank" class="dropdown-item">Telegram Group</a>
+                            <a href="https://discordapp.com/invite/mPZNm7A" target="_blank" class="dropdown-item">Discord</a>
+                            <a href="https://larachat.co/" target="_blank" class="dropdown-item">Slack</a>
+                        </div>
                     </li>
 
                     <li class="nav-item">
                         <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown">About</a>
                         <div class="dropdown-menu dropdown-menu-arrow">
-                            <a href="{{ url('/about') }}" class="dropdown-item ">About</a>
-                            <a href="{{ url('/sponsors') }}" class="dropdown-item ">Sponsors</a>
+                            <a href="{{ url('/about') }}" class="dropdown-item">About</a>
+                            <a href="{{ url('/sponsors') }}" class="dropdown-item">Sponsors</a>
                         </div>
                     </li>
                 </ul>
