@@ -52,10 +52,6 @@
                             </p>
                         </div>
                     </div>
-
-                    <div class="card">
-                        <div class="card-body" v-html="user.biography"></div>
-                    </div>
                 </div>
 
                 <div class="row">
