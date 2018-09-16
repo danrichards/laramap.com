@@ -17,7 +17,7 @@ But you can also follow up whats going on in the community.
 <li><a href="https://fontawesome.com">FontAwesome 5</a> (Pro)</li>
 <li><a href="https://redis.io">Redis</a> (Cache and Queues)</li>
 <li><a href="https://pusher.com">Pusher.com</a> (Realtime)</li>
-<li><a href="https://algolia.com">Algolia</a> (Search as a Service</li>
+<li><a href="https://algolia.com">Algolia</a> (Search as a Service)</li>
 <li><a href="https://forge.laravel.com">Laravel Forge</a> (Server Management)</li>
 <li><a href="https://m.do.co/c/3dca62b8d69e">DigitalOcean</a> (Hosting)</li>
 
