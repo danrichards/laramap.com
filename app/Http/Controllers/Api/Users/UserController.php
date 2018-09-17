@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
 use App\Http\Requests\Users\UpdateRequest;
+use DB;
 
 class UserController extends Controller
 {
@@ -70,5 +71,27 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * Display a listing of users countries with users count
+     *
+     * @return array
+     */
+    public function countries()
+    {
+        $countries = DB::table('users')
+            ->select(DB::raw('country as name, count(*) as users_count'))
+            ->where('country', '<>', '')
+            ->groupBy('country')
+            ->orderBy('country')
+            ->get();
+        
+        $result = [];
+        foreach ($countries as $country) {
+            $result[] = ['name' => $country->name, 'users_count' => $country->users_count];
+        }
+
+        return ['data' => $result];
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 Route::get('users', 'Api\Users\UserController@index');
+Route::get('users/countries', 'Api\Users\UserController@countries');
 Route::get('users/{id}', 'Api\Users\UserController@show');
 
 Route::group(['prefix' => 'forums'], function () {
