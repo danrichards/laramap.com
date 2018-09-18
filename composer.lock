@@ -1303,12 +1303,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GijsGoudzwaard/nova-system-resources.git",
-                "reference": "bcaf5a7e71a669b6dba71dbefe00cc548a04fa26"
+                "reference": "ee7e540c8457eb7e7d27fff8c93458f63a580e4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GijsGoudzwaard/nova-system-resources/zipball/bcaf5a7e71a669b6dba71dbefe00cc548a04fa26",
-                "reference": "bcaf5a7e71a669b6dba71dbefe00cc548a04fa26",
+                "url": "https://api.github.com/repos/GijsGoudzwaard/nova-system-resources/zipball/ee7e540c8457eb7e7d27fff8c93458f63a580e4e",
+                "reference": "ee7e540c8457eb7e7d27fff8c93458f63a580e4e",
                 "shasum": ""
             },
             "require": {
@@ -1336,7 +1336,7 @@
                 "laravel",
                 "nova"
             ],
-            "time": "2018-09-07T19:11:29+00:00"
+            "time": "2018-09-14T18:16:18+00:00"
         },
         {
             "name": "google/apiclient",
@@ -1399,16 +1399,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.69",
+            "version": "v0.70",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "6e2507a5bb39d970ae98cc2f1421012e7b38248f"
+                "reference": "759a1a246409eae1c723abc72d817205a1d5549f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/6e2507a5bb39d970ae98cc2f1421012e7b38248f",
-                "reference": "6e2507a5bb39d970ae98cc2f1421012e7b38248f",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/759a1a246409eae1c723abc72d817205a1d5549f",
+                "reference": "759a1a246409eae1c723abc72d817205a1d5549f",
                 "shasum": ""
             },
             "require": {
@@ -1432,20 +1432,20 @@
             "keywords": [
                 "google"
             ],
-            "time": "2018-09-08T00:22:43+00:00"
+            "time": "2018-09-16T00:22:55+00:00"
         },
         {
             "name": "google/auth",
-            "version": "v1.3.3",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-auth-library-php.git",
-                "reference": "af72b3f50420c801dc35cc07b1fa429ae027b847"
+                "reference": "196237248e636a3554a7d9e4dfddeb97f450ab5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/af72b3f50420c801dc35cc07b1fa429ae027b847",
-                "reference": "af72b3f50420c801dc35cc07b1fa429ae027b847",
+                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/196237248e636a3554a7d9e4dfddeb97f450ab5c",
+                "reference": "196237248e636a3554a7d9e4dfddeb97f450ab5c",
                 "shasum": ""
             },
             "require": {
@@ -1479,7 +1479,7 @@
                 "google",
                 "oauth2"
             ],
-            "time": "2018-08-27T19:47:35+00:00"
+            "time": "2018-09-17T20:29:21+00:00"
         },
         {
             "name": "graham-campbell/manager",
@@ -2778,26 +2778,26 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.46",
+            "version": "1.0.47",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "f3e0d925c18b92cf3ce84ea5cc58d62a1762a2b2"
+                "reference": "a11e4a75f256bdacf99d20780ce42d3b8272975c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f3e0d925c18b92cf3ce84ea5cc58d62a1762a2b2",
-                "reference": "f3e0d925c18b92cf3ce84ea5cc58d62a1762a2b2",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/a11e4a75f256bdacf99d20780ce42d3b8272975c",
+                "reference": "a11e4a75f256bdacf99d20780ce42d3b8272975c",
                 "shasum": ""
             },
             "require": {
+                "ext-fileinfo": "*",
                 "php": ">=5.5.9"
             },
             "conflict": {
                 "league/flysystem-sftp": "<1.0.6"
             },
             "require-dev": {
-                "ext-fileinfo": "*",
                 "phpspec/phpspec": "^3.4",
                 "phpunit/phpunit": "^5.7.10"
             },
@@ -2858,7 +2858,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2018-08-22T07:45:22+00:00"
+            "time": "2018-09-14T15:30:29+00:00"
         },
         {
             "name": "league/oauth1-client",
@@ -3116,16 +3116,16 @@
         },
         {
             "name": "maatwebsite/laravel-nova-excel",
-            "version": "1.0.2",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Maatwebsite/Laravel-Nova-Excel.git",
-                "reference": "b5a291e3d660bd89f2207384fcdf4049037ea3b3"
+                "reference": "085ef66ea6963e8567a6a578a8533f5da9b6c620"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Maatwebsite/Laravel-Nova-Excel/zipball/b5a291e3d660bd89f2207384fcdf4049037ea3b3",
-                "reference": "b5a291e3d660bd89f2207384fcdf4049037ea3b3",
+                "url": "https://api.github.com/repos/Maatwebsite/Laravel-Nova-Excel/zipball/085ef66ea6963e8567a6a578a8533f5da9b6c620",
+                "reference": "085ef66ea6963e8567a6a578a8533f5da9b6c620",
                 "shasum": ""
             },
             "require": {
@@ -3166,7 +3166,7 @@
                 "nova",
                 "phpspreadsheet"
             ],
-            "time": "2018-09-08T15:59:48+00:00"
+            "time": "2018-09-17T18:39:08+00:00"
         },
         {
             "name": "madewithlove/illuminate-psr-cache-bridge",
@@ -3857,16 +3857,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.0.3",
+            "version": "v4.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "bd088dc940a418f09cda079a9b5c7c478890fb8d"
+                "reference": "fa6ee28600d21d49b2b4e1006b48426cec8e579c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/bd088dc940a418f09cda079a9b5c7c478890fb8d",
-                "reference": "bd088dc940a418f09cda079a9b5c7c478890fb8d",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/fa6ee28600d21d49b2b4e1006b48426cec8e579c",
+                "reference": "fa6ee28600d21d49b2b4e1006b48426cec8e579c",
                 "shasum": ""
             },
             "require": {
@@ -3904,7 +3904,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2018-07-15T17:25:16+00:00"
+            "time": "2018-09-18T07:03:24+00:00"
         },
         {
             "name": "ohdearapp/laravel-ohdear-webhooks",
@@ -4019,16 +4019,16 @@
         },
         {
             "name": "orchestra/testbench-core",
-            "version": "v3.7.2",
+            "version": "v3.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench-core.git",
-                "reference": "72579b24435463dd846e323d097b6ddc8af257d8"
+                "reference": "cfddff2e51f868b09aa9e66c67664c0cd32438cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench-core/zipball/72579b24435463dd846e323d097b6ddc8af257d8",
-                "reference": "72579b24435463dd846e323d097b6ddc8af257d8",
+                "url": "https://api.github.com/repos/orchestral/testbench-core/zipball/cfddff2e51f868b09aa9e66c67664c0cd32438cc",
+                "reference": "cfddff2e51f868b09aa9e66c67664c0cd32438cc",
                 "shasum": ""
             },
             "require": {
@@ -4079,7 +4079,7 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2018-09-12T09:41:23+00:00"
+            "time": "2018-09-13T09:05:08+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -4128,16 +4128,16 @@
         },
         {
             "name": "paragonie/sodium_compat",
-            "version": "v1.6.4",
+            "version": "v1.6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/sodium_compat.git",
-                "reference": "3f2fd07977541b4d630ea0365ad0eceddee5179c"
+                "reference": "aaaf71f3f7713248703c23cfbd1189ce1215f57f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/sodium_compat/zipball/3f2fd07977541b4d630ea0365ad0eceddee5179c",
-                "reference": "3f2fd07977541b4d630ea0365ad0eceddee5179c",
+                "url": "https://api.github.com/repos/paragonie/sodium_compat/zipball/aaaf71f3f7713248703c23cfbd1189ce1215f57f",
+                "reference": "aaaf71f3f7713248703c23cfbd1189ce1215f57f",
                 "shasum": ""
             },
             "require": {
@@ -4206,7 +4206,7 @@
                 "secret-key cryptography",
                 "side-channel resistant"
             ],
-            "time": "2018-08-29T22:02:48+00:00"
+            "time": "2018-09-14T00:17:10+00:00"
         },
         {
             "name": "patchwork/utf8",
@@ -4946,20 +4946,23 @@
         },
         {
             "name": "phpunit/php-file-iterator",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
-                "reference": "cecbc684605bb0cc288828eb5d65d93d5c676d3c"
+                "reference": "050bedf145a257b1ff02746c31894800e5122946"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/cecbc684605bb0cc288828eb5d65d93d5c676d3c",
-                "reference": "cecbc684605bb0cc288828eb5d65d93d5c676d3c",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/050bedf145a257b1ff02746c31894800e5122946",
+                "reference": "050bedf145a257b1ff02746c31894800e5122946",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.1"
             },
             "type": "library",
             "extra": {
@@ -4989,7 +4992,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2018-06-11T11:44:00+00:00"
+            "time": "2018-09-13T20:33:42+00:00"
         },
         {
             "name": "phpunit/php-text-template",
@@ -5216,16 +5219,16 @@
         },
         {
             "name": "pragmarx/artisan-tool",
-            "version": "v0.2.1",
+            "version": "v0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/artisan-tool.git",
-                "reference": "c7dd1ec3ca6146c5c11554e00dda756f8f331a10"
+                "reference": "0820bcc21dbcfae0878fbe15731a604b55e7dfb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/artisan-tool/zipball/c7dd1ec3ca6146c5c11554e00dda756f8f331a10",
-                "reference": "c7dd1ec3ca6146c5c11554e00dda756f8f331a10",
+                "url": "https://api.github.com/repos/antonioribeiro/artisan-tool/zipball/0820bcc21dbcfae0878fbe15731a604b55e7dfb0",
+                "reference": "0820bcc21dbcfae0878fbe15731a604b55e7dfb0",
                 "shasum": ""
             },
             "require": {
@@ -5267,7 +5270,7 @@
                 "laravel",
                 "nova"
             ],
-            "time": "2018-09-03T12:07:17+00:00"
+            "time": "2018-09-16T21:47:30+00:00"
         },
         {
             "name": "pragmarx/coollection",
@@ -7265,16 +7268,16 @@
         },
         {
             "name": "spatie/laravel-permission",
-            "version": "2.19.0",
+            "version": "2.19.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-permission.git",
-                "reference": "cf4f3afb093a524bbdfb32f02a644a37694ff4c6"
+                "reference": "6ab41261b74707e4cbda196a51239039bd3494b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/cf4f3afb093a524bbdfb32f02a644a37694ff4c6",
-                "reference": "cf4f3afb093a524bbdfb32f02a644a37694ff4c6",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/6ab41261b74707e4cbda196a51239039bd3494b7",
+                "reference": "6ab41261b74707e4cbda196a51239039bd3494b7",
                 "shasum": ""
             },
             "require": {
@@ -7322,27 +7325,30 @@
                 "security",
                 "spatie"
             ],
-            "time": "2018-09-10T19:52:52+00:00"
+            "time": "2018-09-14T18:26:21+00:00"
         },
         {
             "name": "spatie/laravel-query-builder",
-            "version": "1.10.1",
+            "version": "1.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-query-builder.git",
-                "reference": "f1465f764c3d93f623bef292362de19529250a75"
+                "reference": "372bfcd1360b2a41ca418614cf2d11e95c422619"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-query-builder/zipball/f1465f764c3d93f623bef292362de19529250a75",
-                "reference": "f1465f764c3d93f623bef292362de19529250a75",
+                "url": "https://api.github.com/repos/spatie/laravel-query-builder/zipball/372bfcd1360b2a41ca418614cf2d11e95c422619",
+                "reference": "372bfcd1360b2a41ca418614cf2d11e95c422619",
                 "shasum": ""
             },
             "require": {
+                "illuminate/database": "~5.5.0|~5.6.0|~5.7.0",
+                "illuminate/http": "~5.5.0|~5.6.0|~5.7.0",
+                "illuminate/support": "~5.5.0|~5.6.0|~5.7.0",
                 "php": "^7.1"
             },
             "require-dev": {
-                "orchestra/testbench": "~3.5.0|~3.6.0",
+                "orchestra/testbench": "~3.5.0|~3.6.0|~3.7.0",
                 "phpunit/phpunit": "^6.1|^7.0"
             },
             "type": "library",
@@ -7376,7 +7382,7 @@
                 "laravel-query-builder",
                 "spatie"
             ],
-            "time": "2018-08-21T06:50:03+00:00"
+            "time": "2018-09-17T10:23:19+00:00"
         },
         {
             "name": "spatie/laravel-referer",
@@ -7550,16 +7556,16 @@
         },
         {
             "name": "spatie/nova-backup-tool",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/nova-backup-tool.git",
-                "reference": "aca75a501f86deb4cf4a680539ecb4e98c23a837"
+                "reference": "7df7d3f4df7f8bce7241f9890e3a50b650f41554"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/nova-backup-tool/zipball/aca75a501f86deb4cf4a680539ecb4e98c23a837",
-                "reference": "aca75a501f86deb4cf4a680539ecb4e98c23a837",
+                "url": "https://api.github.com/repos/spatie/nova-backup-tool/zipball/7df7d3f4df7f8bce7241f9890e3a50b650f41554",
+                "reference": "7df7d3f4df7f8bce7241f9890e3a50b650f41554",
                 "shasum": ""
             },
             "require": {
@@ -7604,7 +7610,7 @@
                 "laravel",
                 "nova"
             ],
-            "time": "2018-08-25T22:25:05+00:00"
+            "time": "2018-09-14T13:44:45+00:00"
         },
         {
             "name": "spatie/once",
@@ -8949,16 +8955,16 @@
         },
         {
             "name": "tightenco/nova-google-analytics",
-            "version": "v0.1.3",
+            "version": "v0.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tightenco/nova-google-analytics.git",
-                "reference": "76d86370e8c43b6980295b8a3fe4b1da0d00129d"
+                "reference": "b078bd8805745effb861c453f0285b2c7ba36205"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/nova-google-analytics/zipball/76d86370e8c43b6980295b8a3fe4b1da0d00129d",
-                "reference": "76d86370e8c43b6980295b8a3fe4b1da0d00129d",
+                "url": "https://api.github.com/repos/tightenco/nova-google-analytics/zipball/b078bd8805745effb861c453f0285b2c7ba36205",
+                "reference": "b078bd8805745effb861c453f0285b2c7ba36205",
                 "shasum": ""
             },
             "require": {
@@ -9000,7 +9006,7 @@
                 "laravel",
                 "nova"
             ],
-            "time": "2018-09-04T12:15:01+00:00"
+            "time": "2018-09-13T00:21:58+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
