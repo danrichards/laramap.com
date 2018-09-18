@@ -4,7 +4,7 @@
             <div class="d-flex align-items-center">
                 <img class="avatar avatar-md mr-3" v-bind:src="user.avatar">
                 <div>
-                    <a v-bind:href="'@' + user.username" class="text-default">{{ user.name }}</a>
+                    <a v-bind:href="'/@' + user.username" class="text-default">{{ user.name }}</a>
                     <small class="d-block text-muted">{{ user.username }}</small>
                 </div>
             </div>
