@@ -19,6 +19,17 @@ class UserController extends Controller
     }
 
     /**
+     * Display a listing of the users by country.
+     *
+     * @param string $country
+     * @return \Illuminate\Http\Response
+     */
+    public function indexByCountry(string $country)
+    {
+        return view('users.list_by_country', compact('country'));
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response

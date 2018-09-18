@@ -2,7 +2,9 @@
 
 Route::get('users', 'Api\Users\UserController@index');
 Route::get('users/countries', 'Api\Users\UserController@countries');
+Route::get('users/cities/{country}', 'Api\Users\UserController@cities');
 Route::get('users/{id}', 'Api\Users\UserController@show');
+Route::get('users/filterByLocation/{country}', 'Api\Users\UserController@indexByCountry');
 
 Route::group(['prefix' => 'forums'], function () {
     Route::get('categories', 'Api\Forums\ThreadCategoryController@index');

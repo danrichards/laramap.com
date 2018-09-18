@@ -24,6 +24,19 @@ class UserController extends Controller
     }
 
     /**
+     * Display a listing of the users by country.
+     *
+     * @param string $country
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection|\Illuminate\Http\Response
+     */
+    public function indexByCountry(string $country)
+    {
+        $users = User::where('country', $country)->get();
+
+        return UserResource::collection($users);
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -86,10 +99,34 @@ class UserController extends Controller
             ->groupBy('country')
             ->orderBy('country')
             ->get();
-        
+
         $result = [];
         foreach ($countries as $country) {
             $result[] = ['name' => $country->name, 'users_count' => $country->users_count];
+        }
+
+        return ['data' => $result];
+    }
+
+    /**
+     * Display a listing of users cities with users count
+     *
+     * @param string $country
+     * @return array
+     */
+    public function cities(string $country)
+    {
+        $cities = DB::table('users')
+            ->select(DB::raw('city as name, count(*) as users_count'))
+            ->where('country', $country)
+            ->where('city', '<>', '')
+            ->groupBy('city')
+            ->orderBy('city')
+            ->get();
+
+        $result = [];
+        foreach ($cities as $city) {
+            $result[] = ['name' => $city->name, 'users_count' => $city->users_count];
         }
 
         return ['data' => $result];
