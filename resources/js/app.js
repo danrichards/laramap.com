@@ -41,6 +41,9 @@ Vue.component(
 
 Vue.component('home-map', require('./components/HomeMap.vue'));
 Vue.component('user-list', require('./components/UserList.vue'));
+Vue.component('user-list-by-country', require('./components/UserListByCountry.vue'));
+Vue.component('user-list-by-city', require('./components/UserListByCity.vue'));
+Vue.component('user-card', require('./components/UserCard.vue'));
 Vue.component('user-latest', require('./components/LatestUsers.vue'));
 Vue.component('user-avatar-stack', require('./components/UserAvatarStack.vue'));
 Vue.component('user-avatar-list', require('./components/UserAvatarList.vue'));

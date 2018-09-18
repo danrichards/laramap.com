@@ -17,6 +17,8 @@ Route::get('oauth/{driver}/callback', 'Auth\SocialAuthController@handleProviderC
 Route::get('/likes', 'Api\Social\LikeController@getLikesForCurrentUser');
 
 Route::get('@{username}', 'Users\UserController@show');
+Route::get('users/{country}/{city}', 'Users\UserController@indexByCity')->middleware('cacheResponse:5');
+Route::get('users/{country}', 'Users\UserController@indexByCountry')->middleware('cacheResponse:5');
 Route::get('users', 'Users\UserController@index')->middleware('cacheResponse:5');
 Route::get('account', 'Users\AccountController@getAccount')->middleware('verified');
 
