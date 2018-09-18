@@ -37,6 +37,22 @@ class UserController extends Controller
     }
 
     /**
+     * Display a listing of the users by city.
+     *
+     * @param string $country
+     * @param string $city
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection|\Illuminate\Http\Response
+     */
+    public function indexByCity(string $country, string $city)
+    {
+        $users = User::where('country', $country)
+            ->where('city', $city)
+            ->get();
+
+        return UserResource::collection($users);
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request

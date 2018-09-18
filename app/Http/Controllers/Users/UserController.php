@@ -30,6 +30,18 @@ class UserController extends Controller
     }
 
     /**
+     * Display a listing of the users by city.
+     *
+     * @param string $country
+     * @param string $city
+     * @return \Illuminate\Http\Response
+     */
+    public function indexByCity(string $country, string $city)
+    {
+        return view('users.list_by_city', compact('country', 'city'));
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
