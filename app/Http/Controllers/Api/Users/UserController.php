@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Api\Users;
 
+use DB;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
 use App\Http\Requests\Users\UpdateRequest;
-use DB;
 
 class UserController extends Controller
 {
@@ -103,7 +103,7 @@ class UserController extends Controller
     }
 
     /**
-     * Display a listing of users countries with users count
+     * Display a listing of users countries with users count.
      *
      * @return array
      */
@@ -125,7 +125,7 @@ class UserController extends Controller
     }
 
     /**
-     * Display a listing of users cities with users count
+     * Display a listing of users cities with users count.
      *
      * @param string $country
      * @return array

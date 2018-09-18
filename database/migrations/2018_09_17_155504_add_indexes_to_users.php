@@ -15,7 +15,7 @@ class AddIndexesToUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->index('country');
-            $table->index( 'city');
+            $table->index('city');
         });
     }
 
