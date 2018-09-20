@@ -18,6 +18,7 @@
 
     @stack('header_scripts')
     <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://wartner.io/js/made-by-widget.js" defer></script>
 
     <script>
         window.Laramap = <?php echo json_encode(array_merge(
@@ -35,6 +36,7 @@
         @include('_includes.navigation')
         <div id="wrapper">
             @yield('content')
+            <made-by></made-by>
         </div>
         @include('_includes.footer')
     @endif
