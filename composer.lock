@@ -150,16 +150,16 @@
         },
         {
             "name": "benjaminhirsch/nova-slug-field",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/benjaminhirsch/nova-slug-field.git",
-                "reference": "e4d53b46213279ca1962ec79a8448936df6b330e"
+                "reference": "592fe6940758334b911fc6bdc191026ab0d6a2ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/benjaminhirsch/nova-slug-field/zipball/e4d53b46213279ca1962ec79a8448936df6b330e",
-                "reference": "e4d53b46213279ca1962ec79a8448936df6b330e",
+                "url": "https://api.github.com/repos/benjaminhirsch/nova-slug-field/zipball/592fe6940758334b911fc6bdc191026ab0d6a2ba",
+                "reference": "592fe6940758334b911fc6bdc191026ab0d6a2ba",
                 "shasum": ""
             },
             "require": {
@@ -195,7 +195,7 @@
                 "laravel",
                 "nova"
             ],
-            "time": "2018-08-25T20:16:38+00:00"
+            "time": "2018-10-10T18:18:24+00:00"
         },
         {
             "name": "cakephp/chronos",
@@ -1183,16 +1183,16 @@
         },
         {
             "name": "get-stream/stream",
-            "version": "2.8.0",
+            "version": "2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GetStream/stream-php.git",
-                "reference": "b5d9c7bffebb86524ecb9caa861a7c2b9b8e124e"
+                "reference": "fc16876e5be0c35415fe9b973562c655fdda09a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GetStream/stream-php/zipball/b5d9c7bffebb86524ecb9caa861a7c2b9b8e124e",
-                "reference": "b5d9c7bffebb86524ecb9caa861a7c2b9b8e124e",
+                "url": "https://api.github.com/repos/GetStream/stream-php/zipball/fc16876e5be0c35415fe9b973562c655fdda09a7",
+                "reference": "fc16876e5be0c35415fe9b973562c655fdda09a7",
                 "shasum": ""
             },
             "require": {
@@ -1233,7 +1233,7 @@
                 "newsfeed",
                 "stream"
             ],
-            "time": "2018-09-06T12:10:31+00:00"
+            "time": "2018-10-08T19:26:09+00:00"
         },
         {
             "name": "get-stream/stream-laravel",
@@ -1399,16 +1399,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.70",
+            "version": "v0.71",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "759a1a246409eae1c723abc72d817205a1d5549f"
+                "reference": "f066aac8c0ea88cf5880611d589fd1e01c4fd082"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/759a1a246409eae1c723abc72d817205a1d5549f",
-                "reference": "759a1a246409eae1c723abc72d817205a1d5549f",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/f066aac8c0ea88cf5880611d589fd1e01c4fd082",
+                "reference": "f066aac8c0ea88cf5880611d589fd1e01c4fd082",
                 "shasum": ""
             },
             "require": {
@@ -1432,7 +1432,7 @@
             "keywords": [
                 "google"
             ],
-            "time": "2018-09-16T00:22:55+00:00"
+            "time": "2018-10-09T00:22:49+00:00"
         },
         {
             "name": "google/auth",
@@ -1790,16 +1790,16 @@
         },
         {
             "name": "infinety-es/nova-filemanager",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/InfinetyES/Nova-Filemanager.git",
-                "reference": "78bd1af0eb4ad7e549a69544b880eeaa6abfa20b"
+                "reference": "d7135f712de3cf4b91501e65a2efe1f2ac47ec71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/InfinetyES/Nova-Filemanager/zipball/78bd1af0eb4ad7e549a69544b880eeaa6abfa20b",
-                "reference": "78bd1af0eb4ad7e549a69544b880eeaa6abfa20b",
+                "url": "https://api.github.com/repos/InfinetyES/Nova-Filemanager/zipball/d7135f712de3cf4b91501e65a2efe1f2ac47ec71",
+                "reference": "d7135f712de3cf4b91501e65a2efe1f2ac47ec71",
                 "shasum": ""
             },
             "require": {
@@ -1846,7 +1846,7 @@
                 "laravel",
                 "nova"
             ],
-            "time": "2018-09-21T13:57:19+00:00"
+            "time": "2018-10-09T08:24:30+00:00"
         },
         {
             "name": "inspheric/nova-url-field",
@@ -2062,16 +2062,16 @@
         },
         {
             "name": "laravel/cashier",
-            "version": "v7.2.0",
+            "version": "v7.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/cashier.git",
-                "reference": "445fd85263b4fa2395135f7881feedbd2609c09f"
+                "reference": "d450aa31f1b5e9f9618088ebe9fa4c2d77962d5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/cashier/zipball/445fd85263b4fa2395135f7881feedbd2609c09f",
-                "reference": "445fd85263b4fa2395135f7881feedbd2609c09f",
+                "url": "https://api.github.com/repos/laravel/cashier/zipball/d450aa31f1b5e9f9618088ebe9fa4c2d77962d5d",
+                "reference": "d450aa31f1b5e9f9618088ebe9fa4c2d77962d5d",
                 "shasum": ""
             },
             "require": {
@@ -2123,20 +2123,20 @@
                 "laravel",
                 "stripe"
             ],
-            "time": "2018-09-05T21:39:18+00:00"
+            "time": "2018-10-11T15:18:37+00:00"
         },
         {
             "name": "laravel/framework",
-            "version": "v5.7.8",
+            "version": "v5.7.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "763b64a43ebb6042e463aab4214d4cc9722147be"
+                "reference": "172f69f86bb86e107fb9fafff293b4b01291cf05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/763b64a43ebb6042e463aab4214d4cc9722147be",
-                "reference": "763b64a43ebb6042e463aab4214d4cc9722147be",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/172f69f86bb86e107fb9fafff293b4b01291cf05",
+                "reference": "172f69f86bb86e107fb9fafff293b4b01291cf05",
                 "shasum": ""
             },
             "require": {
@@ -2265,7 +2265,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2018-10-04T14:47:20+00:00"
+            "time": "2018-10-09T13:28:28+00:00"
         },
         {
             "name": "laravel/horizon",
@@ -3052,16 +3052,16 @@
         },
         {
             "name": "maatwebsite/excel",
-            "version": "3.1.1",
+            "version": "3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Maatwebsite/Laravel-Excel.git",
-                "reference": "7f2cdb5ac02401460c52e09ad64cdcd91c97732f"
+                "reference": "a80179c3f33d06fc0d7f22891d6aae4bb083f8c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Maatwebsite/Laravel-Excel/zipball/7f2cdb5ac02401460c52e09ad64cdcd91c97732f",
-                "reference": "7f2cdb5ac02401460c52e09ad64cdcd91c97732f",
+                "url": "https://api.github.com/repos/Maatwebsite/Laravel-Excel/zipball/a80179c3f33d06fc0d7f22891d6aae4bb083f8c3",
+                "reference": "a80179c3f33d06fc0d7f22891d6aae4bb083f8c3",
                 "shasum": ""
             },
             "require": {
@@ -3114,7 +3114,7 @@
                 "php",
                 "phpspreadsheet"
             ],
-            "time": "2018-10-04T09:00:36+00:00"
+            "time": "2018-10-11T09:21:58+00:00"
         },
         {
             "name": "maatwebsite/laravel-nova-excel",
@@ -3859,16 +3859,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.0.4",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "fa6ee28600d21d49b2b4e1006b48426cec8e579c"
+                "reference": "d0230c5c77a7e3cfa69446febf340978540958c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/fa6ee28600d21d49b2b4e1006b48426cec8e579c",
-                "reference": "fa6ee28600d21d49b2b4e1006b48426cec8e579c",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/d0230c5c77a7e3cfa69446febf340978540958c0",
+                "reference": "d0230c5c77a7e3cfa69446febf340978540958c0",
                 "shasum": ""
             },
             "require": {
@@ -3884,7 +3884,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -3906,7 +3906,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2018-09-18T07:03:24+00:00"
+            "time": "2018-10-10T09:24:14+00:00"
         },
         {
             "name": "ohdearapp/laravel-ohdear-webhooks",
@@ -4030,21 +4030,21 @@
         },
         {
             "name": "orchestra/testbench",
-            "version": "v3.7.2",
+            "version": "v3.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench.git",
-                "reference": "254f8f38dc777a914e3c27ee39c9f854db44a670"
+                "reference": "c569608fcecc9ee044f2485d58c1ac5fab26ee2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/254f8f38dc777a914e3c27ee39c9f854db44a670",
-                "reference": "254f8f38dc777a914e3c27ee39c9f854db44a670",
+                "url": "https://api.github.com/repos/orchestral/testbench/zipball/c569608fcecc9ee044f2485d58c1ac5fab26ee2f",
+                "reference": "c569608fcecc9ee044f2485d58c1ac5fab26ee2f",
                 "shasum": ""
             },
             "require": {
                 "laravel/framework": "~5.7.4",
-                "orchestra/testbench-core": "~3.7.3",
+                "orchestra/testbench-core": "~3.7.5",
                 "php": ">=7.1",
                 "phpunit/phpunit": "^7.0"
             },
@@ -4078,20 +4078,20 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2018-09-13T10:35:30+00:00"
+            "time": "2018-10-07T02:44:38+00:00"
         },
         {
             "name": "orchestra/testbench-core",
-            "version": "v3.7.4",
+            "version": "v3.7.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench-core.git",
-                "reference": "a8b9fc170115333240eb0f6507b456bbe09c1121"
+                "reference": "9ef7319cc288a613e38f456f0349907dfeb2587f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench-core/zipball/a8b9fc170115333240eb0f6507b456bbe09c1121",
-                "reference": "a8b9fc170115333240eb0f6507b456bbe09c1121",
+                "url": "https://api.github.com/repos/orchestral/testbench-core/zipball/9ef7319cc288a613e38f456f0349907dfeb2587f",
+                "reference": "9ef7319cc288a613e38f456f0349907dfeb2587f",
                 "shasum": ""
             },
             "require": {
@@ -4142,7 +4142,7 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2018-10-03T07:44:35+00:00"
+            "time": "2018-10-07T01:22:19+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -7395,16 +7395,16 @@
         },
         {
             "name": "spatie/laravel-query-builder",
-            "version": "1.11.0",
+            "version": "1.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-query-builder.git",
-                "reference": "b6fd53fc8c519909a3c9f0da5f417db0b89380a3"
+                "reference": "0e2a013051a34f5f2d7c908d52503344aa1c5204"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-query-builder/zipball/b6fd53fc8c519909a3c9f0da5f417db0b89380a3",
-                "reference": "b6fd53fc8c519909a3c9f0da5f417db0b89380a3",
+                "url": "https://api.github.com/repos/spatie/laravel-query-builder/zipball/0e2a013051a34f5f2d7c908d52503344aa1c5204",
+                "reference": "0e2a013051a34f5f2d7c908d52503344aa1c5204",
                 "shasum": ""
             },
             "require": {
@@ -7448,7 +7448,7 @@
                 "laravel-query-builder",
                 "spatie"
             ],
-            "time": "2018-10-03T08:14:25+00:00"
+            "time": "2018-10-09T15:06:36+00:00"
         },
         {
             "name": "spatie/laravel-referer",
@@ -11086,12 +11086,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/larastan.git",
-                "reference": "78da1a1e9b8bc8149347f5d801e09a9662fdd34e"
+                "reference": "0981822844c8e193468c4fe5a469d77a64192ba2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/larastan/zipball/78da1a1e9b8bc8149347f5d801e09a9662fdd34e",
-                "reference": "78da1a1e9b8bc8149347f5d801e09a9662fdd34e",
+                "url": "https://api.github.com/repos/nunomaduro/larastan/zipball/0981822844c8e193468c4fe5a469d77a64192ba2",
+                "reference": "0981822844c8e193468c4fe5a469d77a64192ba2",
                 "shasum": ""
             },
             "require": {
@@ -11145,7 +11145,7 @@
                 "php",
                 "static analysis"
             ],
-            "time": "2018-10-04T21:31:00+00:00"
+            "time": "2018-10-09T20:35:40+00:00"
         },
         {
             "name": "ocramius/package-versions",
