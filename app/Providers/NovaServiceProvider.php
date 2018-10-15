@@ -80,6 +80,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             new \Infinety\Filemanager\FilemanagerTool(),
             new \PragmaRX\ArtisanTool\Tool(),
             new \vmitchell85\NovaLinks\Links(),
+            new \KABBOUCHI\LogsTool\LogsTool(),
         ];
     }
 

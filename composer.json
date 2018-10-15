@@ -21,6 +21,7 @@
         "infinety-es/nova-filemanager": "^1.0",
         "inspheric/nova-url-field": "^1.1",
         "jameslkingsley/nova-stripe-theme": "^1.0",
+        "kabbouchi/nova-logs-tool": "^0.0.8",
         "kreitje/nova-horizon-stats": "^0.3.0",
         "laravel/cashier": "^7.1",
         "laravel/framework": "5.7.*",
