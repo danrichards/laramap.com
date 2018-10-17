@@ -31,6 +31,7 @@
                 });
 
                 map.scrollZoom.disable();
+                map.addControl(new window.mapboxgl.NavigationControl());
 
                 let self = this;
                 await axios.get('/public-api/users')
