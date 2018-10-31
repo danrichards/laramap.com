@@ -189,10 +189,10 @@ class User extends Authenticatable implements MustVerifyEmailContract
         $params = [
             's' => 80,
             'd' => 'mp',
-            'r' => 'g'
+            'r' => 'g',
         ];
 
-        $url = 'https://www.gravatar.com/avatar/' . md5(strtolower(trim($this->email)));
+        $url = 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($this->email)));
 
         $query = http_build_query($params);
 
