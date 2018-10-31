@@ -186,25 +186,17 @@ class User extends Authenticatable implements MustVerifyEmailContract
      */
     public function getGravatarAttribute()
     {
-        $s = 80;
-        $d = 'mp';
-        $r = 'g';
-        $img = false;
-        $atts = [];
+        $params = [
+            's' => 80,
+            'd' => 'mp',
+            'r' => 'g',
+        ];
 
-        $url = 'https://www.gravatar.com/avatar/';
-        $url .= md5(strtolower(trim($this->email)));
-        $url .= "?s=$s&d=$d&r=$r";
+        $url = 'https://www.gravatar.com/avatar/'.md5(strtolower(trim($this->email)));
 
-        if ($img) {
-            $url = '<img src="'.$url.'"';
-            foreach ($atts as $key => $val) {
-                $url .= ' '.$key.'="'.$val.'"';
-            }
-            $url .= ' />';
-        }
+        $query = http_build_query($params);
 
-        return $url;
+        return "$url?$query";
     }
 
     /**
