@@ -35,7 +35,7 @@ class NotifyAboutNewUserNotification extends Notification implements ShouldQueue
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return env('APP_ENV') === 'production' ? ['mail'] : [];
     }
 
     /**

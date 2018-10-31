@@ -156,17 +156,18 @@ class User extends Authenticatable implements MustVerifyEmailContract
     {
         parent::boot();
         self::created(function (User $user) {
-            $admins = User::all();
-            foreach ($admins as $admin) {
-                if (env('APP_ENV') === 'production') {
-                    if ($admin->is_admin) {
-                        $admin->notify(new NotifyAboutNewUserNotification($user));
-                    }
-                }
-            }
+            self::admins()->each->notify(new NotifyAboutNewUserNotification($user));
 
             $user->notify(new WelcomeNotification($user));
         });
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public static function admins()
+    {
+        return static::where('is_admin', true)->get();
     }
 
     /**
